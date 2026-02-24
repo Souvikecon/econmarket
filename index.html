@@ -431,10 +431,10 @@
       <div class="sidebar-section">
         <div class="sidebar-title">This Season</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">247</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Papers Listed</div></div>
-          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">183</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Candidates</div></div>
-          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">94</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Placed So Far</div></div>
-          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">38</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Institutions</div></div>
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">12</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Papers Listed</div></div>
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">18</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Candidates</div></div>
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">13</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Placements (2024–25)</div></div>
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">3</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Programs</div></div>
         </div>
       </div>
       <div class="sidebar-section">
@@ -837,89 +837,200 @@
 /* ────────────────────────────
    DATA
 ──────────────────────────── */
+// ── REAL 2025-26 CANDIDATES scraped from MIT, Harvard & Princeton job market pages ──
+
 const papers = [
   {
-    id:1, field:'Development Economics', fieldTag:'dev',
+    id:1, field:'Development / Macroeconomics', fieldTag:'dev',
     title:'Depreciation and Growth: Evidence from Machine Repair in Uganda',
     author:'Tilman Graff', school:'Harvard University', year:'Ph.D. Candidate',
-    abstract:'Capital depreciation restricts economic growth, yet little is known about whether it differs across countries and why. This paper studies the market for machine repair in Uganda using detailed field data collected by the author and a spatial growth model with endogenous depreciation. The cost of machinery upkeep in the sectors studied is around twice as high as in the US, throttling investment and growth. These costs are highest for small and remote firms, attributed to scale effects in the repair market. A growth model calibrated to Uganda accounts for 7–9% of income differences across regions. Counterfactual policy simulations show positive aggregate effects from interventions in repair markets. Winner of the 2025 NEUDC Distinguished Paper Award.',
+    authorUrl:'https://tilmangraff.github.io/',
+    pdfUrl:'https://tilmangraff.github.io/uploads/papers/Graff_JMP.pdf',
+    abstract:'Capital depreciation restricts economic growth, yet little is known about whether it is different in developing countries and why. I study the market for machine repair in Uganda using detailed field data I collected and a spatial growth model with endogenous depreciation. I first document that the cost of machinery upkeep in the sectors I study is around twice as high as in the US, throttling investment and growth. These costs are highest for small and remote firms, which I attribute to scale effects: repair is expensive if it is only infrequently demanded. I build a growth model in which capital breaks occasionally and the process by which it is repaired endogenizes the depreciation rate. The model can account for 7–9% of the variation in income between Ugandan regions. I simulate the effects of counterfactual development policies and discuss implications for the measurement of global capital stocks — low-income countries might have 15% less capital than conventionally measured.',
     tags:['Development','Capital','Uganda','Growth'], date:'Nov 2025'
   },
   {
     id:2, field:'Labor / Education', fieldTag:'labor',
-    title:'Common Applications and School Choice: Evidence from New York City Elite High Schools',
-    author:'Anne Carlstein', school:'MIT', year:'Ph.D. Candidate',
-    abstract:'School choice systems increasingly use common applications, where students can apply to multiple schools on a single form while schools make admission decisions independently. This paper studies the causal effects of attending highly sought-after public high schools in New York City under two admissions regimes: traditional screening based on test scores and grades, and a partial lottery introduced in 2021. While screened select schools boosted overall SAT scores by approximately 30 points under traditional admissions, they had no positive impact in the post-reform lottery era. Effects are heterogeneous: students who would not qualify under full screening saw positive impacts on SAT Math, while those who would have been admitted under screening saw negative impacts.',
-    tags:['Education','Market Design','NYC','School Choice'], date:'Oct 2025'
+    title:'Randomizing Elite School Admissions',
+    author:'Anne Carlstein', school:'MIT Economics', year:'Ph.D. Candidate',
+    authorUrl:'https://sites.google.com/view/anne-carlstein',
+    pdfUrl:'https://drive.google.com/file/d/1UxBfhyfvHBfQMAoODgEQjMDtnTuQeRKS/view',
+    abstract:'What happens if students are randomized to elite schools? This paper studies the causal effects of attending several highly sought-after public high schools in New York City (the "screened select") under two starkly different admissions regimes: a traditional screening process based on test scores and grades, and a partial lottery introduced in 2021. Leveraging this reform, I find that screened select schools boosted SAT scores by roughly 30 points under traditional admissions but had no positive impact in the lottery era. Effects are heterogeneous: students who would not have qualified under full screening saw gains in SAT Math, while those who would have been admitted saw no benefit, consistent with peer effects rather than school quality driving outcomes.',
+    tags:['Education','Market Design','NYC','School Choice','Lotteries'], date:'Oct 2025'
   },
   {
-    id:3, field:'Development / Labor', fieldTag:'dev',
-    title:'Familiar Strangers: Evidence from Referral-Based Hiring Experiments in India',
-    author:'Kartik Srivastava', school:'Harvard Kennedy School', year:'Ph.D. Candidate',
-    abstract:'In many developing country labor markets, jobs are filled overwhelmingly through employee referrals, which can entrench inequality by privileging well-connected workers. This paper studies a large Indian manufacturing firm where referral invitations were experimentally redirected to minority lower-caste incumbent workers. This shift raised lower-caste employment by 62%, reduced monthly turnover by 41%, and boosted team output by 5%, with no loss in cohesion. The findings show that referral networks can be redesigned to expand labor market access without sacrificing firm performance, offering new evidence on how social structure shapes labor market inequality.',
-    tags:['Referrals','India','Labor','Caste','RCT'], date:'Nov 2025'
+    id:3, field:'Labor / Public Economics', fieldTag:'labor',
+    title:'The Effect of the Supply of Physicians on Health in Underserved Areas',
+    author:'Victoria Angelova & Shreya Tandon', school:'Harvard University', year:'Ph.D. Candidates',
+    authorUrl:'https://sites.google.com/view/victoriaangelova',
+    pdfUrl:'https://www.dropbox.com/scl/fi/9qw67v5svirnbai7gqb8p/angelova_jmp.pdf?rlkey=hptpyysdnc7gq5mwt63ypwer2&st=4cqoc1fj&dl=0',
+    abstract:'Millions of Americans live in federally designated areas with an undersupply of primary care physicians. We estimate the causal effects of new physician arrivals on net physician supply, healthcare utilization, and health outcomes using quasi-random variation in the timing of physician placements through the National Health Service Corps program, linked to Medicare claims data. Physician arrivals increase overall primary care supply. Half of the healthcare provided by new entrants would have been satisfied by other doctors; the other half constitutes an increase in overall utilization. This additional utilization is concentrated in preventive care and elective procedures, and leads to significant reductions in emergency hospitalizations and mortality. Health improvements persist for at least four years and are particularly pronounced for beneficiaries with chronic conditions and those in more disadvantaged and rural locations.',
+    tags:['Healthcare','Physicians','Underserved Areas','Medicare'], date:'Oct 2025'
   },
   {
     id:4, field:'Political Economy', fieldTag:'public',
-    title:'Patronage Hierarchies and Tax Collection',
-    author:'Raúl Duarte', school:'Harvard Kennedy School', year:'Ph.D. Candidate',
-    abstract:"Why do bureaucracies underperform despite reform attempts? This paper studies Paraguay's customs using data on approximately 300,000 shipment inspections and develops a new measure that infers patronage hires from political appointment cycles. When both a frontline inspector and their port administrator are patronage hires, oversight breaks down: they detect less customs fraud, more often miss fraud later found by headquarter audits, and deviate more often from prescribed random inspector assignment. The results provide micro-level evidence on how political patronage hierarchies undermine state capacity and tax revenue, with implications for institutional reform.",
-    tags:['State Capacity','Taxation','Patronage','Paraguay'], date:'Oct 2025'
+    title:'The Business of the Culture War',
+    author:'Aakaash Rao', school:'Harvard University', year:'Ph.D. Candidate',
+    authorUrl:'https://aakaashrao.github.io/',
+    pdfUrl:'https://www.dropbox.com/scl/fi/27v4xxenpo8wotkw1238e/rao-jmp.pdf?rlkey=x8rg0slqo9mwfhdlbqgftaw4b&dl=0',
+    abstract:"We link the contemporary American 'culture war' to changes in media technologies in the 1980s and to the cable news networks that responded to the new incentives of the era. We show that cable news emphasizes culture-war issues much more, and economic issues much less, than older broadcast news. Using household-by-second smart TV data, we trace cable news' emphasis on cultural over economic issues to a distinctive business strategy: culture attracts viewers who would otherwise not watch news, while economics attracts viewers from competing outlets. The number mobilized by culture exceeds the number poached, so culture increases viewership. Our estimates suggest cable news can account for one-third of the time-series increase in cultural conflict since 2000.",
+    tags:['Media','Culture War','Political Economy','Cable News'], date:'Oct 2025'
   },
   {
-    id:5, field:'Environmental / Public', fieldTag:'public',
-    title:'WIMBY: Wind In My Back Yard',
-    author:'Jacob Ebersole', school:'Georgetown University', year:'Ph.D. Candidate',
-    abstract:'This paper studies the local economic and political effects of wind energy development. Using variation in wind turbine placement driven by wind resource suitability and federal policy, the analysis estimates the causal impact of turbine installation on local labor markets, property values, and political attitudes toward renewable energy. The findings speak to a central tension in the clean energy transition: the gap between aggregate benefits of decarbonization and concentrated local costs borne by affected communities, and whether place-based compensation policies can bridge this divide.',
-    tags:['Wind Energy','Environmental','Local Labor Markets','Clean Energy'], date:'Sep 2025'
+    id:5, field:'Industrial Organization / Environmental', fieldTag:'io',
+    title:'Environmental Regulation with Irreversible Investments: Evidence from High Plains Aquifer Depletion',
+    author:'Nathaniel Hickok & Aaron Berman', school:'MIT Economics', year:'Ph.D. Candidate',
+    authorUrl:'http://nathanielhickok.com',
+    pdfUrl:'https://drive.google.com/file/d/1WDWlvoO0MD5BnJk91eJp94LUQ0o-O9s4/view',
+    abstract:"Many of the world's major aquifers are being rapidly depleted from agricultural irrigation, generating dynamic common-pool externalities by raising future extraction costs. Entry restrictions are commonly used to limit depletion because well drilling is easily monitored, but they are second-best compared to Pigouvian taxes that directly target the intensive margin of water use. When policies cannot be tailored to heterogeneous users, however, the relative effectiveness of entry fees and water-use taxes becomes theoretically ambiguous, depending crucially on the correlation between water users' productivity and externalities. We develop a dynamic model of aquifer depletion and estimate it using novel administrative data on well drilling and water use for the High Plains Aquifer.",
+    tags:['Environmental','Water','Aquifer','Regulation','IO'], date:'Sep 2025'
   },
   {
-    id:6, field:'Macroeconomics', fieldTag:'macro',
-    title:'Equity in Transition: Aggregate and Heterogeneous Effects of Clean Energy Technology Subsidies',
-    author:'Yagmur Menzilcioglu', school:'Georgetown University', year:'Ph.D. Candidate',
-    abstract:'This paper examines how clean energy technology subsidies affect aggregate growth and the distribution of their benefits across households. Using a heterogeneous-agent framework with an energy sector, the model captures how capital costs, income, and energy expenditure shares differ across the wealth and income distribution. Calibrated to US data, the analysis finds that while subsidies for solar and EV adoption generate meaningful aggregate decarbonization, the gains are unequally distributed, with wealthier households capturing a disproportionate share of the subsidy benefit. Corrective redistribution mechanisms can improve both efficiency and equity outcomes.',
-    tags:['Clean Energy','Subsidies','Heterogeneous Agents','Macro'], date:'Oct 2025'
+    id:6, field:'Labor / Urban Economics', fieldTag:'labor',
+    title:'Equilibrium Effects of Neighborhood Schools',
+    author:'Raymond Han & Clemence Idoux', school:'MIT Economics', year:'Ph.D. Candidate',
+    authorUrl:'https://raymondwhan.github.io/',
+    pdfUrl:'https://raymondwhan.github.io/JMP_Han.pdf',
+    abstract:"Many public school districts allow families to enroll in schools outside their neighborhood. At the cost of higher transportation spending, choice programs aim to decouple educational opportunity from residential geography. This paper evaluates the impact of a return to neighborhood-based assignment resulting from Seattle's re-introduction of neighborhood schools in 2010. We quantify the aggregate and distributional consequences using an equilibrium model of joint residential and enrollment choices. We estimate that household relocation mitigates roughly half of the aggregate welfare loss that would occur if household locations were held fixed. Housing cost reductions for low-income renters fully offset welfare losses due to restricted choice.",
+    tags:['Urban','School Choice','Neighborhoods','Housing'], date:'Oct 2025'
+  },
+  {
+    id:7, field:'Economic History / Innovation', fieldTag:'labor',
+    title:'Factories of Ideas? Big Business and the Golden Age of American Innovation',
+    author:'Pier Paolo Creanza', school:'Princeton University', year:'Ph.D. Candidate',
+    authorUrl:'http://www.ppcreanza.com/',
+    pdfUrl:'https://pierpaolocreanza.github.io/website/creanza_jmp.pdf',
+    abstract:'This paper studies the relationship between big business and innovation during the Golden Age of American growth (1940–1970). Using newly digitized patent data matched to employer records, I document that large manufacturing firms accounted for a disproportionate share of foundational patents. I exploit the staggered rollout of antitrust enforcement actions to identify causal effects of market concentration on innovative activity. The findings suggest that the positive relationship between firm size and innovation was driven by complementarities between scale, internal R&D organization, and the ability to retain specialized inventors — mechanisms that have implications for contemporary debates about concentration and innovation.',
+    tags:['Economic History','Innovation','Big Business','Patents'], date:'Nov 2025'
+  },
+  {
+    id:8, field:'Macroeconomics', fieldTag:'macro',
+    title:'Curbing Tax Flight? Aggregate Effects of Taxing Entrepreneur Migration',
+    author:'Christine Blandhol', school:'Princeton University', year:'Ph.D. Candidate',
+    authorUrl:'http://www.christineblandhol.com/',
+    pdfUrl:null,
+    abstract:'This paper studies the aggregate effects of policies aimed at taxing the migration of high-income entrepreneurs. Using a general equilibrium model with heterogeneous agents and endogenous migration, I show that exit taxes on entrepreneurs generate a tradeoff: they raise revenue in the short run but reduce the equilibrium stock of entrepreneurs, depressing innovation and long-run growth. Calibrating the model to Scandinavian data, I find that the net fiscal effect depends critically on the elasticity of entrepreneurial migration, which I estimate using quasi-experimental variation in tax policy across Nordic countries.',
+    tags:['Taxation','Migration','Entrepreneurs','Macroeconomics'], date:'Oct 2025'
+  },
+  {
+    id:9, field:'Finance / International', fieldTag:'finance',
+    title:'The Original Sin Revisited: Investor Composition and Sovereign Risk',
+    author:'Sage Belz & Johannes Breckenfelder', school:'Harvard University', year:'Ph.D. Candidate',
+    authorUrl:'https://sage-belz.github.io/',
+    pdfUrl:null,
+    abstract:"The 'original sin' — the inability of emerging market governments to borrow in their own currency — has long been viewed as a fixed structural feature. This paper revisits this view by studying how the composition of the investor base shapes sovereign borrowing costs and currency risk. Using micro-data on sovereign bond holdings, we show that a shift toward domestic institutional investors substantially reduces currency mismatch and lowers spreads, particularly during periods of global financial stress. Our findings suggest original sin is more malleable than previously understood, with important implications for debt management policy.",
+    tags:['Sovereign Debt','Original Sin','International Finance','Currency'], date:'Sep 2025'
+  },
+  {
+    id:10, field:'Labor / Public Finance', fieldTag:'labor',
+    title:'Labor Supply Responses to a Very Large Income Shock: Evidence from Daughters of Brazilian Military Officers',
+    author:'Marcelo Barbosa Ferreira', school:'Princeton University', year:'Ph.D. Candidate',
+    authorUrl:'http://www.marcelof.com/',
+    pdfUrl:null,
+    abstract:'How do workers respond to large permanent income shocks? This paper studies the labor supply responses of adult daughters of Brazilian military officers following a large, plausibly exogenous pension reform that substantially changed household permanent income. Using administrative matched employer-employee data linked to military pension records, I find large labor supply reductions concentrated among married daughters in dual-earner households. The results are consistent with income effects dominating at high income levels and contribute to our understanding of intra-household labor supply coordination and the incidence of public pension policy.',
+    tags:['Labor Supply','Income Effects','Brazil','Pensions'], date:'Oct 2025'
+  },
+  {
+    id:11, field:'Urban / Trade / Transportation', fieldTag:'io',
+    title:'The Centralizing Effects of Tokyo\'s Train System',
+    author:'Mark Bamba', school:'Princeton University', year:'Ph.D. Candidate',
+    authorUrl:'http://www.markbamba.com',
+    pdfUrl:null,
+    abstract:"Tokyo's train network is among the world's densest, and its expansion over the 20th century shaped one of the most concentrated urban agglomerations in history. This paper studies the causal effect of rail network expansions on urban centralization, using a quantitative spatial equilibrium model that accounts for both commuting and goods transport. Exploiting historical variation in the timing and routing of new train lines, I find that rail access substantially increases population density and land prices near stations, with centralization effects operating through both the labor and housing markets.",
+    tags:['Urban','Transportation','Tokyo','Spatial Economics'], date:'Nov 2025'
+  },
+  {
+    id:12, field:'Finance / Macroeconomics', fieldTag:'finance',
+    title:'Firms\' Foreign Exchange Hedging',
+    author:'Nicolas Hommel', school:'Princeton University', year:'Ph.D. Candidate',
+    authorUrl:'http://www.nicolashommel.com/',
+    pdfUrl:'https://nicolashommel.github.io/files/jmp_hommel.pdf',
+    abstract:'This paper studies the determinants and macroeconomic implications of corporate foreign exchange hedging. Using granular derivatives data matched to firm balance sheets for a large sample of European multinationals, I document substantial heterogeneity in hedging behavior that is systematically related to firm size, export intensity, and financial constraints. I build a model of optimal hedging in which firms trade off the cost of financial distress against the cost of hedging contracts. The model implies that financial frictions lead to under-hedging in the aggregate, amplifying exchange rate shocks.',
+    tags:['FX Hedging','Corporate Finance','Multinationals','Exchange Rates'], date:'Oct 2025'
   },
 ];
 
 const candidates = [
-  { initials:'TG', name:'Tilman Graff', school:'Harvard University', field:'Development / Macro', fieldTag:'dev', status:'available', paperId:1, paperPreview:'Depreciation and Growth: Evidence from Machine Repair in Uganda. 2025 NEUDC Distinguished Paper Award.' },
-  { initials:'AC', name:'Anne Carlstein', school:'MIT Economics', field:'Labor / Education / Market Design', fieldTag:'labor', status:'available', paperId:2, paperPreview:'Common applications and school choice in NYC elite high schools.' },
-  { initials:'KS', name:'Kartik Srivastava', school:'Harvard Kennedy School', field:'Development / Labor', fieldTag:'dev', status:'available', paperId:3, paperPreview:'Referral-based hiring experiments and caste inequality in India.' },
-  { initials:'RD', name:'Raúl Duarte', school:'Harvard Kennedy School', field:'Political Economy', fieldTag:'public', status:'available', paperId:4, paperPreview:'Patronage hierarchies and tax collection in Paraguay.' },
-  { initials:'JE', name:'Jacob Ebersole', school:'Georgetown University', field:'Environmental / Public', fieldTag:'public', status:'available', paperId:5, paperPreview:'Local effects of wind turbine placement on labor markets and politics.' },
-  { initials:'YM', name:'Yagmur Menzilcioglu', school:'Georgetown University', field:'Macro / Environmental', fieldTag:'macro', status:'available', paperId:6, paperPreview:'Heterogeneous household effects of clean energy technology subsidies.' },
-  { initials:'VA', name:'Victoria Angelova', school:'Harvard University', field:'Labor / Public Economics', fieldTag:'labor', status:'available', paperId:null, paperPreview:'Supply of primary care physicians and health outcomes in underserved areas.' },
-  { initials:'RH', name:'Raymond Han', school:'MIT Economics', field:'Labor / Urban / Education', fieldTag:'labor', status:'available', paperId:null, paperPreview:'Equilibrium Effects of Neighborhood Schools.' },
-  { initials:'ST', name:'Shreya Tandon', school:'Harvard Kennedy School', field:'Development / Labor', fieldTag:'dev', status:'available', paperId:null, paperPreview:'Into the Unknown: Job Exploration Risk and Spousal Co-working in India.' },
-  { initials:'AN', name:'Aroon Narayanan', school:'MIT Economics', field:'IO / Theory / Development', fieldTag:'io', status:'available', paperId:null, paperPreview:'Industrial organization, organizational economics, and development.' },
-  { initials:'LP', name:'Lia Petrose', school:'MIT Economics', field:'IO / Urban / Trade', fieldTag:'io', status:'available', paperId:null, paperPreview:'Industrial organization, urban economics, and international trade.' },
-  { initials:'GG', name:'Gabrielle Grafton', school:'Brown University', field:'Labor / Economic History', fieldTag:'labor', status:'available', paperId:null, paperPreview:'The Great Migration and Those Left Behind.' },
+  // Harvard
+  { initials:'TG', name:'Tilman Graff', school:'Harvard University', field:'Development / Macro', fieldTag:'dev', status:'available', paperId:1,
+    website:'https://tilmangraff.github.io/', pdfUrl:'https://tilmangraff.github.io/uploads/papers/Graff_JMP.pdf',
+    paperTitle:'Depreciation and Growth: Evidence from Machine Repair in Uganda' },
+  { initials:'VA', name:'Victoria Angelova', school:'Harvard University', field:'Labor / Public Econ', fieldTag:'labor', status:'available', paperId:3,
+    website:'https://sites.google.com/view/victoriaangelova', pdfUrl:'https://www.dropbox.com/scl/fi/9qw67v5svirnbai7gqb8p/angelova_jmp.pdf?rlkey=hptpyysdnc7gq5mwt63ypwer2&st=4cqoc1fj&dl=0',
+    paperTitle:'The Effect of the Supply of Physicians on Health in Underserved Areas' },
+  { initials:'AR', name:'Aakaash Rao', school:'Harvard University', field:'Political / Behavioral Econ', fieldTag:'public', status:'available', paperId:4,
+    website:'https://aakaashrao.github.io/', pdfUrl:'https://www.dropbox.com/scl/fi/27v4xxenpo8wotkw1238e/rao-jmp.pdf?rlkey=x8rg0slqo9mwfhdlbqgftaw4b&dl=0',
+    paperTitle:'The Business of the Culture War' },
+  { initials:'SB', name:'Sage Belz', school:'Harvard University', field:'Finance / Intl Economics', fieldTag:'finance', status:'available', paperId:9,
+    website:'https://sage-belz.github.io/', pdfUrl:null,
+    paperTitle:'The Original Sin Revisited: Investor Composition and Sovereign Risk' },
+  // MIT
+  { initials:'AC', name:'Anne Carlstein', school:'MIT Economics', field:'Labor / Education / Market Design', fieldTag:'labor', status:'available', paperId:2,
+    website:'https://sites.google.com/view/anne-carlstein', pdfUrl:'https://drive.google.com/file/d/1UxBfhyfvHBfQMAoODgEQjMDtnTuQeRKS/view',
+    paperTitle:'Randomizing Elite School Admissions' },
+  { initials:'RH', name:'Raymond Han', school:'MIT Economics', field:'Labor / Urban / Education', fieldTag:'labor', status:'available', paperId:6,
+    website:'https://raymondwhan.github.io/', pdfUrl:'https://raymondwhan.github.io/JMP_Han.pdf',
+    paperTitle:'Equilibrium Effects of Neighborhood Schools' },
+  { initials:'NH', name:'Nathaniel Hickok', school:'MIT Economics', field:'IO / Environmental / Energy', fieldTag:'io', status:'available', paperId:5,
+    website:'http://nathanielhickok.com', pdfUrl:'https://drive.google.com/file/d/1WDWlvoO0MD5BnJk91eJp94LUQ0o-O9s4/view',
+    paperTitle:'Environmental Regulation with Irreversible Investments' },
+  { initials:'IT', name:'Ishaana Talesara', school:'MIT Economics', field:'Labor / Macro / Development', fieldTag:'labor', status:'available', paperId:null,
+    website:'https://economics.mit.edu/people/phd-students/ishaana-talesara', pdfUrl:null,
+    paperTitle:'Labor supply, macroeconomics, and development' },
+  { initials:'ID', name:'Isabel Di Tella', school:'MIT Economics', field:'Macroeconomics / Labor', fieldTag:'macro', status:'available', paperId:null,
+    website:'https://economics.mit.edu/people/phd-students/isabel-di-tella', pdfUrl:null,
+    paperTitle:'Macroeconomics and labor economics' },
+  { initials:'AW', name:'Arthur Wickard', school:'MIT Economics', field:'Macroeconomics / Labor', fieldTag:'macro', status:'available', paperId:null,
+    website:'https://economics.mit.edu/people/phd-students/arthur-wickard', pdfUrl:null,
+    paperTitle:'Macroeconomics and labor economics' },
+  // Princeton
+  { initials:'PC', name:'Pier Paolo Creanza', school:'Princeton University', field:'Econ History / Labor / Innovation', fieldTag:'labor', status:'available', paperId:7,
+    website:'http://www.ppcreanza.com/', pdfUrl:'https://pierpaolocreanza.github.io/website/creanza_jmp.pdf',
+    paperTitle:'Factories of Ideas? Big Business and the Golden Age of American Innovation' },
+  { initials:'CB', name:'Christine Blandhol', school:'Princeton University', field:'Macroeconomics', fieldTag:'macro', status:'available', paperId:8,
+    website:'http://www.christineblandhol.com/', pdfUrl:null,
+    paperTitle:'Curbing Tax Flight? Aggregate Effects of Taxing Entrepreneur Migration' },
+  { initials:'MF', name:'Marcelo Barbosa Ferreira', school:'Princeton University', field:'Public Finance / Labor', fieldTag:'labor', status:'available', paperId:10,
+    website:'http://www.marcelof.com/', pdfUrl:null,
+    paperTitle:'Labor Supply Responses to a Very Large Income Shock' },
+  { initials:'MB', name:'Mark Bamba', school:'Princeton University', field:'Urban / Trade / Transportation', fieldTag:'io', status:'available', paperId:11,
+    website:'http://www.markbamba.com', pdfUrl:null,
+    paperTitle:'The Centralizing Effects of Tokyo\'s Train System' },
+  { initials:'NH2', name:'Nicolas Hommel', school:'Princeton University', field:'Finance / Intl / Macro-Finance', fieldTag:'finance', status:'available', paperId:12,
+    website:'http://www.nicolashommel.com/', pdfUrl:'https://nicolashommel.github.io/files/jmp_hommel.pdf',
+    paperTitle:'Firms\' Foreign Exchange Hedging' },
+  { initials:'EA', name:'Elena Aguilar', school:'Princeton University', field:'Intl Trade / Macro / Spatial', fieldTag:'macro', status:'available', paperId:null,
+    website:'http://www.elena-aguilar.net/', pdfUrl:null,
+    paperTitle:'Credit Constraints, Learning, and Spatial Misallocation' },
+  { initials:'RD2', name:'Richard De Thorpe', school:'Princeton University', field:'Labor / Public Finance / Urban', fieldTag:'labor', status:'available', paperId:null,
+    website:'http://richarddethorpe.com', pdfUrl:null,
+    paperTitle:'The Impact of Remote Work on Residential Sorting' },
+  { initials:'SG', name:'Sebastian Guarda', school:'Princeton University', field:'Macroeconomics / Behavioral', fieldTag:'macro', status:'available', paperId:null,
+    website:'http://www.sebastianguarda.com', pdfUrl:null,
+    paperTitle:'Narrow and Short Beliefs in Macroeconomics with Heterogeneous Agents' },
 ];
 
 const placements = [
-  { name:'Thomas Bourany', school:'U. Chicago', field:'Macro / Environmental', placed:'Sciences Po Department of Economics', role:'Assistant Professor', type:'academia', season:'2024–25' },
+  { name:'Georgios Nikolakoudis', school:'Princeton', field:'Macro / Theory', placed:'U. Chicago BFI — Saieh Fellow', role:'Postdoctoral Fellow', type:'academia', season:'2024–25' },
+  { name:'Thomas Bourany', school:'U. Chicago', field:'Macro / Environmental', placed:'Sciences Po Paris', role:'Assistant Professor', type:'academia', season:'2024–25' },
   { name:'Alex Petrov', school:'U. Chicago', field:'Trade / Political Economy', placed:'University of British Columbia', role:'Assistant Professor', type:'academia', season:'2024–25' },
   { name:'Samuel Higbee', school:'U. Chicago', field:'Econometrics', placed:'University of Wisconsin–Madison', role:'Assistant Professor', type:'academia', season:'2024–25' },
-  { name:'Nikhil Vellodi', school:'Princeton / Paris', field:'Micro Theory / IO', placed:'UC San Diego', role:'Assistant Professor', type:'academia', season:'2024–25' },
-  { name:'Felipe Lobel', school:'NYU', field:'Macroeconomics', placed:'Federal Reserve Bank of New York', role:'Research Economist', type:'govt', season:'2024–25' },
-  { name:'Mahnum Shahzad', school:'Princeton', field:'Labor / Public', placed:'Princeton IRS — Postdoc', role:'Postdoctoral Fellow', type:'academia', season:'2024–25' },
-  { name:'Isaac Sorkin', school:'Stanford', field:'Macro / Labor', placed:'Stanford (tenured)', role:'Associate Professor', type:'academia', season:'2024–25' },
-  { name:'Pablo Fajgelbaum', school:'UCLA', field:'International Trade', placed:'Princeton University', role:'Professor', type:'academia', season:'2024–25' },
+  { name:'Raffaele Saggio', school:'UBC', field:'Labor / Econometrics', placed:'UC Berkeley', role:'Assistant Professor', type:'academia', season:'2024–25' },
   { name:'Linh To', school:'Boston University', field:'Labor / Education', placed:'University of Toronto', role:'Assistant Professor', type:'academia', season:'2024–25' },
   { name:'Ana Sofia Pessoa', school:'Nova SBE', field:'Labor / Trade', placed:'University of Zurich', role:'Assistant Professor', type:'academia', season:'2024–25' },
-  { name:'Raffaele Saggio', school:'UBC', field:'Labor / Econometrics', placed:'UC Berkeley', role:'Assistant Professor', type:'academia', season:'2024–25' },
-  { name:'Joao Granja', school:'Chicago Booth', field:'Finance / Banking', placed:'University of Chicago Booth', role:'Associate Professor', type:'academia', season:'2024–25' },
-  { name:'Julia Cagé', school:'Sciences Po', field:'Political Economy / Media', placed:'Princeton IAS', role:'Fellow', type:'academia', season:'2024–25' },
+  { name:'Felipe Lobel', school:'NYU', field:'Macroeconomics', placed:'Federal Reserve Bank of New York', role:'Research Economist', type:'govt', season:'2024–25' },
   { name:'Katherine Meckel', school:'UC San Diego', field:'Public / Health', placed:'Federal Reserve Bank of Dallas', role:'Research Economist', type:'govt', season:'2024–25' },
-  { name:'Oren Danieli', school:'TAU', field:'Labor / Macro', placed:'World Bank Research Group', role:'Economist', type:'intl', season:'2024–25' },
+  { name:'Oren Danieli', school:'Tel Aviv University', field:'Labor / Macro', placed:'World Bank Research Group', role:'Economist', type:'intl', season:'2024–25' },
+  { name:'Pablo Fajgelbaum', school:'UCLA', field:'International Trade', placed:'Princeton University', role:'Professor', type:'academia', season:'2023–24' },
+  { name:'Isaac Sorkin', school:'Stanford University', field:'Macro / Labor', placed:'Stanford University', role:'Associate Professor (tenured)', type:'academia', season:'2023–24' },
+  { name:'Joao Granja', school:'Chicago Booth', field:'Finance / Banking', placed:'University of Chicago Booth', role:'Associate Professor', type:'academia', season:'2023–24' },
 ];
 
 const sidebarAuthors = [
-  { initials:'TG', name:'Tilman Graff', school:'Harvard University', field:'Development / Macro' },
-  { initials:'AC', name:'Anne Carlstein', school:'MIT Economics', field:'Labor / Education' },
-  { initials:'KS', name:'Kartik Srivastava', school:'Harvard Kennedy', field:'Development / Labor' },
-  { initials:'VA', name:'Victoria Angelova', school:'Harvard University', field:'Labor / Public' },
+  { initials:'TG', name:'Tilman Graff', school:'Harvard University', field:'Development / Macro', website:'https://tilmangraff.github.io/' },
+  { initials:'AC', name:'Anne Carlstein', school:'MIT Economics', field:'Labor / Education', website:'https://sites.google.com/view/anne-carlstein' },
+  { initials:'VA', name:'Victoria Angelova', school:'Harvard University', field:'Labor / Public', website:'https://sites.google.com/view/victoriaangelova' },
+  { initials:'PC', name:'Pier Paolo Creanza', school:'Princeton University', field:'Econ History / Innovation', website:'http://www.ppcreanza.com/' },
 ];
 const fields = [
   { name:'Labor', count:58, pct:90 },
@@ -957,10 +1068,10 @@ function renderPapers() {
     const ms = !searchQuery || p.title.toLowerCase().includes(searchQuery) || p.author.toLowerCase().includes(searchQuery) || p.abstract.toLowerCase().includes(searchQuery);
     return mf && ms;
   });
-  document.getElementById('paperCount').textContent = `Showing ${filtered.length} of 247 papers`;
+  document.getElementById('paperCount').textContent = `Showing ${filtered.length} of ${papers.length} papers`;
   container.innerHTML = filtered.map((p, i) => `
     <div class="paper-card" onclick="openModal(${p.id})">
-      <div class="paper-num">0${i+1}</div>
+      <div class="paper-num">${String(i+1).padStart(2,'0')}</div>
       <div class="paper-body">
         <div class="paper-field">${p.field.toUpperCase()}</div>
         <div class="paper-title">${p.title}</div>
@@ -969,7 +1080,8 @@ function renderPapers() {
         <div class="paper-meta">
           ${p.tags.map(t=>`<span class="paper-tag">${t}</span>`).join('')}
           <span class="paper-tag" style="margin-left:auto;">${p.date}</span>
-          <a href="#" class="paper-link" onclick="event.stopPropagation()">PDF →</a>
+          ${p.pdfUrl ? `<a href="${p.pdfUrl}" target="_blank" class="paper-link" onclick="event.stopPropagation()">PDF →</a>` : ''}
+          ${p.authorUrl ? `<a href="${p.authorUrl}" target="_blank" class="paper-link" onclick="event.stopPropagation()" style="color:var(--muted)">Website →</a>` : ''}
         </div>
       </div>
     </div>
@@ -990,12 +1102,13 @@ function searchPapers(val) { searchQuery = val.toLowerCase(); renderPapers(); }
 ──────────────────────────── */
 function renderSidebar() {
   document.getElementById('authorsContainer').innerHTML = sidebarAuthors.map(a => `
-    <div class="author-card" onclick="navigate('candidates')">
+    <div class="author-card">
       <div class="author-avatar">${a.initials}</div>
       <div>
         <div class="author-name">${a.name}</div>
         <div class="author-school">${a.school}</div>
         <div class="author-field-tag">${a.field}</div>
+        ${a.website ? `<a href="${a.website}" target="_blank" style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-top:0.2rem;display:inline-block;">Website →</a>` : ''}
       </div>
     </div>
   `).join('');
@@ -1025,9 +1138,9 @@ function openModal(id) {
     <div class="modal-section-label">Keywords</div>
     <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.25rem;">${p.tags.map(t=>`<span class="paper-tag">${t}</span>`).join('')}</div>
     <div class="modal-footer">
-      <a href="#" class="modal-btn">Download PDF</a>
-      <a href="#" class="modal-btn outline">Author Profile</a>
-      <a href="#" class="modal-btn outline">Cite Paper</a>
+      ${p.pdfUrl ? `<a href="${p.pdfUrl}" target="_blank" class="modal-btn">Download PDF</a>` : '<span class="modal-btn" style="opacity:0.4;cursor:default;">PDF Coming Soon</span>'}
+      ${p.authorUrl ? `<a href="${p.authorUrl}" target="_blank" class="modal-btn outline">Author Website</a>` : ''}
+      <a href="#" class="modal-btn outline" onclick="event.preventDefault();navigator.clipboard&&navigator.clipboard.writeText('${p.author} (${p.year}). ${p.title}.')">Copy Citation</a>
     </div>
   `;
   document.getElementById('modalOverlay').classList.add('open');
@@ -1066,19 +1179,22 @@ function renderCandidates(f) {
     return c.fieldTag === f;
   });
   document.getElementById('candidatesGrid').innerHTML = filtered.map(c => `
-    <div class="candidate-card" onclick="${c.paperId ? 'openModal(' + c.paperId + ')' : 'void(0)'}">
+    <div class="candidate-card">
       <div class="cand-top">
-        <div class="cand-avatar">${c.initials}</div>
+        <div class="cand-avatar">${c.initials.substring(0,2)}</div>
         <div>
           <div class="cand-name">${c.name}</div>
           <div class="cand-school">${c.school}</div>
           <div class="cand-field">${c.field}</div>
         </div>
       </div>
-      <div class="cand-paper-title">${c.paperPreview ? 'JMP: ' + c.paperPreview.substring(0, 60) + (c.paperPreview.length > 60 ? '…' : '') : 'Paper coming soon'}</div>
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.5rem;">
+      <div class="cand-paper-title">${c.paperTitle ? 'JMP: ' + c.paperTitle : 'Paper title forthcoming'}</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.75rem;flex-wrap:wrap;gap:0.5rem;">
         <span class="cand-status ${c.status}">${c.status === 'placed' ? '✓ Placed — ' + (c.placement || '') : 'On the Market'}</span>
-        ${c.paperId ? '<span style="font-family:\'DM Mono\',monospace;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);">View Paper →</span>' : ''}
+        <div style="display:flex;gap:0.75rem;align-items:center;">
+          ${c.pdfUrl ? `<a href="${c.pdfUrl}" target="_blank" onclick="event.stopPropagation()" style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);text-decoration:none;">JMP PDF →</a>` : ''}
+          ${c.website ? `<a href="${c.website}" target="_blank" onclick="event.stopPropagation()" style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;">Website →</a>` : ''}
+        </div>
       </div>
     </div>
   `).join('');
@@ -1120,4 +1236,4 @@ function handleSubmit(e) {
 
 /* ────────────────────────────
    INIT
-───────────────────�
+───────────────────�
