@@ -14,12 +14,10 @@
     --gold: #b5872a;
     --muted: #7a7268;
     --rule: rgba(15,14,11,0.12);
+    --green: #2a7a4a;
   }
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { font-size: 16px; scroll-behavior: smooth; }
-
   body {
     background: var(--paper);
     color: var(--ink);
@@ -27,8 +25,6 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
-
-  /* NOISE TEXTURE OVERLAY */
   body::before {
     content: '';
     position: fixed;
@@ -39,717 +35,281 @@
     opacity: 0.4;
   }
 
-  /* MASTHEAD */
-  .masthead {
-    border-bottom: 3px double var(--ink);
-    padding: 0 3rem;
-    background: var(--paper);
-  }
-
+  /* ── MASTHEAD ── */
+  .masthead { border-bottom: 3px double var(--ink); padding: 0 3rem; background: var(--paper); position: sticky; top: 0; z-index: 200; }
   .masthead-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--rule);
-    font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.75rem 0; border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);
+    letter-spacing: 0.08em; text-transform: uppercase;
   }
-
-  .masthead-main {
-    text-align: center;
-    padding: 2.5rem 0 1.5rem;
-  }
-
+  .masthead-main { text-align: center; padding: 2rem 0 1.25rem; cursor: pointer; }
   .site-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(3.5rem, 8vw, 7rem);
-    font-weight: 900;
-    letter-spacing: -0.02em;
-    line-height: 0.9;
-    color: var(--ink);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 900; letter-spacing: -0.02em; line-height: 0.9; color: var(--ink);
   }
-
   .site-title .accent { color: var(--accent); }
-
   .site-tagline {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    color: var(--muted);
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    margin-top: 0.8rem;
+    font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted);
+    letter-spacing: 0.18em; text-transform: uppercase; margin-top: 0.7rem;
   }
-
   .masthead-nav {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    padding: 0.75rem 0;
-    border-top: 1px solid var(--rule);
-    margin-top: 1rem;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    display: flex; justify-content: center; gap: 0; padding: 0.75rem 0;
+    border-top: 1px solid var(--rule); margin-top: 1rem;
+    font-family: 'DM Mono', monospace; font-size: 0.72rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
   }
-
   .masthead-nav a {
-    color: var(--ink);
-    text-decoration: none;
-    padding: 0.25rem 1.5rem;
-    border-right: 1px solid var(--rule);
-    transition: color 0.15s;
+    color: var(--muted); text-decoration: none; padding: 0.3rem 1.4rem;
+    border-right: 1px solid var(--rule); transition: all 0.15s; cursor: pointer;
   }
   .masthead-nav a:first-child { border-left: 1px solid var(--rule); }
   .masthead-nav a:hover { color: var(--accent); }
+  .masthead-nav a.active { color: var(--ink); background: var(--cream); font-weight: 500; }
 
-  /* HERO SECTION */
-  .hero-bar {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 1rem 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-  }
+  /* ── PAGE VIEWS ── */
+  .page { display: none; animation: fadeIn 0.25s ease; }
+  .page.active { display: block; }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
 
-  .hero-bar-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--cream);
-  }
-
-  .hero-bar-stat {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(245,240,232,0.5);
-    white-space: nowrap;
-  }
-
-  .hero-bar-stat span {
-    color: var(--gold);
-    font-size: 1.4rem;
-    font-weight: 500;
-    display: block;
-    letter-spacing: -0.02em;
-  }
-
-  /* FILTERS */
-  .filters-bar {
-    padding: 1.5rem 3rem;
-    border-bottom: 1px solid var(--rule);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .filter-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--muted);
-    margin-right: 0.5rem;
-  }
-
-  .filter-btn {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border: 1px solid var(--ink);
-    background: transparent;
-    color: var(--ink);
-    padding: 0.35rem 0.9rem;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-
-  .filter-btn:hover, .filter-btn.active {
-    background: var(--ink);
-    color: var(--paper);
-  }
-
-  .filter-btn.active {
-    border-color: var(--ink);
-  }
-
-  .search-wrap {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    border-bottom: 1.5px solid var(--ink);
-    gap: 0.5rem;
-  }
-
-  .search-wrap input {
-    background: transparent;
-    border: none;
-    outline: none;
-    font-family: 'Libre Baskerville', serif;
-    font-size: 0.85rem;
-    color: var(--ink);
-    padding: 0.25rem 0;
-    width: 200px;
-  }
-
-  .search-wrap input::placeholder { color: var(--muted); font-style: italic; }
-
-  .search-icon {
-    width: 14px;
-    height: 14px;
-    color: var(--muted);
-    flex-shrink: 0;
-  }
-
-  /* MAIN LAYOUT */
-  .main-layout {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    min-height: calc(100vh - 300px);
-  }
-
-  .papers-col {
-    border-right: 1px solid var(--rule);
-    padding: 2.5rem 3rem;
-  }
-
-  .sidebar {
-    padding: 2.5rem 2rem;
-  }
-
-  /* PAPER CARDS */
-  .section-header {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid var(--ink);
-  }
-
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-  }
-
-  .section-count {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .paper-card {
-    border-bottom: 1px solid var(--rule);
-    padding: 2rem 0;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1.5rem;
-    animation: fadeUp 0.4s ease both;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-
-  .paper-card:hover { background: var(--cream); margin: 0 -1.5rem; padding-left: 1.5rem; padding-right: 1.5rem; }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .paper-card:nth-child(1) { animation-delay: 0.05s; }
-  .paper-card:nth-child(2) { animation-delay: 0.1s; }
-  .paper-card:nth-child(3) { animation-delay: 0.15s; }
-  .paper-card:nth-child(4) { animation-delay: 0.2s; }
-  .paper-card:nth-child(5) { animation-delay: 0.25s; }
-  .paper-card:nth-child(6) { animation-delay: 0.3s; }
-
-  .paper-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    color: var(--muted);
-    padding-top: 0.2rem;
-    letter-spacing: 0.05em;
-    min-width: 2rem;
-    text-align: right;
-  }
-
-  .paper-body {}
-
-  .paper-field {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-bottom: 0.4rem;
-  }
-
-  .paper-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    line-height: 1.35;
-    color: var(--ink);
-    margin-bottom: 0.5rem;
-  }
-
-  .paper-title:hover { text-decoration: underline; text-underline-offset: 3px; }
-
-  .paper-author {
-    font-size: 0.82rem;
-    color: var(--muted);
-    margin-bottom: 0.65rem;
-    font-style: italic;
-  }
-
-  .paper-author strong {
-    color: var(--ink);
-    font-style: normal;
-    font-weight: 700;
-  }
-
-  .paper-abstract {
-    font-size: 0.82rem;
-    line-height: 1.7;
-    color: #3a3830;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin-bottom: 0.85rem;
-  }
-
-  .paper-meta {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .paper-tag {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border: 1px solid var(--rule);
-    padding: 0.15rem 0.5rem;
-    color: var(--muted);
-  }
-
-  .paper-link {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent);
-    text-decoration: none;
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-  }
-
-  .paper-link:hover { text-decoration: underline; }
-
-  .featured-badge {
-    display: inline-block;
-    background: var(--ink);
-    color: var(--paper);
-    font-family: 'DM Mono', monospace;
-    font-size: 0.58rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0.15rem 0.5rem;
-    margin-bottom: 0.4rem;
-  }
-
-  /* FEATURED PAPER */
+  /* ── FEATURED PAPER ── */
   .featured-paper {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 2.5rem 3rem;
-    margin-bottom: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-    animation: fadeUp 0.5s ease 0.02s both;
+    background: var(--ink); color: var(--paper); padding: 2.5rem 3rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
   }
+  .paper-field-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+  .featured-title { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 700; line-height: 1.25; color: var(--paper); margin-bottom: 0.75rem; }
+  .featured-author { font-size: 0.88rem; color: rgba(245,240,232,0.65); margin-bottom: 1rem; font-style: italic; }
+  .featured-author strong { color: var(--paper); font-style: normal; }
+  .featured-abstract { font-size: 0.85rem; line-height: 1.75; color: rgba(245,240,232,0.8); display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden; }
+  .featured-cta { display:inline-flex;align-items:center;gap:0.5rem;border:1px solid var(--gold);color:var(--gold);font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.6rem 1.2rem;text-decoration:none;margin-top:1rem;transition:all 0.15s;cursor:pointer;background:none; }
+  .featured-cta:hover { background:var(--gold);color:var(--ink); }
+  .mini-chart { width:100%;height:130px;border-bottom:1px solid rgba(245,240,232,0.2);border-left:1px solid rgba(245,240,232,0.2); }
+  .mini-chart svg { width:100%;height:100%; }
+  .chart-caption { font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.4);text-align:center;margin-top:0.5rem; }
 
-  .featured-paper .paper-field { color: var(--gold); }
-  .featured-paper .paper-title {
-    font-size: 1.8rem;
-    color: var(--paper);
-    margin-bottom: 1rem;
+  /* ── TICKER ── */
+  .ticker-wrap { background:var(--ink);color:var(--paper);padding:0.6rem 3rem;overflow:hidden;display:flex;gap:0;border-top:1px solid rgba(245,240,232,0.08); }
+  .ticker-label { font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);padding-right:2rem;border-right:1px solid rgba(245,240,232,0.15);margin-right:2rem;white-space:nowrap;flex-shrink:0;display:flex;align-items:center; }
+  .ticker-track { overflow:hidden;flex:1; }
+  .ticker-inner { display:flex;gap:3rem;animation:ticker 30s linear infinite;white-space:nowrap; }
+  .ticker-item { font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.05em;color:rgba(245,240,232,0.7);flex-shrink:0; }
+  .ticker-item .name { color:var(--paper);font-weight:500; }
+  .ticker-item .arrow { color:var(--gold);margin:0 0.5rem; }
+  @keyframes ticker { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+  /* ── FILTERS BAR ── */
+  .filters-bar { padding:1.25rem 3rem;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap; }
+  .filter-label { font-family:'DM Mono',monospace;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--muted);margin-right:0.5rem; }
+  .filter-btn { font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(15,14,11,0.25);background:transparent;color:var(--muted);padding:0.3rem 0.85rem;cursor:pointer;transition:all 0.15s; }
+  .filter-btn:hover,.filter-btn.active { background:var(--ink);color:var(--paper);border-color:var(--ink); }
+  .search-wrap { margin-left:auto;display:flex;align-items:center;border-bottom:1.5px solid var(--ink);gap:0.5rem; }
+  .search-wrap input { background:transparent;border:none;outline:none;font-family:'Libre Baskerville',serif;font-size:0.85rem;color:var(--ink);padding:0.25rem 0;width:210px; }
+  .search-wrap input::placeholder { color:var(--muted);font-style:italic; }
+
+  /* ── MAIN LAYOUT ── */
+  .main-layout { display:grid;grid-template-columns:1fr 300px;min-height:60vh; }
+  .papers-col { border-right:1px solid var(--rule);padding:2.5rem 3rem; }
+  .sidebar { padding:2.5rem 2rem; }
+  .section-header { display:flex;align-items:baseline;gap:1rem;margin-bottom:2rem;padding-bottom:0.75rem;border-bottom:2px solid var(--ink); }
+  .section-title { font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700; }
+  .section-count { font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase; }
+
+  /* ── PAPER CARDS ── */
+  .paper-card { border-bottom:1px solid var(--rule);padding:1.75rem 0;display:grid;grid-template-columns:auto 1fr;gap:1.5rem;cursor:pointer;transition:background 0.15s; }
+  .paper-card:hover { background:var(--cream);margin:0 -1.5rem;padding-left:1.5rem;padding-right:1.5rem; }
+  .paper-num { font-family:'DM Mono',monospace;font-size:0.68rem;color:var(--muted);padding-top:0.2rem;letter-spacing:0.05em;min-width:2rem;text-align:right; }
+  .paper-field { font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.4rem; }
+  .paper-title { font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;line-height:1.35;color:var(--ink);margin-bottom:0.45rem; }
+  .paper-author { font-size:0.82rem;color:var(--muted);margin-bottom:0.6rem;font-style:italic; }
+  .paper-author strong { color:var(--ink);font-style:normal;font-weight:700; }
+  .paper-abstract { font-size:0.82rem;line-height:1.7;color:#3a3830;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:0.8rem; }
+  .paper-meta { display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap; }
+  .paper-tag { font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;border:1px solid var(--rule);padding:0.15rem 0.45rem;color:var(--muted); }
+  .paper-link { font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-left:auto;display:flex;align-items:center;gap:0.3rem; }
+  .paper-link:hover { text-decoration:underline; }
+
+  /* ── SIDEBAR ── */
+  .sidebar-section { margin-bottom:2.25rem;padding-bottom:2.25rem;border-bottom:1px solid var(--rule); }
+  .sidebar-section:last-child { border-bottom:none; }
+  .sidebar-title { font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--ink); }
+  .author-card { display:flex;gap:0.75rem;margin-bottom:1.25rem;align-items:flex-start;cursor:pointer; }
+  .author-avatar { width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;flex-shrink:0; }
+  .author-name { font-size:0.85rem;font-weight:700;margin-bottom:0.1rem; }
+  .author-school { font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);letter-spacing:0.04em; }
+  .author-field-tag { font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-top:0.15rem; }
+  .field-row { display:flex;align-items:center;gap:0.75rem;margin-bottom:0.85rem; }
+  .field-name { width:110px;font-size:0.78rem;flex-shrink:0; }
+  .field-bar-wrap { flex:1;height:4px;background:var(--rule);position:relative; }
+  .field-bar { height:100%;background:var(--ink);transition:width 1s ease; }
+  .field-count { font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--muted);width:24px;text-align:right;flex-shrink:0; }
+
+  /* ── MODAL ── */
+  .modal-overlay { position:fixed;inset:0;background:rgba(15,14,11,0.75);z-index:500;display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.2s; }
+  .modal-overlay.open { opacity:1;pointer-events:all; }
+  .modal { background:var(--paper);max-width:700px;width:100%;max-height:85vh;overflow-y:auto;padding:3rem;position:relative;transform:translateY(20px);transition:transform 0.2s; }
+  .modal-overlay.open .modal { transform:translateY(0); }
+  .modal-close { position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;cursor:pointer;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted); }
+  .modal-field { font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem; }
+  .modal-title { font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;line-height:1.25;margin-bottom:0.75rem; }
+  .modal-author { font-size:0.9rem;color:var(--muted);margin-bottom:1.5rem;font-style:italic; }
+  .modal-author strong { color:var(--ink);font-style:normal; }
+  .modal-section-label { font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem;margin-top:1.5rem; }
+  .modal-abstract { font-size:0.9rem;line-height:1.8; }
+  .modal-footer { margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--rule);display:flex;gap:1rem;flex-wrap:wrap; }
+  .modal-btn { font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.6rem 1.2rem;text-decoration:none;cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:var(--paper);transition:all 0.15s; }
+  .modal-btn.outline { background:transparent;color:var(--ink); }
+  .modal-btn:hover { opacity:0.8; }
+
+  /* ── BY FIELD PAGE ── */
+  .fields-page { padding: 3rem; }
+  .fields-page-header { margin-bottom: 2.5rem; border-bottom: 2px solid var(--ink); padding-bottom: 1rem; }
+  .fields-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+  .field-card {
+    border: 1px solid var(--rule); padding: 1.75rem; cursor: pointer;
+    transition: all 0.2s; background: var(--paper);
   }
-  .featured-paper .paper-author { color: rgba(245,240,232,0.65); }
-  .featured-paper .paper-abstract {
-    color: rgba(245,240,232,0.8);
-    -webkit-line-clamp: 5;
-    font-size: 0.88rem;
+  .field-card:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); box-shadow: 4px 4px 0 var(--ink); }
+  .field-card:hover .field-card-count { color: var(--gold); }
+  .field-card:hover .field-card-desc { color: rgba(245,240,232,0.7); }
+  .field-card:hover .field-card-tag { border-color: rgba(245,240,232,0.2); color: rgba(245,240,232,0.6); }
+  .field-card-name { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; }
+  .field-card-count { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+  .field-card-desc { font-size: 0.82rem; line-height: 1.7; color: var(--muted); margin-bottom: 1rem; }
+  .field-card-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .field-card-tag { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid var(--rule); padding: 0.15rem 0.45rem; color: var(--muted); }
+  .field-stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 2.5rem; }
+  .field-stat-box { background: var(--cream); padding: 1.5rem; text-align: center; border: 1px solid var(--rule); }
+  .field-stat-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; line-height: 1; }
+  .field-stat-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 0.4rem; }
+
+  /* ── CANDIDATES PAGE ── */
+  .candidates-page { padding: 3rem; }
+  .candidates-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+  .candidate-card {
+    border: 1px solid var(--rule); padding: 1.75rem; cursor: pointer;
+    transition: all 0.2s; background: var(--paper);
   }
+  .candidate-card:hover { box-shadow: 4px 4px 0 var(--ink); transform: translate(-2px,-2px); }
+  .cand-top { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+  .cand-avatar { width: 52px; height: 52px; border-radius: 50%; background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; flex-shrink: 0; }
+  .cand-name { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.15rem; }
+  .cand-school { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.04em; }
+  .cand-field { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-top: 0.15rem; }
+  .cand-paper-title { font-size: 0.82rem; line-height: 1.5; font-weight: 700; margin-bottom: 0.5rem; }
+  .cand-paper-preview { font-size: 0.78rem; color: var(--muted); line-height: 1.6; display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden; margin-bottom: 0.85rem; }
+  .cand-status { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.2rem 0.5rem; }
+  .cand-status.available { background: #eaf5ef; color: var(--green); border: 1px solid #b8dfc8; }
+  .cand-status.placed { background: #f5eaea; color: var(--accent); border: 1px solid #dfc0b8; }
+  .candidates-filters { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem; align-items: center; }
 
-  .featured-visual {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+  /* ── PLACEMENTS PAGE ── */
+  .placements-page { padding: 3rem; }
+  .placements-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-bottom: 3rem; }
+  .placement-stat { text-align: center; padding: 1.5rem; border: 1px solid var(--rule); }
+  .placement-stat-num { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; line-height: 1; }
+  .placement-stat-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 0.4rem; }
+  .placements-table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  thead tr { border-bottom: 2px solid var(--ink); }
+  th { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding: 0.75rem 1rem; text-align: left; white-space: nowrap; }
+  td { padding: 1rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  tr:hover td { background: var(--cream); }
+  .placement-name { font-weight: 700; margin-bottom: 0.1rem; }
+  .placement-paper { font-size: 0.78rem; color: var(--muted); font-style: italic; }
+  .placement-dest { font-weight: 700; }
+  .placement-role { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.04em; margin-top: 0.15rem; }
+  .badge { display:inline-block; font-family:'DM Mono',monospace; font-size:0.58rem; letter-spacing:0.08em; text-transform:uppercase; padding:0.18rem 0.5rem; border-radius:0; }
+  .badge-academia { background:#eaf0f8; color:#2a4a7a; border:1px solid #b8c8e0; }
+  .badge-govt { background:#f0f5ea; color:#2a4a2a; border:1px solid #b8d0b8; }
+  .badge-private { background:#f8f0ea; color:#7a4a2a; border:1px solid #e0ccb8; }
+  .badge-intl { background:#f5eaf8; color:#5a2a7a; border:1px solid #d0b8e0; }
+  .chart-section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+  .bar-chart { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem; }
+  .bar-row { display: flex; align-items: center; gap: 1rem; }
+  .bar-label { width: 140px; font-size: 0.82rem; flex-shrink: 0; text-align: right; }
+  .bar-outer { flex: 1; height: 22px; background: var(--cream); position: relative; }
+  .bar-fill { height: 100%; background: var(--ink); transition: width 1s ease; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; }
+  .bar-val { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--paper); letter-spacing: 0.06em; }
+
+  /* ── SUBMIT PAGE ── */
+  .submit-page { padding: 3rem; max-width: 860px; }
+  .submit-intro { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule); }
+  .submit-intro p { font-size: 0.92rem; line-height: 1.8; color: var(--muted); margin-top: 0.75rem; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  input, select, textarea {
+    background: var(--cream); border: 1px solid rgba(15,14,11,0.2); outline: none;
+    font-family: 'Libre Baskerville', serif; font-size: 0.88rem; color: var(--ink);
+    padding: 0.65rem 0.85rem; width: 100%; transition: border-color 0.15s;
   }
-
-  .mini-chart {
-    width: 100%;
-    height: 140px;
-    border-bottom: 1px solid rgba(245,240,232,0.2);
-    border-left: 1px solid rgba(245,240,232,0.2);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .mini-chart svg { width: 100%; height: 100%; }
-
-  .chart-caption {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(245,240,232,0.4);
-    text-align: center;
-  }
-
-  .featured-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0.6rem 1.2rem;
-    text-decoration: none;
-    margin-top: 1rem;
+  input:focus, select:focus, textarea:focus { border-color: var(--ink); }
+  textarea { resize: vertical; min-height: 140px; }
+  select { appearance: none; cursor: pointer; }
+  .form-section-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-bottom: 0.75rem; border-bottom: 1px solid var(--rule); margin: 2rem 0 1.25rem; grid-column: 1/-1; }
+  .form-hint { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.04em; }
+  .submit-btn {
+    margin-top: 2rem; display: inline-block; background: var(--ink); color: var(--paper);
+    font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.14em;
+    text-transform: uppercase; padding: 0.9rem 2.5rem; border: none; cursor: pointer;
     transition: all 0.15s;
   }
+  .submit-btn:hover { background: var(--accent); }
+  .submit-success { display: none; background: #eaf5ef; border: 1px solid #b8dfc8; padding: 2rem; margin-top: 2rem; }
+  .submit-success.show { display: block; }
+  .submit-success h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--green); margin-bottom: 0.5rem; }
+  .submit-success p { font-size: 0.88rem; color: #2a5a3a; line-height: 1.7; }
+  .required-note { font-family:'DM Mono',monospace;font-size:0.62rem;color:var(--muted);margin-top:1.5rem;grid-column:1/-1; }
+  .req { color: var(--accent); }
 
-  .featured-cta:hover {
-    background: var(--gold);
-    color: var(--ink);
-  }
+  /* ── ABOUT PAGE ── */
+  .about-page { display: grid; grid-template-columns: 1fr 380px; gap: 0; }
+  .about-main { padding: 3rem; border-right: 1px solid var(--rule); }
+  .about-sidebar { padding: 3rem 2.5rem; }
+  .about-main h2 { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; margin-bottom: 1.25rem; }
+  .about-main p { font-size: 0.9rem; line-height: 1.85; margin-bottom: 1.25rem; color: #2a2820; }
+  .about-main h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; margin: 2rem 0 0.75rem; }
+  .faq-item { margin-bottom: 1.75rem; padding-bottom: 1.75rem; border-bottom: 1px solid var(--rule); }
+  .faq-q { font-weight: 700; font-size: 0.92rem; margin-bottom: 0.5rem; }
+  .faq-a { font-size: 0.88rem; line-height: 1.75; color: var(--muted); }
+  .about-team { margin-top: 0; }
+  .team-member { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+  .team-member:last-child { border-bottom: none; }
+  .team-avatar { width: 48px; height: 48px; background: var(--ink); color: var(--paper); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; flex-shrink: 0; }
+  .team-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.1rem; }
+  .team-role { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--muted); letter-spacing: 0.06em; }
+  .team-bio { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-top: 0.35rem; }
+  .about-contact { background: var(--ink); color: var(--paper); padding: 2rem; margin-top: 2rem; }
+  .about-contact h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold); margin-bottom: 0.75rem; }
+  .about-contact p { font-size: 0.85rem; line-height: 1.7; color: rgba(245,240,232,0.75); }
+  .about-contact a { color: var(--gold); }
 
-  /* SIDEBAR */
-  .sidebar-section {
-    margin-bottom: 2.5rem;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid var(--rule);
-  }
+  /* ── FOOTER ── */
+  footer { background:var(--ink);color:var(--paper);padding:3rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:3rem;border-top:3px double rgba(245,240,232,0.2); }
+  .footer-brand { font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;line-height:1;margin-bottom:0.75rem; }
+  .footer-brand .accent { color:var(--gold); }
+  .footer-desc { font-size:0.8rem;color:rgba(245,240,232,0.55);line-height:1.7; }
+  .footer-col-title { font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem; }
+  .footer-links { list-style:none; }
+  .footer-links li { margin-bottom:0.5rem; }
+  .footer-links a { color:rgba(245,240,232,0.6);text-decoration:none;font-size:0.85rem;transition:color 0.15s;cursor:pointer; }
+  .footer-links a:hover { color:var(--paper); }
+  .footer-bottom { background:var(--ink);border-top:1px solid rgba(245,240,232,0.1);padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center; }
+  .footer-bottom span { font-family:'DM Mono',monospace;font-size:0.62rem;color:rgba(245,240,232,0.35);letter-spacing:0.08em;text-transform:uppercase; }
 
-  .sidebar-section:last-child { border-bottom: none; }
-
-  .sidebar-title {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1.25rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--ink);
-  }
-
-  .author-card {
-    display: flex;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
-    align-items: flex-start;
-    cursor: pointer;
-  }
-
-  .author-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--ink);
-    color: var(--paper);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-
-  .author-info {}
-
-  .author-name {
-    font-size: 0.85rem;
-    font-weight: 700;
-    margin-bottom: 0.1rem;
-  }
-
-  .author-school {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    color: var(--muted);
-    letter-spacing: 0.04em;
-  }
-
-  .author-field {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-top: 0.15rem;
-  }
-
-  /* Field stats */
-  .field-row {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.85rem;
-    font-size: 0.82rem;
-  }
-
-  .field-name {
-    width: 110px;
-    font-size: 0.78rem;
-    flex-shrink: 0;
-  }
-
-  .field-bar-wrap {
-    flex: 1;
-    height: 4px;
-    background: var(--rule);
-    position: relative;
-  }
-
-  .field-bar {
-    height: 100%;
-    background: var(--ink);
-    transition: width 1s ease;
-  }
-
-  .field-count {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--muted);
-    width: 24px;
-    text-align: right;
-    flex-shrink: 0;
-  }
-
-  /* PLACEMENT TICKER */
-  .ticker-wrap {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 0.6rem 3rem;
-    overflow: hidden;
-    display: flex;
-    gap: 0;
-    border-top: 1px solid var(--rule);
-  }
-
-  .ticker-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    padding-right: 2rem;
-    border-right: 1px solid rgba(245,240,232,0.15);
-    margin-right: 2rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-  }
-
-  .ticker-track {
-    overflow: hidden;
-    flex: 1;
-  }
-
-  .ticker-inner {
-    display: flex;
-    gap: 3rem;
-    animation: ticker 30s linear infinite;
-    white-space: nowrap;
-  }
-
-  .ticker-item {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.05em;
-    color: rgba(245,240,232,0.7);
-    flex-shrink: 0;
-  }
-
-  .ticker-item .name { color: var(--paper); font-weight: 500; }
-  .ticker-item .arrow { color: var(--gold); margin: 0 0.5rem; }
-
-  @keyframes ticker {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
-
-  /* FOOTER */
-  footer {
-    background: var(--ink);
-    color: var(--paper);
-    padding: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-    border-top: 3px double rgba(245,240,232,0.2);
-  }
-
-  .footer-brand {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: 1;
-    margin-bottom: 0.75rem;
-  }
-
-  .footer-brand .accent { color: var(--gold); }
-
-  .footer-desc {
-    font-size: 0.8rem;
-    color: rgba(245,240,232,0.55);
-    line-height: 1.7;
-  }
-
-  .footer-col-title {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 1rem;
-  }
-
-  .footer-links { list-style: none; }
-  .footer-links li { margin-bottom: 0.5rem; }
-  .footer-links a {
-    color: rgba(245,240,232,0.6);
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: color 0.15s;
-  }
-  .footer-links a:hover { color: var(--paper); }
-
-  .footer-bottom {
-    background: var(--ink);
-    border-top: 1px solid rgba(245,240,232,0.1);
-    padding: 1rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-bottom span {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.62rem;
-    color: rgba(245,240,232,0.35);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  /* MODAL */
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(15,14,11,0.75);
-    z-index: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s;
-  }
-
-  .modal-overlay.open {
-    opacity: 1;
-    pointer-events: all;
-  }
-
-  .modal {
-    background: var(--paper);
-    max-width: 700px;
-    width: 100%;
-    max-height: 85vh;
-    overflow-y: auto;
-    padding: 3rem;
-    position: relative;
-    transform: translateY(20px);
-    transition: transform 0.2s;
-  }
-
-  .modal-overlay.open .modal { transform: translateY(0); }
-
-  .modal-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .modal-field { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
-  .modal-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.75rem; }
-  .modal-author { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem; font-style: italic; }
-  .modal-author strong { color: var(--ink); font-style: normal; }
-  .modal-section-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; margin-top: 1.5rem; }
-  .modal-abstract { font-size: 0.9rem; line-height: 1.8; }
-  .modal-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); display: flex; gap: 1rem; flex-wrap: wrap; }
-  .modal-btn {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.6rem 1.2rem;
-    text-decoration: none;
-    cursor: pointer;
-    border: 1px solid var(--ink);
-    background: var(--ink);
-    color: var(--paper);
-    transition: all 0.15s;
-  }
-  .modal-btn.outline { background: transparent; color: var(--ink); }
-  .modal-btn:hover { opacity: 0.8; }
-
+  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    .main-layout { grid-template-columns: 1fr; }
-    .sidebar { border-top: 1px solid var(--rule); }
-    .featured-paper { grid-template-columns: 1fr; }
-    .featured-visual { display: none; }
-    footer { grid-template-columns: 1fr; }
-    .masthead, .filters-bar, .papers-col, .sidebar, footer, .hero-bar, .ticker-wrap, .footer-bottom { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .main-layout, .about-page { grid-template-columns:1fr; }
+    .featured-paper { grid-template-columns:1fr; }
+    .featured-visual { display:none; }
+    footer { grid-template-columns:1fr; }
+    .masthead,.filters-bar,.papers-col,.sidebar,footer,.ticker-wrap,.footer-bottom,.fields-page,.candidates-page,.placements-page,.submit-page,.about-main,.about-sidebar { padding-left:1.5rem;padding-right:1.5rem; }
+    .form-grid { grid-template-columns:1fr; }
+    .placements-stats { grid-template-columns:1fr 1fr; }
+    .field-stats-row { grid-template-columns:1fr 1fr; }
   }
 </style>
 </head>
@@ -759,154 +319,478 @@
 <header class="masthead">
   <div class="masthead-top">
     <span>Vol. III, No. 1 — Job Market Season 2025–26</span>
-    <span id="datestamp">Loading date…</span>
+    <span id="datestamp"></span>
     <span>Economics · Finance · Public Policy</span>
   </div>
-  <div class="masthead-main">
+  <div class="masthead-main" onclick="navigate('browse')">
     <div class="site-title">Econ<span class="accent">Market</span></div>
     <div class="site-tagline">The Definitive Index of Economics Job Market Papers</div>
   </div>
   <nav class="masthead-nav">
-    <a href="#">Browse All</a>
-    <a href="#">By Field</a>
-    <a href="#">Candidates</a>
-    <a href="#">Placements</a>
-    <a href="#">Submit Paper</a>
-    <a href="#">About</a>
+    <a onclick="navigate('browse')" id="nav-browse" class="active">Browse All</a>
+    <a onclick="navigate('fields')" id="nav-fields">By Field</a>
+    <a onclick="navigate('candidates')" id="nav-candidates">Candidates</a>
+    <a onclick="navigate('placements')" id="nav-placements">Placements</a>
+    <a onclick="navigate('submit')" id="nav-submit">Submit Paper</a>
+    <a onclick="navigate('about')" id="nav-about">About</a>
   </nav>
 </header>
 
-<!-- FEATURED PAPER -->
-<section class="featured-paper">
-  <div>
-    <div class="paper-field">⭑ Editor's Pick — Labor Economics</div>
-    <div class="paper-title">"Monopsony Power and Wage Determination in Local Labor Markets: Evidence from Matched Employer-Employee Data"</div>
-    <div class="paper-author"><strong>Clara Voss</strong> — Ph.D. Candidate, MIT Economics</div>
-    <div class="paper-abstract">
-      This paper identifies the causal effect of employer market power on wages using novel matched employer-employee data from German administrative records spanning 1995–2022. Exploiting plant closures as exogenous shocks to local labor supply, I estimate that a one standard-deviation increase in the Herfindahl-Hirschman Index reduces wages by 7.3 percent, with effects concentrated among non-college workers and manufacturing sectors.
-    </div>
-    <a href="#" class="featured-cta">Read Full Paper →</a>
-  </div>
-  <div class="featured-visual">
-    <div class="mini-chart">
-      <svg viewBox="0 0 280 130" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#b5872a" stop-opacity="0.4"/>
-            <stop offset="100%" stop-color="#b5872a" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <!-- Grid lines -->
-        <line x1="0" y1="32" x2="280" y2="32" stroke="rgba(245,240,232,0.1)" stroke-width="0.5"/>
-        <line x1="0" y1="65" x2="280" y2="65" stroke="rgba(245,240,232,0.1)" stroke-width="0.5"/>
-        <line x1="0" y1="97" x2="280" y2="97" stroke="rgba(245,240,232,0.1)" stroke-width="0.5"/>
-        <!-- Area fill -->
-        <path d="M0,110 C20,105 35,90 55,88 C75,86 90,95 110,80 C130,65 145,55 165,45 C185,35 200,50 220,38 C240,26 260,20 280,15 L280,130 L0,130 Z" fill="url(#chartGrad)"/>
-        <!-- Line -->
-        <path d="M0,110 C20,105 35,90 55,88 C75,86 90,95 110,80 C130,65 145,55 165,45 C185,35 200,50 220,38 C240,26 260,20 280,15" fill="none" stroke="#b5872a" stroke-width="2"/>
-        <!-- Dots -->
-        <circle cx="55" cy="88" r="3" fill="#b5872a"/>
-        <circle cx="110" cy="80" r="3" fill="#b5872a"/>
-        <circle cx="165" cy="45" r="3" fill="#b5872a"/>
-        <circle cx="220" cy="38" r="3" fill="#b5872a"/>
-        <circle cx="280" cy="15" r="3" fill="#b5872a"/>
-      </svg>
-    </div>
-    <div class="chart-caption">Wage Suppression Index vs. HHI Quintile, 1995–2022</div>
-  </div>
-</section>
+<!-- ══════════════════════════════════════ -->
+<!-- PAGE: BROWSE ALL                       -->
+<!-- ══════════════════════════════════════ -->
+<div id="page-browse" class="page active">
 
-<!-- TICKER -->
-<div class="ticker-wrap">
-  <div class="ticker-label">Recent Placements</div>
-  <div class="ticker-track">
-    <div class="ticker-inner" id="tickerInner">
-      <span class="ticker-item"><span class="name">J. Hoffman (Princeton)</span><span class="arrow">→</span>Chicago Booth, Asst. Prof.</span>
-      <span class="ticker-item"><span class="name">M. Reyes (Harvard)</span><span class="arrow">→</span>Stanford GSB, Asst. Prof.</span>
-      <span class="ticker-item"><span class="name">D. Nakamura (MIT)</span><span class="arrow">→</span>Fed. Reserve Board</span>
-      <span class="ticker-item"><span class="name">S. Okonkwo (Yale)</span><span class="arrow">→</span>Columbia SIPA, Asst. Prof.</span>
-      <span class="ticker-item"><span class="name">A. Leclerc (Berkeley)</span><span class="arrow">→</span>London School of Economics</span>
-      <span class="ticker-item"><span class="name">P. Ivanova (NYU Stern)</span><span class="arrow">→</span>World Bank Research</span>
-      <span class="ticker-item"><span class="name">T. Mukherjee (Columbia)</span><span class="arrow">→</span>Duke Fuqua, Asst. Prof.</span>
-      <span class="ticker-item"><span class="name">R. Aguilar (Chicago)</span><span class="arrow">→</span>IMF Research Dept.</span>
-      <!-- Duplicate for seamless loop -->
-      <span class="ticker-item"><span class="name">J. Hoffman (Princeton)</span><span class="arrow">→</span>Chicago Booth, Asst. Prof.</span>
-      <span class="ticker-item"><span class="name">M. Reyes (Harvard)</span><span class="arrow">→</span>Stanford GSB, Asst. Prof.</span>
-      <span class="ticker-item"><span class="name">D. Nakamura (MIT)</span><span class="arrow">→</span>Fed. Reserve Board</span>
-      <span class="ticker-item"><span class="name">S. Okonkwo (Yale)</span><span class="arrow">→</span>Columbia SIPA, Asst. Prof.</span>
-      <span class="ticker-item"><span class="name">A. Leclerc (Berkeley)</span><span class="arrow">→</span>London School of Economics</span>
-      <span class="ticker-item"><span class="name">P. Ivanova (NYU Stern)</span><span class="arrow">→</span>World Bank Research</span>
-      <span class="ticker-item"><span class="name">T. Mukherjee (Columbia)</span><span class="arrow">→</span>Duke Fuqua, Asst. Prof.</span>
-      <span class="ticker-item"><span class="name">R. Aguilar (Chicago)</span><span class="arrow">→</span>IMF Research Dept.</span>
+  <!-- Featured Paper -->
+  <section class="featured-paper">
+    <div>
+      <div class="paper-field-label">⭑ Editor's Pick — Development Economics · 2025 NEUDC Distinguished Paper Award</div>
+      <div class="featured-title">"Depreciation and Growth: Evidence from Machine Repair in Uganda"</div>
+      <div class="featured-author"><strong>Tilman Graff</strong> — Ph.D. Candidate, Harvard University (Advisors: Breza, Kreindler, Gabaix, Straub)</div>
+      <div class="featured-abstract">Capital depreciation restricts economic growth, yet little is known about whether it differs in developing countries and why. This paper studies the market for machine repair in Uganda using detailed field data and a spatial growth model with endogenous depreciation. Machinery upkeep costs are around twice as high as in the US, throttling investment — particularly for small and remote firms. A calibrated growth model accounts for 7–9% of income differences across Ugandan regions.</div>
+      <button class="featured-cta" onclick="openModal(1)">Read Full Paper →</button>
+    </div>
+    <div class="featured-visual">
+      <div class="mini-chart">
+        <svg viewBox="0 0 280 130" preserveAspectRatio="none">
+          <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b5872a" stop-opacity="0.4"/><stop offset="100%" stop-color="#b5872a" stop-opacity="0"/></linearGradient></defs>
+          <line x1="0" y1="32" x2="280" y2="32" stroke="rgba(245,240,232,0.1)" stroke-width="0.5"/>
+          <line x1="0" y1="65" x2="280" y2="65" stroke="rgba(245,240,232,0.1)" stroke-width="0.5"/>
+          <line x1="0" y1="97" x2="280" y2="97" stroke="rgba(245,240,232,0.1)" stroke-width="0.5"/>
+          <path d="M0,110 C20,105 35,90 55,88 C75,86 90,95 110,80 C130,65 145,55 165,45 C185,35 200,50 220,38 C240,26 260,20 280,15 L280,130 L0,130 Z" fill="url(#cg)"/>
+          <path d="M0,110 C20,105 35,90 55,88 C75,86 90,95 110,80 C130,65 145,55 165,45 C185,35 200,50 220,38 C240,26 260,20 280,15" fill="none" stroke="#b5872a" stroke-width="2"/>
+          <circle cx="55" cy="88" r="3" fill="#b5872a"/><circle cx="110" cy="80" r="3" fill="#b5872a"/>
+          <circle cx="165" cy="45" r="3" fill="#b5872a"/><circle cx="220" cy="38" r="3" fill="#b5872a"/>
+          <circle cx="280" cy="15" r="3" fill="#b5872a"/>
+        </svg>
+      </div>
+      <div class="chart-caption">Wage Suppression Index vs. HHI Quintile</div>
+    </div>
+  </section>
+
+  <!-- Ticker -->
+  <div class="ticker-wrap">
+    <div class="ticker-label">Recent Placements</div>
+    <div class="ticker-track">
+      <div class="ticker-inner">
+        <span class="ticker-item"><span class="name">Thomas Bourany (U. Chicago)</span><span class="arrow">→</span>Sciences Po, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Alex Petrov (U. Chicago)</span><span class="arrow">→</span>University of British Columbia, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Raffaele Saggio (UBC)</span><span class="arrow">→</span>UC Berkeley, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Ana Sofia Pessoa (Nova SBE)</span><span class="arrow">→</span>University of Zurich, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Linh To (Boston University)</span><span class="arrow">→</span>University of Toronto, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Felipe Lobel (NYU)</span><span class="arrow">→</span>Federal Reserve Bank of New York</span>
+        <span class="ticker-item"><span class="name">Oren Danieli (Tel Aviv)</span><span class="arrow">→</span>World Bank Research Group</span>
+        <span class="ticker-item"><span class="name">Samuel Higbee (U. Chicago)</span><span class="arrow">→</span>University of Wisconsin–Madison, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Thomas Bourany (U. Chicago)</span><span class="arrow">→</span>Sciences Po, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Alex Petrov (U. Chicago)</span><span class="arrow">→</span>University of British Columbia, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Raffaele Saggio (UBC)</span><span class="arrow">→</span>UC Berkeley, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Ana Sofia Pessoa (Nova SBE)</span><span class="arrow">→</span>University of Zurich, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Linh To (Boston University)</span><span class="arrow">→</span>University of Toronto, Asst. Prof.</span>
+        <span class="ticker-item"><span class="name">Felipe Lobel (NYU)</span><span class="arrow">→</span>Federal Reserve Bank of New York</span>
+        <span class="ticker-item"><span class="name">Oren Danieli (Tel Aviv)</span><span class="arrow">→</span>World Bank Research Group</span>
+        <span class="ticker-item"><span class="name">Samuel Higbee (U. Chicago)</span><span class="arrow">→</span>University of Wisconsin–Madison, Asst. Prof.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-bar">
+    <span class="filter-label">Field:</span>
+    <button class="filter-btn active" onclick="filterPapers('all',this)">All</button>
+    <button class="filter-btn" onclick="filterPapers('labor',this)">Labor</button>
+    <button class="filter-btn" onclick="filterPapers('macro',this)">Macro</button>
+    <button class="filter-btn" onclick="filterPapers('io',this)">I/O</button>
+    <button class="filter-btn" onclick="filterPapers('finance',this)">Finance</button>
+    <button class="filter-btn" onclick="filterPapers('public',this)">Public Econ</button>
+    <button class="filter-btn" onclick="filterPapers('dev',this)">Development</button>
+    <div class="search-wrap">
+      <svg style="width:14px;height:14px;color:var(--muted);flex-shrink:0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Search papers, authors…" id="searchInput" oninput="searchPapers(this.value)">
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-layout">
+    <main class="papers-col">
+      <div class="section-header">
+        <span class="section-title">Latest Papers</span>
+        <span class="section-count" id="paperCount">Showing 6 of 247 papers</span>
+      </div>
+      <div id="papersContainer"></div>
+    </main>
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Candidates to Watch</div>
+        <div id="authorsContainer"></div>
+        <button onclick="navigate('candidates')" style="width:100%;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.6rem;background:transparent;border:1px solid var(--ink);cursor:pointer;margin-top:0.5rem;">View All Candidates →</button>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Papers by Field</div>
+        <div id="fieldStats"></div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">This Season</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">247</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Papers Listed</div></div>
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">183</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Candidates</div></div>
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">94</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Placed So Far</div></div>
+          <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;line-height:1;">38</div><div style="font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);">Institutions</div></div>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Submit Your Paper</div>
+        <p style="font-size:0.82rem;line-height:1.7;margin-bottom:1rem;color:var(--muted);">Are you on the 2025–26 economics job market? List your paper for free.</p>
+        <button onclick="navigate('submit')" style="width:100%;font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.75rem;background:var(--ink);color:var(--paper);border:none;cursor:pointer;">Submit Paper →</button>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- PAGE: BY FIELD                         -->
+<!-- ══════════════════════════════════════ -->
+<div id="page-fields" class="page">
+  <div class="fields-page">
+    <div class="fields-page-header">
+      <div class="section-header" style="border:none;margin:0;padding:0;">
+        <span class="section-title">Browse by Field</span>
+        <span class="section-count">6 research areas · 247 papers</span>
+      </div>
+    </div>
+    <div class="field-stats-row">
+      <div class="field-stat-box"><div class="field-stat-num">247</div><div class="field-stat-label">Total Papers</div></div>
+      <div class="field-stat-box"><div class="field-stat-num">183</div><div class="field-stat-label">Candidates</div></div>
+      <div class="field-stat-box"><div class="field-stat-num">94</div><div class="field-stat-label">Placements</div></div>
+    </div>
+    <div class="fields-grid">
+      <div class="field-card" onclick="goToFieldFilter('labor')">
+        <div class="field-card-name">Labor Economics</div>
+        <div class="field-card-count">58 papers · 42 candidates</div>
+        <div class="field-card-desc">Wages, employment, human capital, labor market policy, monopsony, discrimination, and the economics of work and workers.</div>
+        <div class="field-card-tags"><span class="field-card-tag">Wages</span><span class="field-card-tag">Monopsony</span><span class="field-card-tag">Human Capital</span><span class="field-card-tag">Discrimination</span></div>
+      </div>
+      <div class="field-card" onclick="goToFieldFilter('macro')">
+        <div class="field-card-name">Macroeconomics</div>
+        <div class="field-card-count">47 papers · 35 candidates</div>
+        <div class="field-card-desc">Business cycles, monetary and fiscal policy, heterogeneous agents, international macro, and aggregate dynamics.</div>
+        <div class="field-card-tags"><span class="field-card-tag">HANK</span><span class="field-card-tag">Monetary Policy</span><span class="field-card-tag">Fiscal</span><span class="field-card-tag">Business Cycles</span></div>
+      </div>
+      <div class="field-card" onclick="goToFieldFilter('io')">
+        <div class="field-card-name">Industrial Organization</div>
+        <div class="field-card-count">41 papers · 30 candidates</div>
+        <div class="field-card-desc">Market structure, competition, platforms, antitrust, auctions, pricing, and the strategic behavior of firms.</div>
+        <div class="field-card-tags"><span class="field-card-tag">Platforms</span><span class="field-card-tag">Antitrust</span><span class="field-card-tag">Two-Sided Markets</span></div>
+      </div>
+      <div class="field-card" onclick="goToFieldFilter('finance')">
+        <div class="field-card-name">Finance</div>
+        <div class="field-card-count">38 papers · 28 candidates</div>
+        <div class="field-card-desc">Asset pricing, corporate finance, banking, household finance, climate risk, and financial intermediation.</div>
+        <div class="field-card-tags"><span class="field-card-tag">Asset Pricing</span><span class="field-card-tag">Climate Risk</span><span class="field-card-tag">Banking</span></div>
+      </div>
+      <div class="field-card" onclick="goToFieldFilter('public')">
+        <div class="field-card-name">Public Economics</div>
+        <div class="field-card-count">34 papers · 26 candidates</div>
+        <div class="field-card-desc">Taxation, public goods, social insurance, redistribution, political economy, and the role of government.</div>
+        <div class="field-card-tags"><span class="field-card-tag">Taxation</span><span class="field-card-tag">Social Insurance</span><span class="field-card-tag">Redistribution</span></div>
+      </div>
+      <div class="field-card" onclick="goToFieldFilter('dev')">
+        <div class="field-card-name">Development Economics</div>
+        <div class="field-card-count">29 papers · 22 candidates</div>
+        <div class="field-card-desc">Poverty, growth, field experiments, credit markets, agriculture, and the economics of developing countries.</div>
+        <div class="field-card-tags"><span class="field-card-tag">RCT</span><span class="field-card-tag">Poverty</span><span class="field-card-tag">Credit</span><span class="field-card-tag">Agriculture</span></div>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- FILTERS -->
-<div class="filters-bar">
-  <span class="filter-label">Field:</span>
-  <button class="filter-btn active" onclick="filterPapers('all', this)">All</button>
-  <button class="filter-btn" onclick="filterPapers('labor', this)">Labor</button>
-  <button class="filter-btn" onclick="filterPapers('macro', this)">Macro</button>
-  <button class="filter-btn" onclick="filterPapers('io', this)">I/O</button>
-  <button class="filter-btn" onclick="filterPapers('finance', this)">Finance</button>
-  <button class="filter-btn" onclick="filterPapers('public', this)">Public Econ</button>
-  <button class="filter-btn" onclick="filterPapers('dev', this)">Development</button>
-  <div class="search-wrap">
-    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-    <input type="text" placeholder="Search papers, authors…" id="searchInput" oninput="searchPapers(this.value)">
-  </div>
-</div>
-
-<!-- MAIN LAYOUT -->
-<div class="main-layout">
-  <main class="papers-col">
+<!-- ══════════════════════════════════════ -->
+<!-- PAGE: CANDIDATES                       -->
+<!-- ══════════════════════════════════════ -->
+<div id="page-candidates" class="page">
+  <div class="candidates-page">
     <div class="section-header">
-      <span class="section-title">Latest Papers</span>
-      <span class="section-count" id="paperCount">Showing 6 of 247 papers</span>
+      <span class="section-title">2025–26 Candidates</span>
+      <span class="section-count">183 registered · 94 placed</span>
     </div>
-    <div id="papersContainer"></div>
-  </main>
+    <div class="candidates-filters">
+      <span class="filter-label">Filter:</span>
+      <button class="filter-btn active" onclick="filterCandidates('all',this)">All</button>
+      <button class="filter-btn" onclick="filterCandidates('available',this)">Available</button>
+      <button class="filter-btn" onclick="filterCandidates('placed',this)">Placed</button>
+      <button class="filter-btn" onclick="filterCandidates('labor',this)">Labor</button>
+      <button class="filter-btn" onclick="filterCandidates('macro',this)">Macro</button>
+      <button class="filter-btn" onclick="filterCandidates('io',this)">I/O</button>
+      <button class="filter-btn" onclick="filterCandidates('finance',this)">Finance</button>
+      <button class="filter-btn" onclick="filterCandidates('dev',this)">Development</button>
+    </div>
+    <div class="candidates-grid" id="candidatesGrid"></div>
+  </div>
+</div>
 
-  <aside class="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Candidates to Watch</div>
-      <div id="authorsContainer"></div>
+<!-- ══════════════════════════════════════ -->
+<!-- PAGE: PLACEMENTS                       -->
+<!-- ══════════════════════════════════════ -->
+<div id="page-placements" class="page">
+  <div class="placements-page">
+    <div class="section-header">
+      <span class="section-title">Placement Tracker — Selected Recent Placements</span>
+      <span class="section-count">Data drawn from 2024–25 confirmed placements</span>
+    </div>
+    <div class="placements-stats">
+      <div class="placement-stat"><div class="placement-stat-num">94</div><div class="placement-stat-label">Total Placed</div></div>
+      <div class="placement-stat"><div class="placement-stat-num">61%</div><div class="placement-stat-label">Academia</div></div>
+      <div class="placement-stat"><div class="placement-stat-num">22%</div><div class="placement-stat-label">Govt / Central Bank</div></div>
+      <div class="placement-stat"><div class="placement-stat-num">17%</div><div class="placement-stat-label">Private Sector</div></div>
     </div>
 
-    <div class="sidebar-section">
-      <div class="sidebar-title">Papers by Field</div>
-      <div id="fieldStats"></div>
+    <div class="placements-table-wrap">
+      <table id="placementsTable">
+        <thead>
+          <tr>
+            <th>Candidate</th>
+            <th>Field</th>
+            <th>Placed At</th>
+            <th>Type</th>
+            <th>Season</th>
+          </tr>
+        </thead>
+        <tbody id="placementsBody"></tbody>
+      </table>
     </div>
 
-    <div class="sidebar-section">
-      <div class="sidebar-title">This Season</div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-        <div style="text-align:center;">
-          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:900; line-height:1;">247</div>
-          <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Papers Listed</div>
+    <div class="chart-section">
+      <div class="section-header" style="border-bottom:1px solid var(--rule);padding-bottom:0.75rem;">
+        <span class="section-title" style="font-size:1.1rem;">Placements by Institution Type</span>
+      </div>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label">Top-10 PhD Programs</div><div class="bar-outer"><div class="bar-fill" data-w="72%" style="width:0%"><span class="bar-val">27</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Other R1 Universities</div><div class="bar-outer"><div class="bar-fill" data-w="55%" style="width:0%"><span class="bar-val">21</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Liberal Arts Colleges</div><div class="bar-outer"><div class="bar-fill" data-w="18%" style="width:0%"><span class="bar-val">7</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Central Banks</div><div class="bar-outer"><div class="bar-fill" data-w="34%" style="width:0%"><span class="bar-val">13</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Intl. Organizations</div><div class="bar-outer"><div class="bar-fill" data-w="21%" style="width:0%"><span class="bar-val">8</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Private Sector</div><div class="bar-outer"><div class="bar-fill" data-w="24%" style="width:0%"><span class="bar-val">9</span></div></div></div>
+        <div class="bar-row"><div class="bar-label">Think Tanks / NGO</div><div class="bar-outer"><div class="bar-fill" data-w="24%" style="width:0%"><span class="bar-val">9</span></div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- PAGE: SUBMIT PAPER                     -->
+<!-- ══════════════════════════════════════ -->
+<div id="page-submit" class="page">
+  <div class="submit-page">
+    <div class="submit-intro">
+      <div class="section-header" style="border:none;margin:0;padding:0;">
+        <span class="section-title">Submit Your Job Market Paper</span>
+      </div>
+      <p>EconMarket is free for all PhD candidates currently on the economics job market. Your paper will be listed in our searchable database and shared with hiring committees at universities, central banks, and research institutions worldwide.</p>
+    </div>
+
+    <form id="submitForm" onsubmit="handleSubmit(event)">
+      <div class="form-grid">
+        <div class="form-section-label">— Personal Information</div>
+        <div class="form-group">
+          <label>First Name <span class="req">*</span></label>
+          <input type="text" placeholder="e.g. Clara" required>
         </div>
-        <div style="text-align:center;">
-          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:900; line-height:1;">183</div>
-          <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Candidates</div>
+        <div class="form-group">
+          <label>Last Name <span class="req">*</span></label>
+          <input type="text" placeholder="e.g. Voss" required>
         </div>
-        <div style="text-align:center;">
-          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:900; line-height:1;">94</div>
-          <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Placed So Far</div>
+        <div class="form-group">
+          <label>Email Address <span class="req">*</span></label>
+          <input type="email" placeholder="you@university.edu" required>
         </div>
-        <div style="text-align:center;">
-          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:900; line-height:1;">38</div>
-          <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Institutions</div>
+        <div class="form-group">
+          <label>Personal / Academic Website</label>
+          <input type="url" placeholder="https://…">
         </div>
+        <div class="form-group">
+          <label>PhD-Granting Institution <span class="req">*</span></label>
+          <input type="text" placeholder="e.g. MIT, Harvard, Chicago…" required>
+        </div>
+        <div class="form-group">
+          <label>Expected Graduation Year <span class="req">*</span></label>
+          <select required>
+            <option value="">Select…</option>
+            <option>2025</option><option>2026</option><option>2027</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Primary Advisor(s)</label>
+          <input type="text" placeholder="e.g. Prof. John Smith, Prof. Jane Doe">
+        </div>
+
+        <div class="form-section-label">— Job Market Paper</div>
+        <div class="form-group full">
+          <label>Paper Title <span class="req">*</span></label>
+          <input type="text" placeholder="Full title of your job market paper" required>
+        </div>
+        <div class="form-group">
+          <label>Primary Field <span class="req">*</span></label>
+          <select required>
+            <option value="">Select field…</option>
+            <option>Labor Economics</option>
+            <option>Macroeconomics</option>
+            <option>Industrial Organization</option>
+            <option>Finance</option>
+            <option>Public Economics</option>
+            <option>Development Economics</option>
+            <option>Econometrics</option>
+            <option>International Economics</option>
+            <option>Health Economics</option>
+            <option>Environmental Economics</option>
+            <option>Urban / Regional Economics</option>
+            <option>Behavioral Economics</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Secondary Field</label>
+          <select>
+            <option value="">Select field (optional)…</option>
+            <option>Labor Economics</option>
+            <option>Macroeconomics</option>
+            <option>Industrial Organization</option>
+            <option>Finance</option>
+            <option>Public Economics</option>
+            <option>Development Economics</option>
+            <option>Econometrics</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Abstract <span class="req">*</span></label>
+          <textarea placeholder="Paste your paper abstract here (max ~400 words)…" required></textarea>
+          <span class="form-hint">This will be shown on your public listing. Aim for a clear, informative abstract.</span>
+        </div>
+        <div class="form-group">
+          <label>Paper URL / SSRN Link <span class="req">*</span></label>
+          <input type="url" placeholder="https://…" required>
+        </div>
+        <div class="form-group">
+          <label>Keywords (comma-separated)</label>
+          <input type="text" placeholder="e.g. Wages, Monopsony, Germany">
+        </div>
+
+        <div class="form-section-label">— References & Status</div>
+        <div class="form-group full">
+          <label>Reference Letter Writers (names and institutions)</label>
+          <textarea placeholder="e.g. Prof. Daron Acemoglu (MIT), Prof. Esther Duflo (MIT)…" style="min-height:90px;"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Current Job Market Status</label>
+          <select>
+            <option>Actively Interviewing</option>
+            <option>Flyouts Received</option>
+            <option>Offer Received</option>
+            <option>Placed — Accepting</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Willing to Receive Emails from Hiring Committees?</label>
+          <select>
+            <option>Yes — list my email publicly</option>
+            <option>Yes — contact through EconMarket only</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div class="required-note"><span class="req">*</span> Required fields</div>
+      </div>
+      <button type="submit" class="submit-btn">Submit Paper for Review →</button>
+    </form>
+
+    <div class="submit-success" id="submitSuccess">
+      <h3>✓ Submission Received!</h3>
+      <p>Thank you for submitting your job market paper. Our team will review your submission within 2–3 business days. You'll receive a confirmation email shortly with your listing details and a link to edit your profile.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!-- PAGE: ABOUT                            -->
+<!-- ══════════════════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="about-page">
+    <div class="about-main">
+      <h2>About EconMarket</h2>
+      <p>EconMarket is an independent, free-to-use directory of economics job market papers. Our mission is to make the economics job market more transparent and accessible — for candidates, hiring committees, and the broader research community.</p>
+      <p>Each year we list job market papers from PhD candidates at universities worldwide, organized by field and searchable by keyword, author, and institution. Our placement tracker follows candidates through the market season, providing the field with data on outcomes across institution types and subfields. The 2025–26 season features candidates from MIT, Harvard, Chicago, Princeton, Georgetown, BU, Brown, and many more top programs.</p>
+      <p>EconMarket is not affiliated with the American Economic Association, NBER, or any university. Candidate data is sourced directly from departmental placement pages. If you are a candidate and wish to update your listing, please use the submission form.</p>
+
+      <h3>How It Works</h3>
+      <p>Candidates submit their paper directly through our submission form. Each submission is reviewed by an editor with expertise in the relevant field before being published. Listings include the full abstract, author contact information, field classification, and a link to the full paper. Candidates can update their listing at any time and mark themselves as placed once they accept an offer.</p>
+      <p>Hiring committees and researchers can browse freely, filter by field, and contact candidates directly. We do not charge any fee for either side of the market.</p>
+
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq-item">
+        <div class="faq-q">Who can submit a paper?</div>
+        <div class="faq-a">Any PhD student currently on the economics job market is welcome to submit. Papers are typically submitted in September–November of the job market year. We accept papers in all subfields of economics, finance, and quantitative social science.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does review take?</div>
+        <div class="faq-a">Most submissions are reviewed within 2–3 business days. During peak submission season (October–November) it may take up to one week. You'll receive an email notification when your listing goes live.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I update my listing after submitting?</div>
+        <div class="faq-a">Yes. You'll receive an edit link via email. You can update your abstract, paper URL, contact preferences, and placement status at any time throughout the season.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is placement data collected?</div>
+        <div class="faq-a">We ask candidates to self-report their placement outcome once they accept an offer. We also track publicly announced placements from department websites and X/Twitter. All placement data is verified before being added to the tracker.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is EconMarket free?</div>
+        <div class="faq-a">Yes, completely free for candidates and employers. EconMarket is supported by voluntary institutional sponsorships from economics departments who want to support a transparent job market.</div>
       </div>
     </div>
 
-    <div class="sidebar-section">
-      <div class="sidebar-title">Submit Your Paper</div>
-      <p style="font-size:0.82rem; line-height:1.7; margin-bottom:1rem; color:var(--muted);">Are you on the 2025–26 economics job market? List your paper for free.</p>
-      <button style="width:100%; font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.75rem; background:var(--ink); color:var(--paper); border:none; cursor:pointer;">Submit Paper →</button>
+    <div class="about-sidebar">
+      <div class="sidebar-title">The Team</div>
+      <div class="about-team">
+        <div class="team-member">
+          <div class="team-avatar">EL</div>
+          <div>
+            <div class="team-name">Elena Lund</div>
+            <div class="team-role">Founder & Editor-in-Chief</div>
+            <div class="team-bio">Ph.D. Economics, Princeton '22. Former Asst. Prof. at Stockholm University. Launched EconMarket after experiencing the opacity of the job market firsthand.</div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-avatar">JW</div>
+          <div>
+            <div class="team-name">James Wu</div>
+            <div class="team-role">Data & Placements Editor</div>
+            <div class="team-bio">Ph.D. Economics, Chicago '23. Manages the placement tracker and field data. Currently a postdoc at the Becker Friedman Institute.</div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-avatar">MO</div>
+          <div>
+            <div class="team-name">Miriam Osei</div>
+            <div class="team-role">Development & International Fields Editor</div>
+            <div class="team-bio">Ph.D. Candidate, LSE. Specializes in development and international economics. Oversees submissions in those subfields.</div>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="team-avatar">AS</div>
+          <div>
+            <div class="team-name">Amir Sultani</div>
+            <div class="team-role">Finance & Macro Fields Editor</div>
+            <div class="team-bio">Ph.D. Economics, MIT '24. Now at the Federal Reserve Bank of New York. Reviews submissions in finance and macroeconomics.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-contact">
+        <h4>Get in Touch</h4>
+        <p>For questions about your submission, partnership inquiries, or press requests, email us at <a href="/cdn-cgi/l/email-protection#e58d8089898aa580868a8b8884978e8091cb8a9782"><span class="__cf_email__" data-cfemail="19717c757576597c7a767774786b727c6d37766b7e">[email&#160;protected]</span></a>.</p>
+        <p style="margin-top:0.75rem;">To report a data error or update a placement record, use the <a href="#" onclick="navigate('submit')">submission form</a> or email us directly.</p>
+      </div>
     </div>
-  </aside>
+  </div>
 </div>
 
 <!-- FOOTER -->
@@ -918,21 +802,21 @@
   <div>
     <div class="footer-col-title">Resources</div>
     <ul class="footer-links">
-      <li><a href="#">JMP Database</a></li>
-      <li><a href="#">Placement Tracker</a></li>
-      <li><a href="#">Interview Tips</a></li>
-      <li><a href="#">Reference Letters Guide</a></li>
-      <li><a href="#">ASSA Conference Schedule</a></li>
+      <li><a onclick="navigate('browse')">JMP Database</a></li>
+      <li><a onclick="navigate('placements')">Placement Tracker</a></li>
+      <li><a onclick="navigate('candidates')">Candidate Directory</a></li>
+      <li><a onclick="navigate('fields')">Browse by Field</a></li>
+      <li><a onclick="navigate('submit')">Submit a Paper</a></li>
     </ul>
   </div>
   <div>
-    <div class="footer-col-title">By Department</div>
+    <div class="footer-col-title">Information</div>
     <ul class="footer-links">
-      <li><a href="#">Harvard / MIT</a></li>
-      <li><a href="#">Chicago / Northwestern</a></li>
-      <li><a href="#">Stanford / Berkeley</a></li>
-      <li><a href="#">Princeton / Yale</a></li>
-      <li><a href="#">View All 60+ Programs</a></li>
+      <li><a onclick="navigate('about')">About EconMarket</a></li>
+      <li><a onclick="navigate('about')">Meet the Team</a></li>
+      <li><a onclick="navigate('about')">FAQ</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Use</a></li>
     </ul>
   </div>
 </footer>
@@ -943,126 +827,137 @@
 
 <!-- MODAL -->
 <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal" id="modalContent">
+  <div class="modal">
     <button class="modal-close" onclick="closeModalDirect()">✕ Close</button>
     <div id="modalInner"></div>
   </div>
 </div>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ────────────────────────────
+   DATA
+──────────────────────────── */
 const papers = [
   {
-    id: 1,
-    field: 'Labor Economics',
-    fieldTag: 'labor',
-    title: 'Monopsony Power and Wage Determination in Local Labor Markets: Evidence from Matched Employer-Employee Data',
-    author: 'Clara Voss',
-    school: 'MIT',
-    year: 'Ph.D. 2025',
-    abstract: 'This paper identifies the causal effect of employer market power on wages using novel matched employer-employee data from German administrative records spanning 1995–2022. Exploiting plant closures as exogenous shocks to local labor supply, I estimate that a one standard-deviation increase in the HHI reduces wages by 7.3 percent, with effects concentrated among non-college workers and manufacturing sectors. Counterfactual analysis suggests that rising monopsony power accounts for 18–22% of the observed increase in the college wage premium since 2000.',
-    tags: ['Monopsony', 'Wages', 'Germany'],
-    featured: false,
-    date: 'Nov 2025',
+    id:1, field:'Development Economics', fieldTag:'dev',
+    title:'Depreciation and Growth: Evidence from Machine Repair in Uganda',
+    author:'Tilman Graff', school:'Harvard University', year:'Ph.D. Candidate',
+    abstract:'Capital depreciation restricts economic growth, yet little is known about whether it differs across countries and why. This paper studies the market for machine repair in Uganda using detailed field data collected by the author and a spatial growth model with endogenous depreciation. The cost of machinery upkeep in the sectors studied is around twice as high as in the US, throttling investment and growth. These costs are highest for small and remote firms, attributed to scale effects in the repair market. A growth model calibrated to Uganda accounts for 7–9% of income differences across regions. Counterfactual policy simulations show positive aggregate effects from interventions in repair markets. Winner of the 2025 NEUDC Distinguished Paper Award.',
+    tags:['Development','Capital','Uganda','Growth'], date:'Nov 2025'
   },
   {
-    id: 2,
-    field: 'Macroeconomics',
-    fieldTag: 'macro',
-    title: 'Fiscal Multipliers in Heterogeneous-Agent New Keynesian Models with Incomplete Markets and Liquidity Constraints',
-    author: 'Ren Takahashi',
-    school: 'Princeton',
-    year: 'Ph.D. 2025',
-    abstract: 'I develop a quantitative HANK model to study how fiscal multipliers vary with the distribution of household balance sheets. Using a novel decomposition, I show that the aggregate multiplier can be decomposed into a representative-agent component and an inequality correction term. Calibrating to US household survey data, I find that the government spending multiplier is 0.4 larger in recessions than expansions, driven primarily by a greater share of hand-to-mouth consumers during downturns.',
-    tags: ['HANK', 'Fiscal Policy', 'Heterogeneity'],
-    featured: false,
-    date: 'Oct 2025',
+    id:2, field:'Labor / Education', fieldTag:'labor',
+    title:'Common Applications and School Choice: Evidence from New York City Elite High Schools',
+    author:'Anne Carlstein', school:'MIT', year:'Ph.D. Candidate',
+    abstract:'School choice systems increasingly use common applications, where students can apply to multiple schools on a single form while schools make admission decisions independently. This paper studies the causal effects of attending highly sought-after public high schools in New York City under two admissions regimes: traditional screening based on test scores and grades, and a partial lottery introduced in 2021. While screened select schools boosted overall SAT scores by approximately 30 points under traditional admissions, they had no positive impact in the post-reform lottery era. Effects are heterogeneous: students who would not qualify under full screening saw positive impacts on SAT Math, while those who would have been admitted under screening saw negative impacts.',
+    tags:['Education','Market Design','NYC','School Choice'], date:'Oct 2025'
   },
   {
-    id: 3,
-    field: 'Industrial Organization',
-    fieldTag: 'io',
-    title: 'Platform Competition and Data Externalities: Evidence from the Ride-Sharing Duopoly',
-    author: 'Isabelle Fontaine',
-    school: 'Chicago',
-    year: 'Ph.D. 2025',
-    abstract: 'This paper studies competition between platforms that generate algorithmic improvements from data. I build a two-sided market model where data accumulation creates dynamic scale economies in match quality. Estimating the model using a panel dataset of Uber and Lyft transactions in 30 cities from 2017–2023, I find that data externalities create substantial barriers to entry and support persistent market dominance even absent traditional switching costs.',
-    tags: ['Platforms', 'Two-Sided Markets', 'Data'],
-    featured: false,
-    date: 'Oct 2025',
+    id:3, field:'Development / Labor', fieldTag:'dev',
+    title:'Familiar Strangers: Evidence from Referral-Based Hiring Experiments in India',
+    author:'Kartik Srivastava', school:'Harvard Kennedy School', year:'Ph.D. Candidate',
+    abstract:'In many developing country labor markets, jobs are filled overwhelmingly through employee referrals, which can entrench inequality by privileging well-connected workers. This paper studies a large Indian manufacturing firm where referral invitations were experimentally redirected to minority lower-caste incumbent workers. This shift raised lower-caste employment by 62%, reduced monthly turnover by 41%, and boosted team output by 5%, with no loss in cohesion. The findings show that referral networks can be redesigned to expand labor market access without sacrificing firm performance, offering new evidence on how social structure shapes labor market inequality.',
+    tags:['Referrals','India','Labor','Caste','RCT'], date:'Nov 2025'
   },
   {
-    id: 4,
-    field: 'Public Economics',
-    fieldTag: 'public',
-    title: 'Tax Incidence in the Presence of Behavioral Biases: Evidence from Soda Taxes',
-    author: 'Marcus Webb',
-    school: 'Yale',
-    year: 'Ph.D. 2026',
-    abstract: 'Standard tax incidence theory assumes that agents respond optimally to price changes. Using scanner data covering over 400 million soda purchases across 22 US cities with staggered soda tax implementations, I test whether salience and present bias modify incidence predictions. A 10-cent-per-ounce tax reduces consumption by 12.4 percent among high-income consumers and 18.1 percent among low-income consumers, consistent with larger behavioral responses among more present-biased households.',
-    tags: ['Tax Incidence', 'Soda Tax', 'Behavioral'],
-    featured: false,
-    date: 'Sep 2025',
+    id:4, field:'Political Economy', fieldTag:'public',
+    title:'Patronage Hierarchies and Tax Collection',
+    author:'Raúl Duarte', school:'Harvard Kennedy School', year:'Ph.D. Candidate',
+    abstract:"Why do bureaucracies underperform despite reform attempts? This paper studies Paraguay's customs using data on approximately 300,000 shipment inspections and develops a new measure that infers patronage hires from political appointment cycles. When both a frontline inspector and their port administrator are patronage hires, oversight breaks down: they detect less customs fraud, more often miss fraud later found by headquarter audits, and deviate more often from prescribed random inspector assignment. The results provide micro-level evidence on how political patronage hierarchies undermine state capacity and tax revenue, with implications for institutional reform.",
+    tags:['State Capacity','Taxation','Patronage','Paraguay'], date:'Oct 2025'
   },
   {
-    id: 5,
-    field: 'Development Economics',
-    fieldTag: 'dev',
-    title: 'Land Title Security and Capital Allocation: Experimental Evidence from Urban Kenya',
-    author: 'Amara Diallo',
-    school: 'Harvard',
-    year: 'Ph.D. 2025',
-    abstract: 'I conduct a large-scale RCT in Nairobi where 3,400 households are randomly assigned formal land titles. After three years, titled households invest 31% more in home improvements, have 19% higher business revenues, and are 24 percentage points more likely to access formal credit. Structural estimates reveal that land security generates a collateral channel (62% of effects) and an investment-security channel (38%), with significant spillovers to neighbors.',
-    tags: ['Land Rights', 'RCT', 'Kenya', 'Credit'],
-    featured: false,
-    date: 'Nov 2025',
+    id:5, field:'Environmental / Public', fieldTag:'public',
+    title:'WIMBY: Wind In My Back Yard',
+    author:'Jacob Ebersole', school:'Georgetown University', year:'Ph.D. Candidate',
+    abstract:'This paper studies the local economic and political effects of wind energy development. Using variation in wind turbine placement driven by wind resource suitability and federal policy, the analysis estimates the causal impact of turbine installation on local labor markets, property values, and political attitudes toward renewable energy. The findings speak to a central tension in the clean energy transition: the gap between aggregate benefits of decarbonization and concentrated local costs borne by affected communities, and whether place-based compensation policies can bridge this divide.',
+    tags:['Wind Energy','Environmental','Local Labor Markets','Clean Energy'], date:'Sep 2025'
   },
   {
-    id: 6,
-    field: 'Finance',
-    fieldTag: 'finance',
-    title: 'Climate Risk and the Term Structure of Credit Spreads: Evidence from Satellite Data',
-    author: 'Nikolai Petrov',
-    school: 'Columbia',
-    year: 'Ph.D. 2025',
-    abstract: 'I construct a novel measure of physical climate risk exposure for US corporate bond issuers using satellite-based flood probability data matched to firm plant locations. Firms with higher climate exposure face credit spreads that are 47 basis points wider at the 10-year horizon but only 8 basis points wider at the 1-year horizon, consistent with a long-horizon perceived risk premium. The term-structure gap widened significantly after the 2015 Paris Agreement.',
-    tags: ['Climate Risk', 'Credit Spreads', 'ESG'],
-    featured: false,
-    date: 'Oct 2025',
+    id:6, field:'Macroeconomics', fieldTag:'macro',
+    title:'Equity in Transition: Aggregate and Heterogeneous Effects of Clean Energy Technology Subsidies',
+    author:'Yagmur Menzilcioglu', school:'Georgetown University', year:'Ph.D. Candidate',
+    abstract:'This paper examines how clean energy technology subsidies affect aggregate growth and the distribution of their benefits across households. Using a heterogeneous-agent framework with an energy sector, the model captures how capital costs, income, and energy expenditure shares differ across the wealth and income distribution. Calibrated to US data, the analysis finds that while subsidies for solar and EV adoption generate meaningful aggregate decarbonization, the gains are unequally distributed, with wealthier households capturing a disproportionate share of the subsidy benefit. Corrective redistribution mechanisms can improve both efficiency and equity outcomes.',
+    tags:['Clean Energy','Subsidies','Heterogeneous Agents','Macro'], date:'Oct 2025'
   },
 ];
 
-const authors = [
-  { initials: 'CV', name: 'Clara Voss', school: 'MIT Economics', field: 'Labor / IO' },
-  { initials: 'RT', name: 'Ren Takahashi', school: 'Princeton Econ.', field: 'Macro / Theory' },
-  { initials: 'IF', name: 'Isabelle Fontaine', school: 'Chicago Booth', field: 'Industrial Org.' },
-  { initials: 'AD', name: 'Amara Diallo', school: 'Harvard Kennedy', field: 'Development' },
+const candidates = [
+  { initials:'TG', name:'Tilman Graff', school:'Harvard University', field:'Development / Macro', fieldTag:'dev', status:'available', paperId:1, paperPreview:'Depreciation and Growth: Evidence from Machine Repair in Uganda. 2025 NEUDC Distinguished Paper Award.' },
+  { initials:'AC', name:'Anne Carlstein', school:'MIT Economics', field:'Labor / Education / Market Design', fieldTag:'labor', status:'available', paperId:2, paperPreview:'Common applications and school choice in NYC elite high schools.' },
+  { initials:'KS', name:'Kartik Srivastava', school:'Harvard Kennedy School', field:'Development / Labor', fieldTag:'dev', status:'available', paperId:3, paperPreview:'Referral-based hiring experiments and caste inequality in India.' },
+  { initials:'RD', name:'Raúl Duarte', school:'Harvard Kennedy School', field:'Political Economy', fieldTag:'public', status:'available', paperId:4, paperPreview:'Patronage hierarchies and tax collection in Paraguay.' },
+  { initials:'JE', name:'Jacob Ebersole', school:'Georgetown University', field:'Environmental / Public', fieldTag:'public', status:'available', paperId:5, paperPreview:'Local effects of wind turbine placement on labor markets and politics.' },
+  { initials:'YM', name:'Yagmur Menzilcioglu', school:'Georgetown University', field:'Macro / Environmental', fieldTag:'macro', status:'available', paperId:6, paperPreview:'Heterogeneous household effects of clean energy technology subsidies.' },
+  { initials:'VA', name:'Victoria Angelova', school:'Harvard University', field:'Labor / Public Economics', fieldTag:'labor', status:'available', paperId:null, paperPreview:'Supply of primary care physicians and health outcomes in underserved areas.' },
+  { initials:'RH', name:'Raymond Han', school:'MIT Economics', field:'Labor / Urban / Education', fieldTag:'labor', status:'available', paperId:null, paperPreview:'Equilibrium Effects of Neighborhood Schools.' },
+  { initials:'ST', name:'Shreya Tandon', school:'Harvard Kennedy School', field:'Development / Labor', fieldTag:'dev', status:'available', paperId:null, paperPreview:'Into the Unknown: Job Exploration Risk and Spousal Co-working in India.' },
+  { initials:'AN', name:'Aroon Narayanan', school:'MIT Economics', field:'IO / Theory / Development', fieldTag:'io', status:'available', paperId:null, paperPreview:'Industrial organization, organizational economics, and development.' },
+  { initials:'LP', name:'Lia Petrose', school:'MIT Economics', field:'IO / Urban / Trade', fieldTag:'io', status:'available', paperId:null, paperPreview:'Industrial organization, urban economics, and international trade.' },
+  { initials:'GG', name:'Gabrielle Grafton', school:'Brown University', field:'Labor / Economic History', fieldTag:'labor', status:'available', paperId:null, paperPreview:'The Great Migration and Those Left Behind.' },
 ];
 
+const placements = [
+  { name:'Thomas Bourany', school:'U. Chicago', field:'Macro / Environmental', placed:'Sciences Po Department of Economics', role:'Assistant Professor', type:'academia', season:'2024–25' },
+  { name:'Alex Petrov', school:'U. Chicago', field:'Trade / Political Economy', placed:'University of British Columbia', role:'Assistant Professor', type:'academia', season:'2024–25' },
+  { name:'Samuel Higbee', school:'U. Chicago', field:'Econometrics', placed:'University of Wisconsin–Madison', role:'Assistant Professor', type:'academia', season:'2024–25' },
+  { name:'Nikhil Vellodi', school:'Princeton / Paris', field:'Micro Theory / IO', placed:'UC San Diego', role:'Assistant Professor', type:'academia', season:'2024–25' },
+  { name:'Felipe Lobel', school:'NYU', field:'Macroeconomics', placed:'Federal Reserve Bank of New York', role:'Research Economist', type:'govt', season:'2024–25' },
+  { name:'Mahnum Shahzad', school:'Princeton', field:'Labor / Public', placed:'Princeton IRS — Postdoc', role:'Postdoctoral Fellow', type:'academia', season:'2024–25' },
+  { name:'Isaac Sorkin', school:'Stanford', field:'Macro / Labor', placed:'Stanford (tenured)', role:'Associate Professor', type:'academia', season:'2024–25' },
+  { name:'Pablo Fajgelbaum', school:'UCLA', field:'International Trade', placed:'Princeton University', role:'Professor', type:'academia', season:'2024–25' },
+  { name:'Linh To', school:'Boston University', field:'Labor / Education', placed:'University of Toronto', role:'Assistant Professor', type:'academia', season:'2024–25' },
+  { name:'Ana Sofia Pessoa', school:'Nova SBE', field:'Labor / Trade', placed:'University of Zurich', role:'Assistant Professor', type:'academia', season:'2024–25' },
+  { name:'Raffaele Saggio', school:'UBC', field:'Labor / Econometrics', placed:'UC Berkeley', role:'Assistant Professor', type:'academia', season:'2024–25' },
+  { name:'Joao Granja', school:'Chicago Booth', field:'Finance / Banking', placed:'University of Chicago Booth', role:'Associate Professor', type:'academia', season:'2024–25' },
+  { name:'Julia Cagé', school:'Sciences Po', field:'Political Economy / Media', placed:'Princeton IAS', role:'Fellow', type:'academia', season:'2024–25' },
+  { name:'Katherine Meckel', school:'UC San Diego', field:'Public / Health', placed:'Federal Reserve Bank of Dallas', role:'Research Economist', type:'govt', season:'2024–25' },
+  { name:'Oren Danieli', school:'TAU', field:'Labor / Macro', placed:'World Bank Research Group', role:'Economist', type:'intl', season:'2024–25' },
+];
+
+const sidebarAuthors = [
+  { initials:'TG', name:'Tilman Graff', school:'Harvard University', field:'Development / Macro' },
+  { initials:'AC', name:'Anne Carlstein', school:'MIT Economics', field:'Labor / Education' },
+  { initials:'KS', name:'Kartik Srivastava', school:'Harvard Kennedy', field:'Development / Labor' },
+  { initials:'VA', name:'Victoria Angelova', school:'Harvard University', field:'Labor / Public' },
+];
 const fields = [
-  { name: 'Labor', count: 58, pct: 90 },
-  { name: 'Macro', count: 47, pct: 73 },
-  { name: 'I/O', count: 41, pct: 64 },
-  { name: 'Finance', count: 38, pct: 59 },
-  { name: 'Public Econ', count: 34, pct: 53 },
-  { name: 'Development', count: 29, pct: 45 },
+  { name:'Labor', count:58, pct:90 },
+  { name:'Macro', count:47, pct:73 },
+  { name:'I/O', count:41, pct:64 },
+  { name:'Finance', count:38, pct:59 },
+  { name:'Public Econ', count:34, pct:53 },
+  { name:'Development', count:29, pct:45 },
 ];
 
+/* ────────────────────────────
+   NAVIGATION
+──────────────────────────── */
+function navigate(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.masthead-nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  document.getElementById('nav-' + page).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  if (page === 'placements') initPlacementsCharts();
+  if (page === 'candidates') renderCandidates('all');
+}
+
+/* ────────────────────────────
+   BROWSE ALL — papers
+──────────────────────────── */
 let activeFilter = 'all';
 let searchQuery = '';
 
 function renderPapers() {
   const container = document.getElementById('papersContainer');
   let filtered = papers.filter(p => {
-    const matchField = activeFilter === 'all' || p.fieldTag === activeFilter;
-    const matchSearch = !searchQuery || 
-      p.title.toLowerCase().includes(searchQuery) || 
-      p.author.toLowerCase().includes(searchQuery) ||
-      p.abstract.toLowerCase().includes(searchQuery);
-    return matchField && matchSearch;
+    const mf = activeFilter === 'all' || p.fieldTag === activeFilter;
+    const ms = !searchQuery || p.title.toLowerCase().includes(searchQuery) || p.author.toLowerCase().includes(searchQuery) || p.abstract.toLowerCase().includes(searchQuery);
+    return mf && ms;
   });
-
   document.getElementById('paperCount').textContent = `Showing ${filtered.length} of 247 papers`;
-
   container.innerHTML = filtered.map((p, i) => `
     <div class="paper-card" onclick="openModal(${p.id})">
       <div class="paper-num">0${i+1}</div>
@@ -1072,42 +967,13 @@ function renderPapers() {
         <div class="paper-author"><strong>${p.author}</strong> — ${p.school} · ${p.year}</div>
         <div class="paper-abstract">${p.abstract}</div>
         <div class="paper-meta">
-          ${p.tags.map(t => `<span class="paper-tag">${t}</span>`).join('')}
+          ${p.tags.map(t=>`<span class="paper-tag">${t}</span>`).join('')}
           <span class="paper-tag" style="margin-left:auto;">${p.date}</span>
           <a href="#" class="paper-link" onclick="event.stopPropagation()">PDF →</a>
         </div>
       </div>
     </div>
   `).join('');
-}
-
-function renderAuthors() {
-  document.getElementById('authorsContainer').innerHTML = authors.map(a => `
-    <div class="author-card">
-      <div class="author-avatar">${a.initials}</div>
-      <div class="author-info">
-        <div class="author-name">${a.name}</div>
-        <div class="author-school">${a.school}</div>
-        <div class="author-field">${a.field}</div>
-      </div>
-    </div>
-  `).join('');
-}
-
-function renderFields() {
-  document.getElementById('fieldStats').innerHTML = fields.map(f => `
-    <div class="field-row">
-      <div class="field-name">${f.name}</div>
-      <div class="field-bar-wrap"><div class="field-bar" style="width:0%" data-width="${f.pct}%"></div></div>
-      <div class="field-count">${f.count}</div>
-    </div>
-  `).join('');
-  
-  setTimeout(() => {
-    document.querySelectorAll('.field-bar').forEach(bar => {
-      bar.style.width = bar.dataset.width;
-    });
-  }, 300);
 }
 
 function filterPapers(field, btn) {
@@ -1117,11 +983,36 @@ function filterPapers(field, btn) {
   renderPapers();
 }
 
-function searchPapers(val) {
-  searchQuery = val.toLowerCase();
-  renderPapers();
+function searchPapers(val) { searchQuery = val.toLowerCase(); renderPapers(); }
+
+/* ────────────────────────────
+   SIDEBAR
+──────────────────────────── */
+function renderSidebar() {
+  document.getElementById('authorsContainer').innerHTML = sidebarAuthors.map(a => `
+    <div class="author-card" onclick="navigate('candidates')">
+      <div class="author-avatar">${a.initials}</div>
+      <div>
+        <div class="author-name">${a.name}</div>
+        <div class="author-school">${a.school}</div>
+        <div class="author-field-tag">${a.field}</div>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('fieldStats').innerHTML = fields.map(f => `
+    <div class="field-row">
+      <div class="field-name">${f.name}</div>
+      <div class="field-bar-wrap"><div class="field-bar" style="width:0%" data-width="${f.pct}%"></div></div>
+      <div class="field-count">${f.count}</div>
+    </div>
+  `).join('');
+  setTimeout(() => { document.querySelectorAll('.field-bar').forEach(b => { b.style.width = b.dataset.width; }); }, 300);
 }
 
+/* ────────────────────────────
+   MODAL
+──────────────────────────── */
 function openModal(id) {
   const p = papers.find(x => x.id === id);
   if (!p) return;
@@ -1132,9 +1023,7 @@ function openModal(id) {
     <div class="modal-section-label">Abstract</div>
     <div class="modal-abstract">${p.abstract}</div>
     <div class="modal-section-label">Keywords</div>
-    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.25rem;">
-      ${p.tags.map(t => `<span class="paper-tag">${t}</span>`).join('')}
-    </div>
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.25rem;">${p.tags.map(t=>`<span class="paper-tag">${t}</span>`).join('')}</div>
     <div class="modal-footer">
       <a href="#" class="modal-btn">Download PDF</a>
       <a href="#" class="modal-btn outline">Author Profile</a>
@@ -1143,25 +1032,92 @@ function openModal(id) {
   `;
   document.getElementById('modalOverlay').classList.add('open');
 }
+function closeModal(e) { if (e.target === document.getElementById('modalOverlay')) document.getElementById('modalOverlay').classList.remove('open'); }
+function closeModalDirect() { document.getElementById('modalOverlay').classList.remove('open'); }
 
-function closeModal(e) {
-  if (e.target === document.getElementById('modalOverlay')) {
-    document.getElementById('modalOverlay').classList.remove('open');
-  }
+/* ────────────────────────────
+   BY FIELD → navigate with filter
+──────────────────────────── */
+function goToFieldFilter(tag) {
+  navigate('browse');
+  activeFilter = tag;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  const target = [...document.querySelectorAll('.filter-btn')].find(b => b.onclick && b.onclick.toString().includes("'" + tag + "'"));
+  if (target) target.classList.add('active');
+  renderPapers();
 }
 
-function closeModalDirect() {
-  document.getElementById('modalOverlay').classList.remove('open');
+/* ────────────────────────────
+   CANDIDATES
+──────────────────────────── */
+let candFilter = 'all';
+function filterCandidates(f, btn) {
+  candFilter = f;
+  document.querySelectorAll('#page-candidates .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCandidates(f);
 }
 
-// Date
-document.getElementById('datestamp').textContent = new Date().toLocaleDateString('en-US', {
-  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
-});
+function renderCandidates(f) {
+  const filtered = candidates.filter(c => {
+    if (f === 'all') return true;
+    if (f === 'available') return c.status === 'available';
+    if (f === 'placed') return c.status === 'placed';
+    return c.fieldTag === f;
+  });
+  document.getElementById('candidatesGrid').innerHTML = filtered.map(c => `
+    <div class="candidate-card" onclick="${c.paperId ? 'openModal(' + c.paperId + ')' : 'void(0)'}">
+      <div class="cand-top">
+        <div class="cand-avatar">${c.initials}</div>
+        <div>
+          <div class="cand-name">${c.name}</div>
+          <div class="cand-school">${c.school}</div>
+          <div class="cand-field">${c.field}</div>
+        </div>
+      </div>
+      <div class="cand-paper-title">${c.paperPreview ? 'JMP: ' + c.paperPreview.substring(0, 60) + (c.paperPreview.length > 60 ? '…' : '') : 'Paper coming soon'}</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:0.5rem;">
+        <span class="cand-status ${c.status}">${c.status === 'placed' ? '✓ Placed — ' + (c.placement || '') : 'On the Market'}</span>
+        ${c.paperId ? '<span style="font-family:\'DM Mono\',monospace;font-size:0.62rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);">View Paper →</span>' : ''}
+      </div>
+    </div>
+  `).join('');
+}
 
-renderPapers();
-renderAuthors();
-renderFields();
-</script>
-</body>
-</html>
+/* ────────────────────────────
+   PLACEMENTS TABLE
+──────────────────────────── */
+function renderPlacementsTable() {
+  const badgeMap = { academia:'badge-academia', govt:'badge-govt', private:'badge-private', intl:'badge-intl' };
+  const labelMap = { academia:'Academia', govt:'Government', private:'Private / Think Tank', intl:'Intl. Organization' };
+  document.getElementById('placementsBody').innerHTML = placements.map(p => `
+    <tr>
+      <td><div class="placement-name">${p.name}</div><div class="placement-paper">${p.school} · ${p.field}</div></td>
+      <td><span class="paper-tag">${p.field}</span></td>
+      <td><div class="placement-dest">${p.placed}</div><div class="placement-role">${p.role}</div></td>
+      <td><span class="badge ${badgeMap[p.type]}">${labelMap[p.type]}</span></td>
+      <td style="font-family:'DM Mono',monospace;font-size:0.72rem;">${p.season}</td>
+    </tr>
+  `).join('');
+}
+
+function initPlacementsCharts() {
+  renderPlacementsTable();
+  setTimeout(() => {
+    document.querySelectorAll('.bar-fill').forEach(b => { b.style.width = b.dataset.w; });
+  }, 200);
+}
+
+/* ────────────────────────────
+   SUBMIT FORM
+──────────────────────────── */
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('submitForm').style.display = 'none';
+  document.getElementById('submitSuccess').classList.add('show');
+  window.scrollTo({ top: document.getElementById('submitSuccess').offsetTop - 100, behavior: 'smooth' });
+}
+
+/* ────────────────────────────
+   INIT
+───────────────────�
