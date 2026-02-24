@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EconMarket — Job Market Papers 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0e0b;
+    --paper: #f5f0e8;
+    --cream: #ede8db;
+    --accent: #c8391a;
+    --gold: #b5872a;
+    --muted: #7a7268;
+    --rule: rgba(15,14,11,0.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Libre Baskerville', Georgia, serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* NOISE TEXTURE OVERLAY */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* MASTHEAD */
+  .masthead {
+    border-bottom: 3px double var(--ink);
+    padding: 0 3rem;
+    background: var(--paper);
+  }
+
+  .masthead-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .masthead-main {
+    text-align: center;
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+    color: var(--ink);
+  }
+
+  .site-title .accent { color: var(--accent); }
+
+  .site-tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-top: 0.8rem;
+  }
+
+  .masthead-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--rule);
+    margin-top: 1rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .masthead-nav a {
+    color: var(--ink);
+    text-decoration: none;
+    padding: 0.25rem 1.5rem;
+    border-right: 1px solid var(--rule);
+    transition: color 0.15s;
+  }
+  .masthead-nav a:first-child { border-left: 1px solid var(--rule); }
+  .masthead-nav a:hover { color: var(--accent); }
+
+  /* HERO SECTION */
+  .hero-bar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .hero-bar-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--cream);
+  }
+
+  .hero-bar-stat {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.5);
+    white-space: nowrap;
+  }
+
+  .hero-bar-stat span {
+    color: var(--gold);
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: block;
+    letter-spacing: -0.02em;
+  }
+
+  /* FILTERS */
+  .filters-bar {
+    padding: 1.5rem 3rem;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .filter-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin-right: 0.5rem;
+  }
+
+  .filter-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    padding: 0.35rem 0.9rem;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .filter-btn.active {
+    border-color: var(--ink);
+  }
+
+  .search-wrap {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid var(--ink);
+    gap: 0.5rem;
+  }
+
+  .search-wrap input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.85rem;
+    color: var(--ink);
+    padding: 0.25rem 0;
+    width: 200px;
+  }
+
+  .search-wrap input::placeholder { color: var(--muted); font-style: italic; }
+
+  .search-icon {
+    width: 14px;
+    height: 14px;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  /* MAIN LAYOUT */
+  .main-layout {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    min-height: calc(100vh - 300px);
+  }
+
+  .papers-col {
+    border-right: 1px solid var(--rule);
+    padding: 2.5rem 3rem;
+  }
+
+  .sidebar {
+    padding: 2.5rem 2rem;
+  }
+
+  /* PAPER CARDS */
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  .section-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .paper-card {
+    border-bottom: 1px solid var(--rule);
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    animation: fadeUp 0.4s ease both;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .paper-card:hover { background: var(--cream); margin: 0 -1.5rem; padding-left: 1.5rem; padding-right: 1.5rem; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .paper-card:nth-child(1) { animation-delay: 0.05s; }
+  .paper-card:nth-child(2) { animation-delay: 0.1s; }
+  .paper-card:nth-child(3) { animation-delay: 0.15s; }
+  .paper-card:nth-child(4) { animation-delay: 0.2s; }
+  .paper-card:nth-child(5) { animation-delay: 0.25s; }
+  .paper-card:nth-child(6) { animation-delay: 0.3s; }
+
+  .paper-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    padding-top: 0.2rem;
+    letter-spacing: 0.05em;
+    min-width: 2rem;
+    text-align: right;
+  }
+
+  .paper-body {}
+
+  .paper-field {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+
+  .paper-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .paper-title:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .paper-author {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-bottom: 0.65rem;
+    font-style: italic;
+  }
+
+  .paper-author strong {
+    color: var(--ink);
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .paper-abstract {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: #3a3830;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.85rem;
+  }
+
+  .paper-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .paper-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--rule);
+    padding: 0.15rem 0.5rem;
+    color: var(--muted);
+  }
+
+  .paper-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .paper-link:hover { text-decoration: underline; }
+
+  .featured-badge {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  /* FEATURED PAPER */
+  .featured-paper {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 2.5rem 3rem;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    animation: fadeUp 0.5s ease 0.02s both;
+  }
+
+  .featured-paper .paper-field { color: var(--gold); }
+  .featured-paper .paper-title {
+    font-size: 1.8rem;
+    color: var(--paper);
+    margin-bottom: 1rem;
+  }
+  .featured-paper .paper-author { color: rgba(245,240,232,0.65); }
+  .featured-paper .paper-abstract {
+    color: rgba(245,240,232,0.8);
+    -webkit-line-clamp: 5;
+    font-size: 0.88rem;
+  }
+
+  .featured-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .mini-chart {
+    width: 100%;
+    height: 140px;
+    border-bottom: 1px solid rgba(245,240,232,0.2);
+    border-left: 1px solid rgba(245,240,232,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mini-chart svg { width: 100%; height: 100%; }
+
+  .chart-caption {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.4);
+    text-align: center;
+  }
+
+  .featured-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.15s;
+  }
+
+  .featured-cta:hover {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  /* SIDEBAR */
+  .sidebar-section {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .sidebar-section:last-child { border-bottom: none; }
+
+  .sidebar-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .author-card {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    align-items: flex-start;
+    cursor: pointer;
+  }
+
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .author-info {}
+
+  .author-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.1rem;
+  }
+
+  .author-school {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  .author-field {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: 0.15rem;
+  }
+
+  /* Field stats */
+  .field-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.82rem;
+  }
+
+  .field-name {
+    width: 110px;
+    font-size: 0.78rem;
+    flex-shrink: 0;
+  }
+
+  .field-bar-wrap {
+    flex: 1;
+    height: 4px;
+    background: var(--rule);
+    position: relative;
+  }
+
+  .field-bar {
+    height: 100%;
+    background: var(--ink);
+    transition: width 1s ease;
+  }
+
+  .field-count {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    width: 24px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* PLACEMENT TICKER */
+  .ticker-wrap {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.6rem 3rem;
+    overflow: hidden;
+    display: flex;
+    gap: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .ticker-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-right: 2rem;
+    border-right: 1px solid rgba(245,240,232,0.15);
+    margin-right: 2rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .ticker-track {
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .ticker-inner {
+    display: flex;
+    gap: 3rem;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+  }
+
+  .ticker-item {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.05em;
+    color: rgba(245,240,232,0.7);
+    flex-shrink: 0;
+  }
+
+  .ticker-item .name { color: var(--paper); font-weight: 500; }
+  .ticker-item .arrow { color: var(--gold); margin: 0 0.5rem; }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    border-top: 3px double rgba(245,240,232,0.2);
+  }
+
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-brand .accent { color: var(--gold); }
+
+  .footer-desc {
+    font-size: 0.8rem;
+    color: rgba(245,240,232,0.55);
+    line-height: 1.7;
+  }
+
+  .footer-col-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: 0.5rem; }
+  .footer-links a {
+    color: rgba(245,240,232,0.6);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.15s;
+  }
+  .footer-links a:hover { color: var(--paper); }
+
+  .footer-bottom {
+    background: var(--ink);
+    border-top: 1px solid rgba(245,240,232,0.1);
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom span {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: rgba(245,240,232,0.35);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15,14,11,0.75);
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+
+  .modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .modal {
+    background: var(--paper);
+    max-width: 700px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 3rem;
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.2s;
+  }
+
+  .modal-overlay.open .modal { transform: translateY(0); }
+
+  .modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .modal-field { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+  .modal-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.75rem; }
+  .modal-author { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem; font-style: italic; }
+  .modal-author strong { color: var(--ink); font-style: normal; }
+  .modal-section-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; margin-top: 1.5rem; }
+  .modal-abstract { font-size: 0.9rem; line-height: 1.8; }
+  .modal-footer { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); display: flex; gap: 1rem; flex-wrap: wrap; }
+  .modal-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--ink);
+    background: var(--ink);
+    color: var(--paper);
+    transition: all 0.15s;
+  }
+  .modal-btn.outline { background: transparent; color: var(--ink); }
+  .modal-btn:hover { opacity: 0.8; }
+
+  @media (max-width: 900px) {
+    .main-layout { grid-template-columns: 1fr; }
+    .sidebar { border-top: 1px solid var(--rule); }
+    .featured-paper { grid-template-columns: 1fr; }
+    .featured-visual { display: none; }
+    footer { grid-template-columns: 1fr; }
+    .masthead, .filters-bar, .papers-col, .sidebar, footer, .hero-bar, .ticker-wrap, .footer-bottom { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-top">
+    <span>Vol. III, No. 1 — Job Market Season 2025–26</span>
+    <span id="datestamp">Loading date…</span>
+    <span>Economics · Finance · Public Policy</span>
+  </div>
+  <div class="masthead-main">
+    <div class="site-title">Econ<span class="accent">Market</span></div>
+    <div class="site-tagline">The Definitive Index of Economics Job Market Papers</div>
+  </div>
+  <nav class="masthead-nav">
+    <a href="#">Browse All</a>
+    <a href="#">By Field</a>
+    <a href="#">Candidates</a>
+    <a href="#">Placements</a>
+    <a href="#">Submit Paper</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<!-- FEATURED PAPER -->
+<section class="featured-paper">
+  <div>
+    <div class="paper-field">⭑ Editor's Pick — Labor Economics</div>
+    <div class="paper-title">"Monopsony Power and Wage Determination in Local Labor Markets: Evidence from Matched Employer-Employee Data"</div>
+    <div class="paper-author"><strong>Clara Voss</strong> — Ph.D. Candidate, MIT Economics</div>
+    <div class="paper-abstract">
+      This paper identifies the causal effect of employer market power on wages using novel matched employer-employee data from German administrative records spanning 1995–2022. Exploiting plant closures as exogenous shocks to local labor supply, I estimate that a one standard-deviation increase in the Herfindahl-Hirschman Index reduces wages by 7.3 percent, with effects concentrated among non-college workers and manufacturing sectors.
+    </div>
+    <a href="#" class="featured-cta">Read Full Paper →</a>
+  </div>
+  <div class="featured-visual">
+    <div class="mini-chart">
+      <svg viewBox="0 0 280 130" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#b5872a" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#b5872a" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <!-- Grid lines -->
+        <line x1="0" y1="32" x2="280" y2="32" stroke="rgba(245,240,232,0.1)" stroke-width="0.5"/>
+        <line x1="0" y1="65" x2="280" y2="65" stroke="rgba(245,240,232,0.1)" stroke-width="0.5"/>
+        <line x1="0" y1="97" x2="280" y2="97" stroke="rgba(245,240,232,0.1)" stroke-width="0.5"/>
+        <!-- Area fill -->
+        <path d="M0,110 C20,105 35,90 55,88 C75,86 90,95 110,80 C130,65 145,55 165,45 C185,35 200,50 220,38 C240,26 260,20 280,15 L280,130 L0,130 Z" fill="url(#chartGrad)"/>
+        <!-- Line -->
+        <path d="M0,110 C20,105 35,90 55,88 C75,86 90,95 110,80 C130,65 145,55 165,45 C185,35 200,50 220,38 C240,26 260,20 280,15" fill="none" stroke="#b5872a" stroke-width="2"/>
+        <!-- Dots -->
+        <circle cx="55" cy="88" r="3" fill="#b5872a"/>
+        <circle cx="110" cy="80" r="3" fill="#b5872a"/>
+        <circle cx="165" cy="45" r="3" fill="#b5872a"/>
+        <circle cx="220" cy="38" r="3" fill="#b5872a"/>
+        <circle cx="280" cy="15" r="3" fill="#b5872a"/>
+      </svg>
+    </div>
+    <div class="chart-caption">Wage Suppression Index vs. HHI Quintile, 1995–2022</div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-label">Recent Placements</div>
+  <div class="ticker-track">
+    <div class="ticker-inner" id="tickerInner">
+      <span class="ticker-item"><span class="name">J. Hoffman (Princeton)</span><span class="arrow">→</span>Chicago Booth, Asst. Prof.</span>
+      <span class="ticker-item"><span class="name">M. Reyes (Harvard)</span><span class="arrow">→</span>Stanford GSB, Asst. Prof.</span>
+      <span class="ticker-item"><span class="name">D. Nakamura (MIT)</span><span class="arrow">→</span>Fed. Reserve Board</span>
+      <span class="ticker-item"><span class="name">S. Okonkwo (Yale)</span><span class="arrow">→</span>Columbia SIPA, Asst. Prof.</span>
+      <span class="ticker-item"><span class="name">A. Leclerc (Berkeley)</span><span class="arrow">→</span>London School of Economics</span>
+      <span class="ticker-item"><span class="name">P. Ivanova (NYU Stern)</span><span class="arrow">→</span>World Bank Research</span>
+      <span class="ticker-item"><span class="name">T. Mukherjee (Columbia)</span><span class="arrow">→</span>Duke Fuqua, Asst. Prof.</span>
+      <span class="ticker-item"><span class="name">R. Aguilar (Chicago)</span><span class="arrow">→</span>IMF Research Dept.</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="ticker-item"><span class="name">J. Hoffman (Princeton)</span><span class="arrow">→</span>Chicago Booth, Asst. Prof.</span>
+      <span class="ticker-item"><span class="name">M. Reyes (Harvard)</span><span class="arrow">→</span>Stanford GSB, Asst. Prof.</span>
+      <span class="ticker-item"><span class="name">D. Nakamura (MIT)</span><span class="arrow">→</span>Fed. Reserve Board</span>
+      <span class="ticker-item"><span class="name">S. Okonkwo (Yale)</span><span class="arrow">→</span>Columbia SIPA, Asst. Prof.</span>
+      <span class="ticker-item"><span class="name">A. Leclerc (Berkeley)</span><span class="arrow">→</span>London School of Economics</span>
+      <span class="ticker-item"><span class="name">P. Ivanova (NYU Stern)</span><span class="arrow">→</span>World Bank Research</span>
+      <span class="ticker-item"><span class="name">T. Mukherjee (Columbia)</span><span class="arrow">→</span>Duke Fuqua, Asst. Prof.</span>
+      <span class="ticker-item"><span class="name">R. Aguilar (Chicago)</span><span class="arrow">→</span>IMF Research Dept.</span>
+    </div>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters-bar">
+  <span class="filter-label">Field:</span>
+  <button class="filter-btn active" onclick="filterPapers('all', this)">All</button>
+  <button class="filter-btn" onclick="filterPapers('labor', this)">Labor</button>
+  <button class="filter-btn" onclick="filterPapers('macro', this)">Macro</button>
+  <button class="filter-btn" onclick="filterPapers('io', this)">I/O</button>
+  <button class="filter-btn" onclick="filterPapers('finance', this)">Finance</button>
+  <button class="filter-btn" onclick="filterPapers('public', this)">Public Econ</button>
+  <button class="filter-btn" onclick="filterPapers('dev', this)">Development</button>
+  <div class="search-wrap">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="Search papers, authors…" id="searchInput" oninput="searchPapers(this.value)">
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="main-layout">
+  <main class="papers-col">
+    <div class="section-header">
+      <span class="section-title">Latest Papers</span>
+      <span class="section-count" id="paperCount">Showing 6 of 247 papers</span>
+    </div>
+    <div id="papersContainer"></div>
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Candidates to Watch</div>
+      <div id="authorsContainer"></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Papers by Field</div>
+      <div id="fieldStats"></div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">This Season</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+        <div style="text-align:center;">
+          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:900; line-height:1;">247</div>
+          <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Papers Listed</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:900; line-height:1;">183</div>
+          <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Candidates</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:900; line-height:1;">94</div>
+          <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Placed So Far</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Playfair Display',serif; font-size:2.2rem; font-weight:900; line-height:1;">38</div>
+          <div style="font-family:'DM Mono',monospace; font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted);">Institutions</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-title">Submit Your Paper</div>
+      <p style="font-size:0.82rem; line-height:1.7; margin-bottom:1rem; color:var(--muted);">Are you on the 2025–26 economics job market? List your paper for free.</p>
+      <button style="width:100%; font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; padding:0.75rem; background:var(--ink); color:var(--paper); border:none; cursor:pointer;">Submit Paper →</button>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Econ<span class="accent">Market</span></div>
+    <p class="footer-desc">The definitive index for economics job market papers. Connecting researchers, departments, and institutions since 2023.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Resources</div>
+    <ul class="footer-links">
+      <li><a href="#">JMP Database</a></li>
+      <li><a href="#">Placement Tracker</a></li>
+      <li><a href="#">Interview Tips</a></li>
+      <li><a href="#">Reference Letters Guide</a></li>
+      <li><a href="#">ASSA Conference Schedule</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">By Department</div>
+    <ul class="footer-links">
+      <li><a href="#">Harvard / MIT</a></li>
+      <li><a href="#">Chicago / Northwestern</a></li>
+      <li><a href="#">Stanford / Berkeley</a></li>
+      <li><a href="#">Princeton / Yale</a></li>
+      <li><a href="#">View All 60+ Programs</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span>© 2025 EconMarket — All rights reserved</span>
+  <span>Not affiliated with AEA or NBER</span>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modalContent">
+    <button class="modal-close" onclick="closeModalDirect()">✕ Close</button>
+    <div id="modalInner"></div>
+  </div>
+</div>
+
+<script>
+const papers = [
+  {
+    id: 1,
+    field: 'Labor Economics',
+    fieldTag: 'labor',
+    title: 'Monopsony Power and Wage Determination in Local Labor Markets: Evidence from Matched Employer-Employee Data',
+    author: 'Clara Voss',
+    school: 'MIT',
+    year: 'Ph.D. 2025',
+    abstract: 'This paper identifies the causal effect of employer market power on wages using novel matched employer-employee data from German administrative records spanning 1995–2022. Exploiting plant closures as exogenous shocks to local labor supply, I estimate that a one standard-deviation increase in the HHI reduces wages by 7.3 percent, with effects concentrated among non-college workers and manufacturing sectors. Counterfactual analysis suggests that rising monopsony power accounts for 18–22% of the observed increase in the college wage premium since 2000.',
+    tags: ['Monopsony', 'Wages', 'Germany'],
+    featured: false,
+    date: 'Nov 2025',
+  },
+  {
+    id: 2,
+    field: 'Macroeconomics',
+    fieldTag: 'macro',
+    title: 'Fiscal Multipliers in Heterogeneous-Agent New Keynesian Models with Incomplete Markets and Liquidity Constraints',
+    author: 'Ren Takahashi',
+    school: 'Princeton',
+    year: 'Ph.D. 2025',
+    abstract: 'I develop a quantitative HANK model to study how fiscal multipliers vary with the distribution of household balance sheets. Using a novel decomposition, I show that the aggregate multiplier can be decomposed into a representative-agent component and an inequality correction term. Calibrating to US household survey data, I find that the government spending multiplier is 0.4 larger in recessions than expansions, driven primarily by a greater share of hand-to-mouth consumers during downturns.',
+    tags: ['HANK', 'Fiscal Policy', 'Heterogeneity'],
+    featured: false,
+    date: 'Oct 2025',
+  },
+  {
+    id: 3,
+    field: 'Industrial Organization',
+    fieldTag: 'io',
+    title: 'Platform Competition and Data Externalities: Evidence from the Ride-Sharing Duopoly',
+    author: 'Isabelle Fontaine',
+    school: 'Chicago',
+    year: 'Ph.D. 2025',
+    abstract: 'This paper studies competition between platforms that generate algorithmic improvements from data. I build a two-sided market model where data accumulation creates dynamic scale economies in match quality. Estimating the model using a panel dataset of Uber and Lyft transactions in 30 cities from 2017–2023, I find that data externalities create substantial barriers to entry and support persistent market dominance even absent traditional switching costs.',
+    tags: ['Platforms', 'Two-Sided Markets', 'Data'],
+    featured: false,
+    date: 'Oct 2025',
+  },
+  {
+    id: 4,
+    field: 'Public Economics',
+    fieldTag: 'public',
+    title: 'Tax Incidence in the Presence of Behavioral Biases: Evidence from Soda Taxes',
+    author: 'Marcus Webb',
+    school: 'Yale',
+    year: 'Ph.D. 2026',
+    abstract: 'Standard tax incidence theory assumes that agents respond optimally to price changes. Using scanner data covering over 400 million soda purchases across 22 US cities with staggered soda tax implementations, I test whether salience and present bias modify incidence predictions. A 10-cent-per-ounce tax reduces consumption by 12.4 percent among high-income consumers and 18.1 percent among low-income consumers, consistent with larger behavioral responses among more present-biased households.',
+    tags: ['Tax Incidence', 'Soda Tax', 'Behavioral'],
+    featured: false,
+    date: 'Sep 2025',
+  },
+  {
+    id: 5,
+    field: 'Development Economics',
+    fieldTag: 'dev',
+    title: 'Land Title Security and Capital Allocation: Experimental Evidence from Urban Kenya',
+    author: 'Amara Diallo',
+    school: 'Harvard',
+    year: 'Ph.D. 2025',
+    abstract: 'I conduct a large-scale RCT in Nairobi where 3,400 households are randomly assigned formal land titles. After three years, titled households invest 31% more in home improvements, have 19% higher business revenues, and are 24 percentage points more likely to access formal credit. Structural estimates reveal that land security generates a collateral channel (62% of effects) and an investment-security channel (38%), with significant spillovers to neighbors.',
+    tags: ['Land Rights', 'RCT', 'Kenya', 'Credit'],
+    featured: false,
+    date: 'Nov 2025',
+  },
+  {
+    id: 6,
+    field: 'Finance',
+    fieldTag: 'finance',
+    title: 'Climate Risk and the Term Structure of Credit Spreads: Evidence from Satellite Data',
+    author: 'Nikolai Petrov',
+    school: 'Columbia',
+    year: 'Ph.D. 2025',
+    abstract: 'I construct a novel measure of physical climate risk exposure for US corporate bond issuers using satellite-based flood probability data matched to firm plant locations. Firms with higher climate exposure face credit spreads that are 47 basis points wider at the 10-year horizon but only 8 basis points wider at the 1-year horizon, consistent with a long-horizon perceived risk premium. The term-structure gap widened significantly after the 2015 Paris Agreement.',
+    tags: ['Climate Risk', 'Credit Spreads', 'ESG'],
+    featured: false,
+    date: 'Oct 2025',
+  },
+];
+
+const authors = [
+  { initials: 'CV', name: 'Clara Voss', school: 'MIT Economics', field: 'Labor / IO' },
+  { initials: 'RT', name: 'Ren Takahashi', school: 'Princeton Econ.', field: 'Macro / Theory' },
+  { initials: 'IF', name: 'Isabelle Fontaine', school: 'Chicago Booth', field: 'Industrial Org.' },
+  { initials: 'AD', name: 'Amara Diallo', school: 'Harvard Kennedy', field: 'Development' },
+];
+
+const fields = [
+  { name: 'Labor', count: 58, pct: 90 },
+  { name: 'Macro', count: 47, pct: 73 },
+  { name: 'I/O', count: 41, pct: 64 },
+  { name: 'Finance', count: 38, pct: 59 },
+  { name: 'Public Econ', count: 34, pct: 53 },
+  { name: 'Development', count: 29, pct: 45 },
+];
+
+let activeFilter = 'all';
+let searchQuery = '';
+
+function renderPapers() {
+  const container = document.getElementById('papersContainer');
+  let filtered = papers.filter(p => {
+    const matchField = activeFilter === 'all' || p.fieldTag === activeFilter;
+    const matchSearch = !searchQuery || 
+      p.title.toLowerCase().includes(searchQuery) || 
+      p.author.toLowerCase().includes(searchQuery) ||
+      p.abstract.toLowerCase().includes(searchQuery);
+    return matchField && matchSearch;
+  });
+
+  document.getElementById('paperCount').textContent = `Showing ${filtered.length} of 247 papers`;
+
+  container.innerHTML = filtered.map((p, i) => `
+    <div class="paper-card" onclick="openModal(${p.id})">
+      <div class="paper-num">0${i+1}</div>
+      <div class="paper-body">
+        <div class="paper-field">${p.field.toUpperCase()}</div>
+        <div class="paper-title">${p.title}</div>
+        <div class="paper-author"><strong>${p.author}</strong> — ${p.school} · ${p.year}</div>
+        <div class="paper-abstract">${p.abstract}</div>
+        <div class="paper-meta">
+          ${p.tags.map(t => `<span class="paper-tag">${t}</span>`).join('')}
+          <span class="paper-tag" style="margin-left:auto;">${p.date}</span>
+          <a href="#" class="paper-link" onclick="event.stopPropagation()">PDF →</a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderAuthors() {
+  document.getElementById('authorsContainer').innerHTML = authors.map(a => `
+    <div class="author-card">
+      <div class="author-avatar">${a.initials}</div>
+      <div class="author-info">
+        <div class="author-name">${a.name}</div>
+        <div class="author-school">${a.school}</div>
+        <div class="author-field">${a.field}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderFields() {
+  document.getElementById('fieldStats').innerHTML = fields.map(f => `
+    <div class="field-row">
+      <div class="field-name">${f.name}</div>
+      <div class="field-bar-wrap"><div class="field-bar" style="width:0%" data-width="${f.pct}%"></div></div>
+      <div class="field-count">${f.count}</div>
+    </div>
+  `).join('');
+  
+  setTimeout(() => {
+    document.querySelectorAll('.field-bar').forEach(bar => {
+      bar.style.width = bar.dataset.width;
+    });
+  }, 300);
+}
+
+function filterPapers(field, btn) {
+  activeFilter = field;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderPapers();
+}
+
+function searchPapers(val) {
+  searchQuery = val.toLowerCase();
+  renderPapers();
+}
+
+function openModal(id) {
+  const p = papers.find(x => x.id === id);
+  if (!p) return;
+  document.getElementById('modalInner').innerHTML = `
+    <div class="modal-field">${p.field}</div>
+    <div class="modal-title">${p.title}</div>
+    <div class="modal-author"><strong>${p.author}</strong> — ${p.school} · ${p.year}</div>
+    <div class="modal-section-label">Abstract</div>
+    <div class="modal-abstract">${p.abstract}</div>
+    <div class="modal-section-label">Keywords</div>
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.25rem;">
+      ${p.tags.map(t => `<span class="paper-tag">${t}</span>`).join('')}
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="modal-btn">Download PDF</a>
+      <a href="#" class="modal-btn outline">Author Profile</a>
+      <a href="#" class="modal-btn outline">Cite Paper</a>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modalOverlay')) {
+    document.getElementById('modalOverlay').classList.remove('open');
+  }
+}
+
+function closeModalDirect() {
+  document.getElementById('modalOverlay').classList.remove('open');
+}
+
+// Date
+document.getElementById('datestamp').textContent = new Date().toLocaleDateString('en-US', {
+  weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+});
+
+renderPapers();
+renderAuthors();
+renderFields();
+</script>
+</body>
+</html>
