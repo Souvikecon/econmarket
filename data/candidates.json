@@ -1,0 +1,332 @@
+{
+  "generated_at": "2026-06-13T17:45:13+00:00",
+  "ranking_period": "May 2026",
+  "ranking_sources": {
+    "US": "https://ideas.repec.org/top/top.usecondept.html",
+    "UK": "https://ideas.repec.org/top/top.uk.html"
+  },
+  "departments_monitored": 18,
+  "candidates": [
+    {
+      "id": "3049e5e61cb3",
+      "name": "Sitong Ding",
+      "institution": "London School of Economics",
+      "country": "UK",
+      "rank": 1,
+      "fields": [
+        "Macro-Finance",
+        "Monetary Economics"
+      ],
+      "paper_title": "Who Moves the Long End? The Dynamics of Bond Market Segmentation",
+      "paper_url": "https://www.dropbox.com/scl/fi/ulftcclqr8c5rpkbqifwa/DraftV3_JMP.pdf?dl=0&rlkey=pin7a7sg2lhsn5a8lngkovbi4&st=czyocr5z",
+      "profile_url": "https://www.sitongding.com/",
+      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "a64c002fc775",
+      "name": "Stephan Hobler",
+      "institution": "London School of Economics",
+      "country": "UK",
+      "rank": 1,
+      "fields": [
+        "Macroeconomics",
+        "Economic Growth",
+        "Fiscal Policy"
+      ],
+      "paper_title": "Worker Mobility and the Diffusion of Radical Technologies",
+      "paper_url": "https://sjhobler.github.io/assets/papers/jmp/jmp-sj-hobler.pdf",
+      "profile_url": "https://sjhobler.github.io/",
+      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "fe5f36a0eee2",
+      "name": "Yuhao Qian",
+      "institution": "London School of Economics",
+      "country": "UK",
+      "rank": 1,
+      "fields": [
+        "Macroeconomics",
+        "Corporate Finance",
+        "International Finance"
+      ],
+      "paper_title": "Capital Misallocation and Earnings-Based Borrowing",
+      "paper_url": "https://drive.google.com/file/d/1MIaLKIe2AszccfaBVloH0d2A7Dva08Zr/view?usp=sharing",
+      "profile_url": "https://www.yuhaoqian.com/",
+      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "7d5fcbe3d8af",
+      "name": "Hannah Römer",
+      "institution": "University of Oxford",
+      "country": "UK",
+      "rank": 2,
+      "fields": [
+        "Macroeconomics"
+      ],
+      "paper_title": "Climate change beliefs and savings decisions: a macroeconomic perspective",
+      "paper_url": "https://hannahroemer.github.io/HR_JMP_CCS.pdf",
+      "profile_url": "https://www.hannahroemer.com/home",
+      "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "a8ff7eb4abb0",
+      "name": "Lidia Smitkova",
+      "institution": "University of Oxford",
+      "country": "UK",
+      "rank": 2,
+      "fields": [
+        "International Macroeconomics",
+        "Economic Growth",
+        "Macroeconomics"
+      ],
+      "paper_title": "Export Subsidies as Industrial Policy: the Case of the 19th Century Sugar Industry",
+      "paper_url": "https://lidiasmitkova.com/wp-content/uploads/2025/10/export_subsidies.pdf",
+      "profile_url": "http://lidiasmitkova.com/",
+      "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "41b936b4b005",
+      "name": "Lukas Boehnert",
+      "institution": "University of Oxford",
+      "country": "UK",
+      "rank": 2,
+      "fields": [
+        "International Macroeconomics",
+        "Economic Growth",
+        "Macroeconomics"
+      ],
+      "paper_title": "The Regional Specialization Trade-off",
+      "paper_url": "https://lukasboehnert.github.io/JMP_LBoehnert.pdf",
+      "profile_url": "https://www.lukasboehnert.com/",
+      "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "b6463bd1523e",
+      "name": "Rustam Jamilov",
+      "institution": "University of Oxford",
+      "country": "UK",
+      "rank": 2,
+      "fields": [
+        "Monetary Economics"
+      ],
+      "paper_title": "Two Centuries of Systemic Bank Runs",
+      "paper_url": "https://www.systemicbankruns.com/",
+      "profile_url": "https://www.rustamjamilov.com/",
+      "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "9d33ad76d598",
+      "name": "Sarah Duffy",
+      "institution": "University of Oxford",
+      "country": "UK",
+      "rank": 2,
+      "fields": [
+        "Macroeconomics"
+      ],
+      "paper_title": "Climate Change, Adaptation, and Sovereign Risk",
+      "paper_url": "https://sarahwduffy.github.io/Duffy_JMP.pdf",
+      "profile_url": "https://sarahwduffy.github.io",
+      "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "251387753fc2",
+      "name": "Tobias Kawalec",
+      "institution": "University of Oxford",
+      "country": "UK",
+      "rank": 2,
+      "fields": [
+        "Monetary Economics",
+        "Macroeconomics"
+      ],
+      "paper_title": "Debt Indexation, Determinacy, and Inflation",
+      "paper_url": "https://tobiaskawalec.com/files/DIDI.pdf",
+      "profile_url": "https://tobiaskawalec.com/",
+      "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "4ad923ca7cd4",
+      "name": "Alfredo Mendoza-Fernandez",
+      "institution": "UC Berkeley",
+      "country": "US",
+      "rank": 3,
+      "fields": [
+        "International Macroeconomics",
+        "Finance"
+      ],
+      "paper_title": "Do Central Banks Follow the Fed?",
+      "paper_url": "https://drive.google.com/file/d/11hAbTC-KCe8YB0j25b3eJ0Ev-lhQNJ4g/view?usp=drive_link",
+      "profile_url": "https://sites.google.com/view/alfredo-mendoza-fernandez/home?authuser=0",
+      "source_url": "https://econ.berkeley.edu/graduate/placement/job-market-candidates-phd",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "314b8ad2f1e8",
+      "name": "Anders Yding",
+      "institution": "UC Berkeley",
+      "country": "US",
+      "rank": 3,
+      "fields": [
+        "Macroeconomics"
+      ],
+      "paper_title": "The Macroeconomic Effects of Defense Spending News",
+      "paper_url": "https://www.dropbox.com/scl/fi/4ajfzu341p0eqxfne4ew5/Yding_JMP.pdf?rlkey=82y584m9fa8tqj69x78vnxhnp&st=gu6hvgpp&dl=0",
+      "profile_url": "https://andersyding.com",
+      "source_url": "https://econ.berkeley.edu/graduate/placement/job-market-candidates-phd",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "4cbecf7e4041",
+      "name": "Emily Martell",
+      "institution": "UC Berkeley",
+      "country": "US",
+      "rank": 3,
+      "fields": [
+        "Macroeconomics"
+      ],
+      "paper_title": "Official Arm-Twisting? Measuring the Federal Reserve's Use of Moral Suasion",
+      "paper_url": "https://drive.google.com/file/d/19hdX6FImdgjp-lvXwu8aBesu5LtDbm8V/view?usp=drive_link",
+      "profile_url": "https://www.emilymartell.com/",
+      "source_url": "https://econ.berkeley.edu/graduate/placement/job-market-candidates-phd",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "1ef9aa86f8fc",
+      "name": "Cindy Chung",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Finance",
+        "Macroeconomics"
+      ],
+      "paper_title": "Small Firm Credit Card Financing and Interest Rate Conditions",
+      "paper_url": "https://drive.google.com/file/d/1k7Dre-c7cQtbfhtm1898SQ5YPRMX85wY/view?usp=drive_link",
+      "profile_url": "https://sites.google.com/view/cindychung",
+      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "f096bb3ca84f",
+      "name": "Jonathan Hartley",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Finance",
+        "Macroeconomics",
+        "Labor"
+      ],
+      "paper_title": "Does Government Debt Management Matter? High-Frequency Identification From U.S. Treasury Quarterly Refunding Announcements",
+      "paper_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4772653",
+      "profile_url": "https://www.jonathanhartley.net/",
+      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "c5e0853bb919",
+      "name": "Lautaro Chittaro",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Financial Economics",
+        "Macroeconomics",
+        "Industrial Organization"
+      ],
+      "paper_title": "Selection in Crisis Lending. Evidence from Chile",
+      "paper_url": "https://lautarochittaro.github.io/assets/papers/Chittaro-JMP.pdf",
+      "profile_url": "https://lautarochittaro.github.io",
+      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "d09ee616feb0",
+      "name": "Marcelo Sena",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Finance",
+        "Macroeconomics"
+      ],
+      "paper_title": "Pricing and Risk in Sovereign Green Debt: Evidence from Chile",
+      "paper_url": "https://marcelosena.github.io/marcelosenajmp.pdf",
+      "profile_url": "https://marcelosena.github.io/",
+      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "82e2b79c8175",
+      "name": "Mohamad Adhami",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Macroeconomics"
+      ],
+      "paper_title": "Quantifying Knowledge Spillovers Using Firm and Product Dynamics",
+      "paper_url": "https://adhamimohamad.github.io/papers/Adhami_JMP.pdf",
+      "profile_url": "https://adhami.people.stanford.edu/",
+      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "c8931a554a00",
+      "name": "Giovanni Bonfanti",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Finance",
+        "International Macroeconomics"
+      ],
+      "paper_title": "A European Safe Asset? Not Without the Investors",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/Giovanni-Bonfanti-Job-Market-Paper.pdf",
+      "profile_url": "https://sites.google.com/view/giovannibonfanti",
+      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "32f20a423f98",
+      "name": "Hyoseok Kim",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Econometrics",
+        "Macroeconomics"
+      ],
+      "paper_title": "Macroeconomic forecasting with outlier-robust VAR",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/robust_VAR_0922.pdf",
+      "profile_url": "https://econ.columbia.edu/e/40889/",
+      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "e3e242e2c712",
+      "name": "Finn Schüle",
+      "institution": "Brown University",
+      "country": "US",
+      "rank": 10,
+      "fields": [
+        "Macroeconomics",
+        "Monetary Economics",
+        "Labor Economics"
+      ],
+      "paper_title": "The Phillips and Beveridge Curves in a Multi-Sector Economy",
+      "paper_url": "https://www.finnschule.com/papers/jmp/JMP_Finn_Schuele.pdf",
+      "profile_url": "https://www.finnschule.com",
+      "source_url": "https://economics.brown.edu/job-market-candidates-0",
+      "last_verified": "2026-06-13"
+    }
+  ]
+}

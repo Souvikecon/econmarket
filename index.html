@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Current macroeconomics PhD job market candidates from leading US and UK economics departments, with links to their job market papers.">
+  <title>Macro Job Market Papers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css">
+  <script src="static/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Macro Job Market Papers home">
+      <span class="brand-mark">M</span>
+      <span>Macro JMP</span>
+    </a>
+    <a class="method-link" href="#methodology">Methodology</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Economics PhD job market</div>
+      <h1>Macroeconomics candidates,<br><span>in one place.</span></h1>
+      <p class="hero-copy">Job market papers from macroeconomics candidates at leading US and UK departments, selected using IDEAS/RePEc rankings.</p>
+      <div class="status-line" aria-live="polite">
+        <span class="status-dot"></span>
+        <span id="updated-label">Loading latest data...</span>
+      </div>
+    </section>
+
+    <section class="explorer" aria-labelledby="papers-heading">
+      <div class="explorer-heading">
+        <div>
+          <p class="section-kicker">Candidate directory</p>
+          <h2 id="papers-heading"><span id="result-count">0</span> papers</h2>
+        </div>
+        <label class="search-box">
+          <span class="sr-only">Search candidates and papers</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+          <input id="search-input" type="search" placeholder="Search name, paper, or field">
+        </label>
+      </div>
+
+      <div class="filters" aria-label="Candidate filters">
+        <div class="filter-group" role="group" aria-label="Country">
+          <button class="filter-chip active" type="button" data-country="all">All</button>
+          <button class="filter-chip" type="button" data-country="US">United States</button>
+          <button class="filter-chip" type="button" data-country="UK">United Kingdom</button>
+        </div>
+        <label class="select-wrap">
+          <span class="sr-only">Filter by department</span>
+          <select id="institution-filter">
+            <option value="all">All departments</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="paper-grid" class="paper-grid"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <h3>No matching papers</h3>
+        <p>Try a broader search or clear a filter.</p>
+        <button id="clear-filters" type="button">Clear filters</button>
+      </div>
+    </section>
+
+    <section id="methodology" class="methodology">
+      <div>
+        <p class="section-kicker">Scope and sources</p>
+        <h2>Small, current, and verifiable.</h2>
+      </div>
+      <div class="method-copy">
+        <p>The directory monitors the top 10 US economics departments and the top 8 UK university economics departments in the latest configured IDEAS/RePEc rankings. Research institutes and business schools are excluded.</p>
+        <p>A candidate is included only when an official department page identifies a macroeconomic field and a working job market paper link can be found. Macroeconomics includes international macro, monetary economics, macro-finance, growth, and closely related aggregate topics.</p>
+        <div class="source-links">
+          <a id="us-ranking-link" href="https://ideas.repec.org/top/top.usecondept.html" target="_blank" rel="noopener">US RePEc ranking <span>↗</span></a>
+          <a id="uk-ranking-link" href="https://ideas.repec.org/top/top.uk.html" target="_blank" rel="noopener">UK RePEc ranking <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Independent directory. Candidate details remain the property of their authors and departments.</p>
+  </footer>
+</body>
+</html>
