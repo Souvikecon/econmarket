@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T18:20:26+00:00",
+  "generated_at": "2026-06-13T18:32:39+00:00",
   "ranking_period": "May 2026",
   "ranking_sources": {
     "US": "https://ideas.repec.org/top/top.usecondept.html",
     "UK": "https://ideas.repec.org/top/top.uk.html"
   },
-  "departments_monitored": 21,
+  "departments_monitored": 22,
   "candidates": [
     {
       "id": "3049e5e61cb3",
@@ -476,6 +476,174 @@
       "paper_url": "https://ziligit.github.io/files/jmp_paper.pdf",
       "profile_url": "https://ziligit.github.io/",
       "source_url": "https://dornsife.usc.edu/econ/doctoral/job-market-candidates/",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "565a9e581968",
+      "name": "Alexander Wurdinger",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "Macroeconomics",
+        "Labor Economics"
+      ],
+      "paper_title": "Declining Teen Employment: Causes and Consequences",
+      "paper_url": "https://drive.google.com/file/d/18oW-B8seFKUfJU0GZhqP0Rph7BPKH688/view?usp=sharing",
+      "profile_url": "https://sites.google.com/view/alexwurdinger/home",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "4ce38c47f2a9",
+      "name": "Bipul Verma",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "Macroeconomics",
+        "Economic Growth",
+        "Inequality"
+      ],
+      "paper_title": "Higher Education and Economic Development: Evidence from College Expansion in India",
+      "paper_url": "https://drive.google.com/file/d/1bjK8sOJr8lOebdESXOAxLU22D_XCZt1Q/view?usp=drive_link",
+      "profile_url": "https://www.bipulverma.com/",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "f87194f62819",
+      "name": "Carlos Bolivar",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "Macroeconomics",
+        "International Economics"
+      ],
+      "paper_title": "The Micro Effects of Aggregate Shocks in Endogenous Trade Networks",
+      "paper_url": "https://assets.zyrosite.com/AGBrEJQpGyuROE7Z/jmp_carlos_bolivar_12_4-ccGr09KqVa8MaG4z.pdf",
+      "profile_url": "https://carlosbolivar.info/",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "f688d77a98a9",
+      "name": "Effie Karfaki",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "International Finance",
+        "Applied Macroeconomics",
+        "Monetary Economics"
+      ],
+      "paper_title": "Are Exchange Rate Appreciations Contractionary or Expansionary? Evidence from Switzerland",
+      "paper_url": "https://drive.google.com/file/d/1kqt9moyMLJCSqn1doMiRJguTAqPXLnb0/view?usp=drive_link",
+      "profile_url": "https://sites.google.com/umn.edu/effie-karfaki/home",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "b73837c8c462",
+      "name": "Francisco Bullano",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "Macroeconomics",
+        "Public Economics",
+        "Health Economics"
+      ],
+      "paper_title": "Health, Families and Private and Public Health Insurance",
+      "paper_url": "https://franciscobullano.com/files/Bullano_JMP_latest.pdf",
+      "profile_url": "https://franciscobullano.com/",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "2fbdb8357c8f",
+      "name": "Ioannis Koutsonikolis",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "Macroeconomics",
+        "Public Finance",
+        "Corporate Finance"
+      ],
+      "paper_title": "Stock Market Accounting",
+      "paper_url": "https://drive.google.com/file/d/17lYaHDju-9twq-h9tkaEzH_Z49GZpCZ4/view?usp=share_link",
+      "profile_url": "https://www.ikoutsonikolis.com/",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "7de018636815",
+      "name": "Jacob Wright",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "Macroeconomics",
+        "Labor Economics",
+        "Spatial Economics"
+      ],
+      "paper_title": "On the Spatial Distribution of Colleges",
+      "paper_url": "https://www.jacob-wright.me/_files/ugd/5f97f5_b827be76dffa43faadc057606359e32b.pdf?index=true",
+      "profile_url": "https://www.jacob-wright.me/",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "d432d0baf69f",
+      "name": "Leonardo Barreto",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "Macroeconomics",
+        "International Economics",
+        "Monetary Economics"
+      ],
+      "paper_title": "Debt-Financed Fiscal Stimulus, Heterogeneity, and Welfare",
+      "paper_url": "https://www.leonardo-barreto.com/pdf/Barreto_JMP.pdf",
+      "profile_url": "https://www.leonardo-barreto.com/",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "53f2ac6d12e2",
+      "name": "Lieyuan Yang",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "Macroeconomics",
+        "Public Economics",
+        "Economic Growth"
+      ],
+      "paper_title": "Growth with Regional Redistribution",
+      "paper_url": "https://drive.google.com/file/d/1q4jMU9q2z2XNGB-ZcMMftORyIy_6FExh/view?usp=drive_link",
+      "profile_url": "https://sites.google.com/umn.edu/lieyuanyang",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "0a32f632fe7d",
+      "name": "Scott Sommers",
+      "institution": "University of Minnesota",
+      "country": "US",
+      "rank": 33,
+      "fields": [
+        "International Macroeconomics",
+        "International Trade",
+        "Development"
+      ],
+      "paper_title": "Land Institutions, Agricultural Productivity, and Climate Shocks",
+      "paper_url": "https://drive.google.com/file/d/1UEZAP3lnoWHn87lJGuDC2BkDAxqkVtBU/view?usp=drive_link",
+      "profile_url": "https://sites.google.com/view/scottsommers",
+      "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
       "last_verified": "2026-06-13"
     }
   ]

@@ -148,3 +148,17 @@ def test_curated_candidate_must_remain_on_official_roster():
 
     assert [item["name"] for item in curated_partials(present, department)] == ["Zixing Guo"]
     assert curated_partials(absent, department) == []
+
+
+def test_curated_candidate_supports_last_name_first_roster():
+    department = {
+        "institution": "University of Minnesota",
+        "country": "US",
+        "rank": 33,
+        "url": "https://cla.umn.edu/economics/people/job-market-candidates",
+    }
+    roster = BeautifulSoup("<main><a>Barreto, Leonardo</a></main>", "html.parser")
+
+    candidates = curated_partials(roster, department)
+    assert [item["name"] for item in candidates] == ["Leonardo Barreto"]
+    assert "roster_name" not in candidates[0]

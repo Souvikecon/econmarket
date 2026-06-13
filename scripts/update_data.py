@@ -49,6 +49,7 @@ DEPARTMENTS = [
     {"institution": "University of Pennsylvania", "country": "US", "rank": 11, "url": "https://economics.sas.upenn.edu/graduate/job-market-candidates"},
     {"institution": "Boston University", "country": "US", "rank": 12, "url": "https://www.bu.edu/econ/job-market-candidates/"},
     {"institution": "University of Southern California", "country": "US", "rank": 17, "url": "https://dornsife.usc.edu/econ/doctoral/job-market-candidates/"},
+    {"institution": "University of Minnesota", "country": "US", "rank": 33, "url": "https://cla.umn.edu/economics/people/job-market-candidates"},
     # Top degree-granting university economics departments in the UK ranking.
     {"institution": "London School of Economics", "country": "UK", "rank": 1, "url": "https://www.lse.ac.uk/economics/phd-job-market"},
     {"institution": "University of Oxford", "country": "UK", "rank": 2, "url": "https://www.economics.ox.ac.uk/job-market-candidates"},
@@ -123,6 +124,78 @@ CURATED_CANDIDATES = {
             "fields": ["Economic Growth", "Economics of Innovation", "Business Economics"],
             "paper_title": "Technology M&A and Knowledge Diffusion",
             "profile_url": "https://ziligit.github.io/",
+        },
+    ],
+    "University of Minnesota": [
+        {
+            "name": "Leonardo Barreto",
+            "roster_name": "Barreto, Leonardo",
+            "fields": ["Macroeconomics", "International Economics", "Monetary Economics"],
+            "paper_title": "Debt-Financed Fiscal Stimulus, Heterogeneity, and Welfare",
+            "profile_url": "https://www.leonardo-barreto.com/",
+        },
+        {
+            "name": "Carlos Bolivar",
+            "roster_name": "Bolivar, Carlos",
+            "fields": ["Macroeconomics", "International Economics"],
+            "paper_title": "The Micro Effects of Aggregate Shocks in Endogenous Trade Networks",
+            "profile_url": "https://carlosbolivar.info/",
+        },
+        {
+            "name": "Francisco Bullano",
+            "roster_name": "Bullano, Francisco",
+            "fields": ["Macroeconomics", "Public Economics", "Health Economics"],
+            "paper_title": "Health, Families and Private and Public Health Insurance",
+            "profile_url": "https://franciscobullano.com/",
+        },
+        {
+            "name": "Effie Karfaki",
+            "roster_name": "Karfaki, Eftychia (Effie)",
+            "fields": ["International Finance", "Applied Macroeconomics", "Monetary Economics"],
+            "paper_title": "Are Exchange Rate Appreciations Contractionary or Expansionary? Evidence from Switzerland",
+            "profile_url": "https://sites.google.com/umn.edu/effie-karfaki/home",
+        },
+        {
+            "name": "Ioannis Koutsonikolis",
+            "roster_name": "Koutsonikolis, Ioannis",
+            "fields": ["Macroeconomics", "Public Finance", "Corporate Finance"],
+            "paper_title": "Stock Market Accounting",
+            "profile_url": "https://www.ikoutsonikolis.com/",
+        },
+        {
+            "name": "Scott Sommers",
+            "roster_name": "Sommers, Scott",
+            "fields": ["International Macroeconomics", "International Trade", "Development"],
+            "paper_title": "Land Institutions, Agricultural Productivity, and Climate Shocks",
+            "profile_url": "https://sites.google.com/view/scottsommers",
+        },
+        {
+            "name": "Bipul Verma",
+            "roster_name": "Verma, Bipul",
+            "fields": ["Macroeconomics", "Economic Growth", "Inequality"],
+            "paper_title": "Higher Education and Economic Development: Evidence from College Expansion in India",
+            "profile_url": "https://www.bipulverma.com/",
+        },
+        {
+            "name": "Jacob Wright",
+            "roster_name": "Wright, Jacob",
+            "fields": ["Macroeconomics", "Labor Economics", "Spatial Economics"],
+            "paper_title": "On the Spatial Distribution of Colleges",
+            "profile_url": "https://www.jacob-wright.me/",
+        },
+        {
+            "name": "Alexander Wurdinger",
+            "roster_name": "Wurdinger, Alexander",
+            "fields": ["Macroeconomics", "Labor Economics"],
+            "paper_title": "Declining Teen Employment: Causes and Consequences",
+            "profile_url": "https://sites.google.com/view/alexwurdinger/home",
+        },
+        {
+            "name": "Lieyuan Yang",
+            "roster_name": "Yang, Lieyuan",
+            "fields": ["Macroeconomics", "Public Economics", "Economic Growth"],
+            "paper_title": "Growth with Regional Redistribution",
+            "profile_url": "https://sites.google.com/umn.edu/lieyuanyang",
         },
     ],
 }
@@ -253,9 +326,9 @@ def curated_partials(soup: BeautifulSoup, department: dict) -> list[dict] | None
         return None
     roster_text = clean_text(soup.get_text(" ", strip=True)).casefold()
     return [
-        {**candidate, "paper_url": ""}
+        {key: value for key, value in candidate.items() if key != "roster_name"} | {"paper_url": ""}
         for candidate in configured
-        if clean_text(candidate["name"]).casefold() in roster_text
+        if clean_text(candidate.get("roster_name", candidate["name"])).casefold() in roster_text
     ]
 
 
