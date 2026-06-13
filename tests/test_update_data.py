@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 
 from scripts.update_data import (
     candidate_blocks,
+    curated_partials,
     extract_candidate,
     find_paper_link,
 )
@@ -133,3 +134,17 @@ def test_extracts_link_led_roster_entry():
     candidate = next(item for item in candidates if item and item["name"] == "Finn Scholar")
     assert candidate["paper_title"] == "The Phillips Curve"
     assert candidate["paper_url"] == "https://candidate.example/jmp.pdf"
+
+
+def test_curated_candidate_must_remain_on_official_roster():
+    department = {
+        "institution": "Boston University",
+        "country": "US",
+        "rank": 12,
+        "url": "https://www.bu.edu/econ/job-market-candidates/",
+    }
+    present = BeautifulSoup("<main><h3>Zixing Guo</h3></main>", "html.parser")
+    absent = BeautifulSoup("<main><h3>Another Candidate</h3></main>", "html.parser")
+
+    assert [item["name"] for item in curated_partials(present, department)] == ["Zixing Guo"]
+    assert curated_partials(absent, department) == []

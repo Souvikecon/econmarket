@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T17:45:13+00:00",
+  "generated_at": "2026-06-13T18:20:26+00:00",
   "ranking_period": "May 2026",
   "ranking_sources": {
     "US": "https://ideas.repec.org/top/top.usecondept.html",
     "UK": "https://ideas.repec.org/top/top.uk.html"
   },
-  "departments_monitored": 18,
+  "departments_monitored": 21,
   "candidates": [
     {
       "id": "3049e5e61cb3",
@@ -326,6 +326,156 @@
       "paper_url": "https://www.finnschule.com/papers/jmp/JMP_Finn_Schuele.pdf",
       "profile_url": "https://www.finnschule.com",
       "source_url": "https://economics.brown.edu/job-market-candidates-0",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "0ba0d0d854bc",
+      "name": "Alexander Sawyer",
+      "institution": "University of Pennsylvania",
+      "country": "US",
+      "rank": 11,
+      "fields": [
+        "Macroeconomics",
+        "Business Dynamics",
+        "Information Frictions"
+      ],
+      "paper_title": "Learning through Sequential Interactions in the Market for Venture Capital",
+      "paper_url": "https://drive.google.com/file/d/1aVyO0WdndnkhfE25wfjSLwvEkXHhTc7v/view?usp=sharing",
+      "profile_url": "https://sites.google.com/sas.upenn.edu/alexander-sawyer/home",
+      "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "decac045cda1",
+      "name": "Javier Tasso",
+      "institution": "University of Pennsylvania",
+      "country": "US",
+      "rank": 11,
+      "fields": [
+        "Macroeconomics",
+        "Political Economy"
+      ],
+      "paper_title": "Unemployment and Forward-Looking Congressmen",
+      "paper_url": "https://javiertasso.github.io/research/Tasso_JMP.pdf",
+      "profile_url": "https://javiertasso.github.io/",
+      "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "77b143f6f48a",
+      "name": "Ji Hwan Kim",
+      "institution": "University of Pennsylvania",
+      "country": "US",
+      "rank": 11,
+      "fields": [
+        "Macroeconomics",
+        "Urban Economics",
+        "Environmental Economics"
+      ],
+      "paper_title": "Adapting to Storms in the U.S.: A Spatial Dynamic Analysis",
+      "paper_url": "https://jihwankim1994.weebly.com/uploads/1/5/1/1/151162346/jmp.pdf",
+      "profile_url": "https://jihwankim1994.weebly.com/",
+      "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "4174bbdbac1b",
+      "name": "Josemaria Larrain",
+      "institution": "University of Pennsylvania",
+      "country": "US",
+      "rank": 11,
+      "fields": [
+        "Quantitative Macroeconomics",
+        "Labor Economics"
+      ],
+      "paper_title": "A Taste for Luxury",
+      "paper_url": "https://drive.google.com/file/d/1w4hppS42oLRW5geHXQihcWypELDkM1Zj/view?usp=sharing",
+      "profile_url": "https://www.josemarialarrain.com",
+      "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "c7d4079b5a01",
+      "name": "Luigi Falasconi",
+      "institution": "University of Pennsylvania",
+      "country": "US",
+      "rank": 11,
+      "fields": [
+        "Macroeconomics",
+        "Financial Economics",
+        "International Finance"
+      ],
+      "paper_title": "Bailout Expectations, Default Risk and the Dynamics of Bank Credit Spreads",
+      "paper_url": "https://luigif-upenn.github.io/JMP_LF/BailoutLF.pdf",
+      "profile_url": "https://luigifalasconi.com",
+      "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "f448b58fb4aa",
+      "name": "Hannah Rhodenhiser",
+      "institution": "Boston University",
+      "country": "US",
+      "rank": 12,
+      "fields": [
+        "Macroeconomics",
+        "Environmental Economics"
+      ],
+      "paper_title": "Averting Deforestation At Scale: The Macroeconomics of Payments for Ecosystem Services",
+      "paper_url": "https://drive.google.com/file/d/1AJmEFjQ_e4qCzwqdKxvujMzF3pEO7gXr/view?usp=sharing",
+      "profile_url": "https://sites.google.com/view/hannahrhodenhiser",
+      "source_url": "https://www.bu.edu/econ/job-market-candidates/",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "f733fd4004ac",
+      "name": "Zixing Guo",
+      "institution": "Boston University",
+      "country": "US",
+      "rank": 12,
+      "fields": [
+        "Macroeconomics",
+        "Monetary Economics",
+        "Financial Economics"
+      ],
+      "paper_title": "The Macro Impact of the Debt-Inflation Channel on Investment",
+      "paper_url": "https://gzx0321.github.io/files/The_Macro_Impact_of_the_Debt_Inflation_Channel_on_Investment%20(1).pdf",
+      "profile_url": "https://gzx0321.github.io/",
+      "source_url": "https://www.bu.edu/econ/job-market-candidates/",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "6050c8338389",
+      "name": "Yakup Kutsal Koca",
+      "institution": "University of Southern California",
+      "country": "US",
+      "rank": 17,
+      "fields": [
+        "Macroeconomics",
+        "Labor Economics",
+        "Economics of AI and Innovation"
+      ],
+      "paper_title": "AI Automation and Labor Market Outcomes",
+      "paper_url": "https://ykkoca.github.io/files/jmp_YakupKutsal_Koca.pdf",
+      "profile_url": "https://ykkoca.github.io",
+      "source_url": "https://dornsife.usc.edu/econ/doctoral/job-market-candidates/",
+      "last_verified": "2026-06-13"
+    },
+    {
+      "id": "0c782deaf273",
+      "name": "Zili Yang",
+      "institution": "University of Southern California",
+      "country": "US",
+      "rank": 17,
+      "fields": [
+        "Economic Growth",
+        "Economics of Innovation",
+        "Business Economics"
+      ],
+      "paper_title": "Technology M&A and Knowledge Diffusion",
+      "paper_url": "https://ziligit.github.io/files/jmp_paper.pdf",
+      "profile_url": "https://ziligit.github.io/",
+      "source_url": "https://dornsife.usc.edu/econ/doctoral/job-market-candidates/",
       "last_verified": "2026-06-13"
     }
   ]

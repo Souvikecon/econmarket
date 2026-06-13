@@ -46,6 +46,9 @@ DEPARTMENTS = [
     {"institution": "New York University", "country": "US", "rank": 8, "url": "https://as.nyu.edu/departments/economics/graduate/job-market.html"},
     {"institution": "Columbia University", "country": "US", "rank": 9, "url": "https://econ.columbia.edu/phd/job-market-candidates/"},
     {"institution": "Brown University", "country": "US", "rank": 10, "url": "https://economics.brown.edu/academics/graduate/job-market-candidates"},
+    {"institution": "University of Pennsylvania", "country": "US", "rank": 11, "url": "https://economics.sas.upenn.edu/graduate/job-market-candidates"},
+    {"institution": "Boston University", "country": "US", "rank": 12, "url": "https://www.bu.edu/econ/job-market-candidates/"},
+    {"institution": "University of Southern California", "country": "US", "rank": 17, "url": "https://dornsife.usc.edu/econ/doctoral/job-market-candidates/"},
     # Top degree-granting university economics departments in the UK ranking.
     {"institution": "London School of Economics", "country": "UK", "rank": 1, "url": "https://www.lse.ac.uk/economics/phd-job-market"},
     {"institution": "University of Oxford", "country": "UK", "rank": 2, "url": "https://www.economics.ox.ac.uk/job-market-candidates"},
@@ -56,6 +59,73 @@ DEPARTMENTS = [
     {"institution": "University of York", "country": "UK", "rank": 7, "url": "https://www.york.ac.uk/economics/postgraduate-research/job-market-candidates/"},
     {"institution": "Queen Mary University of London", "country": "UK", "rank": 8, "url": "https://www.qmul.ac.uk/sef/postgraduate/phd/job-market-candidates/"},
 ]
+
+
+# These official rosters use layouts where fields or paper links live only on
+# candidate profiles. Entries remain eligible only while the name appears on
+# the official department roster; paper URLs are verified in paper_overrides.
+CURATED_CANDIDATES = {
+    "University of Pennsylvania": [
+        {
+            "name": "Luigi Falasconi",
+            "fields": ["Macroeconomics", "Financial Economics", "International Finance"],
+            "paper_title": "Bailout Expectations, Default Risk and the Dynamics of Bank Credit Spreads",
+            "profile_url": "https://luigifalasconi.com",
+        },
+        {
+            "name": "Ji Hwan Kim",
+            "fields": ["Macroeconomics", "Urban Economics", "Environmental Economics"],
+            "paper_title": "Adapting to Storms in the U.S.: A Spatial Dynamic Analysis",
+            "profile_url": "https://jihwankim1994.weebly.com/",
+        },
+        {
+            "name": "Josemaria Larrain",
+            "fields": ["Quantitative Macroeconomics", "Labor Economics"],
+            "paper_title": "A Taste for Luxury",
+            "profile_url": "https://www.josemarialarrain.com",
+        },
+        {
+            "name": "Alexander Sawyer",
+            "fields": ["Macroeconomics", "Business Dynamics", "Information Frictions"],
+            "paper_title": "Learning through Sequential Interactions in the Market for Venture Capital",
+            "profile_url": "https://sites.google.com/sas.upenn.edu/alexander-sawyer/home",
+        },
+        {
+            "name": "Javier Tasso",
+            "fields": ["Macroeconomics", "Political Economy"],
+            "paper_title": "Unemployment and Forward-Looking Congressmen",
+            "profile_url": "https://javiertasso.github.io/",
+        },
+    ],
+    "Boston University": [
+        {
+            "name": "Zixing Guo",
+            "fields": ["Macroeconomics", "Monetary Economics", "Financial Economics"],
+            "paper_title": "The Macro Impact of the Debt-Inflation Channel on Investment",
+            "profile_url": "https://gzx0321.github.io/",
+        },
+        {
+            "name": "Hannah Rhodenhiser",
+            "fields": ["Macroeconomics", "Environmental Economics"],
+            "paper_title": "Averting Deforestation At Scale: The Macroeconomics of Payments for Ecosystem Services",
+            "profile_url": "https://sites.google.com/view/hannahrhodenhiser",
+        },
+    ],
+    "University of Southern California": [
+        {
+            "name": "Yakup Kutsal Koca",
+            "fields": ["Macroeconomics", "Labor Economics", "Economics of AI and Innovation"],
+            "paper_title": "AI Automation and Labor Market Outcomes",
+            "profile_url": "https://ykkoca.github.io",
+        },
+        {
+            "name": "Zili Yang",
+            "fields": ["Economic Growth", "Economics of Innovation", "Business Economics"],
+            "paper_title": "Technology M&A and Knowledge Diffusion",
+            "profile_url": "https://ziligit.github.io/",
+        },
+    ],
+}
 
 
 @dataclass
@@ -103,8 +173,9 @@ class Scraper:
     def scrape_department(self, department: dict) -> list[Candidate]:
         html = self.fetch(department["url"])
         soup = BeautifulSoup(html, "html.parser")
-        blocks = candidate_blocks(soup)
-        partials = [extract_candidate(block, department) for block in blocks]
+        curated = curated_partials(soup, department)
+        blocks = [] if curated is not None else candidate_blocks(soup)
+        partials = curated if curated is not None else [extract_candidate(block, department) for block in blocks]
         if self.debug:
             headings = [
                 clean_text(tag.get_text(" ", strip=True))
@@ -174,6 +245,18 @@ class Scraper:
 
 def clean_text(value: str) -> str:
     return SPACE_RE.sub(" ", value or "").strip()
+
+
+def curated_partials(soup: BeautifulSoup, department: dict) -> list[dict] | None:
+    configured = CURATED_CANDIDATES.get(department["institution"])
+    if configured is None:
+        return None
+    roster_text = clean_text(soup.get_text(" ", strip=True)).casefold()
+    return [
+        {**candidate, "paper_url": ""}
+        for candidate in configured
+        if clean_text(candidate["name"]).casefold() in roster_text
+    ]
 
 
 def absolute_url(base: str, href: str) -> str:

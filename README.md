@@ -2,6 +2,8 @@
 
 A small, automatically refreshed directory of macroeconomics PhD job market candidates at leading US and UK economics departments. Department scope follows IDEAS/RePEc rankings, while candidate and paper information comes from official department pages and candidate websites.
 
+The current scope covers 13 US departments drawn from the IDEAS/RePEc top 20 and the top 8 UK university economics departments.
+
 ## How it works
 
 - `index.html`, `static/styles.css`, and `static/app.js` form a static GitHub Pages site.
