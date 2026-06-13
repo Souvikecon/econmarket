@@ -7,7 +7,7 @@ A small, automatically refreshed directory of macroeconomics PhD job market cand
 - `index.html`, `static/styles.css`, and `static/app.js` form a static GitHub Pages site.
 - `scripts/update_data.py` checks official department pages, filters for macro fields, resolves job market paper links, and writes `data/candidates.json`.
 - `data/paper_overrides.json` records a small number of verified paper links for sites whose markup does not identify a job market paper reliably.
-- `.github/workflows/refresh-and-deploy.yml` refreshes the data every Monday and deploys the site to GitHub Pages.
+- `.github/workflows/refresh-and-deploy.yml` tests every push and refreshes the data every Monday. GitHub Pages publishes the `main` branch.
 - Existing records are retained for one failed refresh, preventing a temporary department outage from emptying the public site.
 
 ## Local development

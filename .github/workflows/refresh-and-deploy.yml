@@ -1,4 +1,4 @@
-name: Refresh data and deploy Pages
+name: Test and refresh data
 
 on:
   push:
@@ -9,24 +9,22 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: refresh-data
   cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - run: pytest -q
+      - run: python -m pytest tests -q
       - run: python scripts/update_data.py
         if: github.event_name != 'push'
       - name: Commit refreshed data
@@ -39,12 +37,3 @@ jobs:
             git commit -m "Refresh candidate data"
             git push
           fi
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - id: deployment
-        uses: actions/deploy-pages@v4
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
