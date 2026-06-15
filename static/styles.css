@@ -363,18 +363,18 @@ h2 {
 
 .placement-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  padding-top: 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  padding-top: 22px;
 }
 
 .placement-card {
-  min-height: 330px;
-  padding: 28px;
+  min-height: 245px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 12px;
   background: #fff;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
@@ -386,18 +386,23 @@ h2 {
 }
 
 .placement-card h3 {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   font-family: "Newsreader", serif;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.08;
   letter-spacing: -0.025em;
 }
 
+.placement-card .card-top {
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
 .placement-status {
   flex: 0 0 auto;
-  padding: 5px 9px;
+  padding: 4px 7px;
   border-radius: 999px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
 }
 
@@ -405,13 +410,13 @@ h2 {
 .placement-status.pending { color: #7a675d; background: #eee7df; }
 
 .placement-detail {
-  padding-top: 18px;
+  padding-top: 12px;
   border-top: 1px solid var(--line);
 }
 
 .placement-label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: var(--muted);
   font-size: 10px;
   font-weight: 700;
@@ -422,38 +427,38 @@ h2 {
 .placement-destination {
   display: block;
   color: var(--ink);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.35;
   overflow-wrap: anywhere;
 }
 
 .placement-position {
-  margin: 7px 0 0;
+  margin: 5px 0 0;
   color: var(--green);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1.45;
   overflow-wrap: anywhere;
 }
 
 .placement-timing {
-  margin: 8px 0 0;
+  margin: 5px 0 0;
   color: var(--muted);
   font-size: 12px;
 }
 
 .placement-links {
   margin-top: auto;
-  padding-top: 24px;
+  padding-top: 14px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px 18px;
+  gap: 7px 14px;
 }
 
 .source-link {
   color: var(--green);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   text-decoration: none;
   overflow-wrap: anywhere;
@@ -462,6 +467,14 @@ h2 {
 .pending-card { background: #fcfaf5; }
 .pending-card .placement-destination { color: var(--muted); font-weight: 600; }
 #clear-placement-filters { color: #fff; border-color: var(--green); background: var(--green); }
+
+.placement-hero {
+  padding-bottom: 54px;
+}
+
+.placement-hero h1 {
+  margin-bottom: 20px;
+}
 
 .methodology {
   max-width: 1184px;
@@ -508,6 +521,10 @@ footer a { text-decoration: none; }
   border: 0;
 }
 
+@media (max-width: 1020px) {
+  .placement-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 760px) {
   .site-header { height: 66px; padding-inline: 20px; }
   .site-nav { gap: 14px; }
@@ -523,7 +540,8 @@ footer a { text-decoration: none; }
   .paper-grid { grid-template-columns: 1fr; }
   .paper-card { min-height: 290px; padding: 24px; }
   .placement-grid { grid-template-columns: 1fr; }
-  .placement-card { min-height: 310px; padding: 24px; }
+  .placement-card { min-height: 0; padding: 18px; }
+  .placement-hero { padding-bottom: 48px; }
   .methodology { grid-template-columns: 1fr; gap: 36px; padding: 70px 20px; }
   footer { margin-inline: 20px; padding-inline: 0; flex-direction: column; }
 }
