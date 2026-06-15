@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Confirmed placements for macroeconomics PhD job market candidates from leading US and UK economics departments.">
+  <title>Candidate Placements | Macro JMP</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/styles.css?v=20260615-2">
+  <script src="static/placements.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Macro Job Market Papers home">
+      <span class="brand-mark">M</span>
+      <span>Macro JMP</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="./">Papers</a>
+      <a href="placements.html" aria-current="page">Placements</a>
+      <a href="#methodology">Methodology</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero placement-hero">
+      <div class="eyebrow">2025-26 placement tracker</div>
+      <h1>Where macro candidates<br><span>are headed.</span></h1>
+      <p class="hero-copy">Confirmed destinations and current roles for candidates in the paper directory, sourced from departments and candidate websites.</p>
+      <div class="status-line" aria-live="polite">
+        <span class="status-dot"></span>
+        <span id="placement-summary">Loading placement data...</span>
+      </div>
+    </section>
+
+    <section class="explorer" aria-labelledby="placements-heading">
+      <div class="explorer-heading">
+        <div>
+          <p class="section-kicker">Placement directory</p>
+          <h2 id="placements-heading"><span id="placement-count">0</span> candidates</h2>
+        </div>
+        <label class="search-box">
+          <span class="sr-only">Search candidate placements</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+          <input id="placement-search" type="search" placeholder="Search name, destination, or role">
+        </label>
+      </div>
+
+      <div class="filters" aria-label="Placement filters">
+        <div class="filter-group" role="group" aria-label="Placement status">
+          <button class="filter-chip active" type="button" data-status="all">All</button>
+          <button class="filter-chip" type="button" data-status="confirmed">Confirmed</button>
+          <button class="filter-chip" type="button" data-status="pending">Not announced</button>
+        </div>
+        <label class="select-wrap">
+          <span class="sr-only">Filter by PhD department</span>
+          <select id="placement-institution-filter">
+            <option value="all">All PhD departments</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="placement-grid" class="placement-grid"></div>
+      <div id="placement-empty-state" class="empty-state" hidden>
+        <h3>No matching placements</h3>
+        <p>Try a broader search or clear a filter.</p>
+        <button id="clear-placement-filters" type="button">Clear filters</button>
+      </div>
+    </section>
+
+    <section id="methodology" class="methodology">
+      <div>
+        <p class="section-kicker">How to read this page</p>
+        <h2>Confirmed, sourced, and current.</h2>
+      </div>
+      <div class="method-copy">
+        <p>A placement is marked confirmed only when an official department record or the candidate's website names a destination. Multi-stage placements show both the postdoctoral position and the subsequent appointment.</p>
+        <p>"Not yet announced" means no public placement was found during the latest review. It does not imply that the candidate is unplaced. Each confirmed card links to the source used for verification.</p>
+        <div class="source-links">
+          <a href="./">Browse job market papers <span>&nearr;</span></a>
+          <a href="https://github.com/Souvikecon/econmarket" target="_blank" rel="noopener">View source data <span>&nearr;</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Independent directory. Placement records are updated as public announcements become available.</p>
+    <a href="https://github.com/Souvikecon/econmarket" target="_blank" rel="noopener">View source</a>
+  </footer>
+</body>
+</html>

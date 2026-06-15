@@ -9,6 +9,8 @@ The current scope covers 14 leading US departments selected from IDEAS/RePEc ran
 - `index.html`, `static/styles.css`, and `static/app.js` form a static GitHub Pages site.
 - `scripts/update_data.py` checks official department pages, filters for macro fields, resolves job market paper links, and writes `data/candidates.json`.
 - `data/paper_overrides.json` records a small number of verified paper links for sites whose markup does not identify a job market paper reliably.
+- `placements.html` and `static/placements.js` show confirmed destinations and pending announcements for every current candidate.
+- `scripts/update_placements.py` merges the current candidate list with reviewed records in `data/placement_overrides.json` and writes `data/placements.json`.
 - `.github/workflows/refresh-and-deploy.yml` tests every push and refreshes the data every Monday. GitHub Pages publishes the `main` branch.
 - Existing records are retained for one failed refresh, preventing a temporary department outage from emptying the public site.
 
@@ -17,6 +19,7 @@ The current scope covers 14 leading US departments selected from IDEAS/RePEc ran
 ```powershell
 py -m pip install -r requirements.txt
 py scripts/update_data.py
+py scripts/update_placements.py
 py -m http.server 8000
 ```
 
