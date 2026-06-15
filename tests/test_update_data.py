@@ -4,6 +4,7 @@ from scripts.update_data import (
     candidate_blocks,
     curated_partials,
     extract_candidate,
+    extract_fields,
     find_paper_link,
     is_valid_paper_title,
 )
@@ -170,3 +171,13 @@ def test_rejects_site_search_results_as_paper_titles():
 
     assert not is_valid_paper_title(broken)
     assert is_valid_paper_title("Collateralized Debt Networks with Lender Default")
+
+
+def test_rejects_version_labels_as_paper_titles():
+    assert not is_valid_paper_title("Latest version: March 2026")
+
+
+def test_extracts_separate_primary_and_secondary_fields():
+    text = "Johannes Matt Primary Field: Finance Secondary Field: Macroeconomics Personal Website"
+
+    assert extract_fields(text) == ["Finance", "Macroeconomics"]

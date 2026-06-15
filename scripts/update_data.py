@@ -330,6 +330,7 @@ def is_valid_paper_title(value: str) -> bool:
         4 <= len(title) <= 240
         and "relevance:" not in lowered
         and "news item" not in lowered
+        and not lowered.startswith("latest version:")
         and title.casefold() not in {"skip to content", "home", "research", "link"}
     )
 
@@ -494,6 +495,22 @@ def extract_fields(text: str, block: Tag | None = None) -> list[str]:
             raw = clean_text(field_node.get_text(" ", strip=True))
             fields = [clean_text(field) for field in re.split(r"[,;/]", raw) if clean_text(field)]
             return fields[:6] if any(MACRO_RE.search(field) for field in fields) else []
+    labelled_fields = re.findall(
+        r"(?:Primary|Secondary)(?: Research)? Fields?\s*:\s*(.*?)"
+        r"(?=(?:Primary|Secondary)(?: Research)? Fields?\s*:|Personal Website|Job Market Paper|References|Email|$)",
+        text,
+        re.IGNORECASE,
+    )
+    if labelled_fields:
+        fields = []
+        for raw_field in labelled_fields:
+            for field in re.split(r"[,;/]", raw_field):
+                field = clean_text(field).strip(".-")
+                field = re.sub(r"^(?:and\s+)", "", field, flags=re.IGNORECASE)
+                if 2 <= len(field) <= 80 and field.casefold() not in {item.casefold() for item in fields}:
+                    fields.append(field)
+        if any(MACRO_RE.search(field) for field in fields):
+            return fields[:6]
     patterns = [
         r"Fields? of Study\s*:\s*(.+?)(?:Advisor|Job Market Paper|References|Email|$)",
         r"Field\(s\)\s*:\s*(.+?)(?:Paper Title|Main Advisor|Advisor|$)",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T15:43:28+00:00",
+  "generated_at": "2026-06-15T15:54:12+00:00",
   "ranking_period": "May 2026",
   "ranking_sources": {
     "US": "https://ideas.repec.org/top/top.usecondept.html",
@@ -14,9 +14,10 @@
       "country": "UK",
       "rank": 1,
       "fields": [
-        "Finance Secondary Field: Macroeconomics Personal Website"
+        "Finance",
+        "Macroeconomics"
       ],
-      "paper_title": "Latest version: March 202 6",
+      "paper_title": "Financial Regulation, Pension Investment, and Economic Growth",
       "paper_url": "https://jimattecon.github.io/Papers/Matt2025FinancialRegulationPensionInvestmentandEconomicGrowth.pdf",
       "profile_url": "https://www.johannesmatt.com/",
       "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
@@ -60,7 +61,8 @@
       "country": "UK",
       "rank": 1,
       "fields": [
-        "Macroeconomics"
+        "Macroeconomics",
+        "Finance"
       ],
       "paper_title": "Debt without Investment",
       "paper_url": "https://www.dropbox.com/scl/fi/u22lix08rd9g7z9zzaczw/Debt-without-Investment_latest-version.pdf?rlkey=b853886wbhw3ivkl7l2b2ng8q&st=v1zw6vqa&dl=1",
