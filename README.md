@@ -11,6 +11,7 @@ The current scope covers 14 leading US departments selected from IDEAS/RePEc ran
 - `data/paper_overrides.json` records a small number of verified paper links for sites whose markup does not identify a job market paper reliably.
 - `placements.html` and `static/placements.js` show confirmed destinations and pending announcements for every current candidate.
 - `scripts/update_placements.py` merges the current candidate list with reviewed records in `data/placement_overrides.json` and writes `data/placements.json`.
+- `scripts/update_candidate_details.py` adds reviewed abstract summaries, normalized research topics, and placement types for advanced filtering.
 - `.github/workflows/refresh-and-deploy.yml` tests every push and refreshes the data every Monday. GitHub Pages publishes the `main` branch.
 - Existing records are retained for one failed refresh, preventing a temporary department outage from emptying the public site.
 
@@ -20,6 +21,7 @@ The current scope covers 14 leading US departments selected from IDEAS/RePEc ran
 py -m pip install -r requirements.txt
 py scripts/update_data.py
 py scripts/update_placements.py
+py scripts/update_candidate_details.py
 py -m http.server 8000
 ```
 

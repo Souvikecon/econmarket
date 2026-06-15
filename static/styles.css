@@ -214,6 +214,13 @@ h2 {
 
 .filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
 
+.select-filters {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .filter-chip, #clear-filters, #clear-placement-filters {
   padding: 9px 14px;
   border: 1px solid var(--line);
@@ -233,7 +240,7 @@ h2 {
 }
 
 .select-wrap select {
-  max-width: 260px;
+  max-width: 220px;
   height: 40px;
   padding: 0 34px 0 13px;
   border: 1px solid var(--line);
@@ -260,6 +267,7 @@ h2 {
   border-radius: 16px;
   background: #fff;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  align-self: start;
 }
 
 .paper-card:hover {
@@ -307,7 +315,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 }
 
 .field-tag {
@@ -318,6 +326,41 @@ h2 {
   font-size: 11px;
   font-weight: 600;
 }
+
+.paper-details {
+  margin-bottom: 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.paper-details summary {
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.paper-details summary::-webkit-details-marker { display: none; }
+.paper-details summary span::before { content: "+"; font-size: 18px; font-weight: 500; }
+.paper-details[open] summary span::before { content: "-"; }
+
+.abstract-content {
+  padding: 2px 0 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.abstract-content p { margin-bottom: 12px; }
+.abstract-content a { color: var(--green); font-weight: 700; text-decoration: none; }
+.abstract-placement { display: flex; flex-wrap: wrap; gap: 5px; }
+.abstract-placement strong { color: var(--ink); }
 
 .card-links {
   margin-top: auto;
@@ -536,6 +579,7 @@ footer a { text-decoration: none; }
   .explorer-heading { align-items: stretch; flex-direction: column; }
   .search-box { width: 100%; }
   .filters { align-items: stretch; flex-direction: column; }
+  .select-filters { display: grid; grid-template-columns: 1fr; }
   .select-wrap select { width: 100%; max-width: none; }
   .paper-grid { grid-template-columns: 1fr; }
   .paper-card { min-height: 290px; padding: 24px; }

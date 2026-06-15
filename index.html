@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/styles.css?v=20260615-3">
-  <script src="static/app.js" defer></script>
+  <link rel="stylesheet" href="static/styles.css?v=20260615-4">
+  <script src="static/app.js?v=20260615-2" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -54,12 +54,26 @@
           <button class="filter-chip" type="button" data-country="US">United States</button>
           <button class="filter-chip" type="button" data-country="UK">United Kingdom</button>
         </div>
-        <label class="select-wrap">
-          <span class="sr-only">Filter by department</span>
-          <select id="institution-filter">
-            <option value="all">All departments</option>
-          </select>
-        </label>
+        <div class="select-filters">
+          <label class="select-wrap">
+            <span class="sr-only">Filter by research field</span>
+            <select id="topic-filter">
+              <option value="all">All research fields</option>
+            </select>
+          </label>
+          <label class="select-wrap">
+            <span class="sr-only">Filter by department</span>
+            <select id="institution-filter">
+              <option value="all">All departments</option>
+            </select>
+          </label>
+          <label class="select-wrap">
+            <span class="sr-only">Filter by placement type</span>
+            <select id="placement-type-filter">
+              <option value="all">All placement types</option>
+            </select>
+          </label>
+        </div>
       </div>
 
       <div id="paper-grid" class="paper-grid"></div>

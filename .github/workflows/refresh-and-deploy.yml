@@ -29,13 +29,15 @@ jobs:
         if: github.event_name != 'push'
       - run: python scripts/update_placements.py
         if: github.event_name != 'push'
+      - run: python scripts/update_candidate_details.py
+        if: github.event_name != 'push'
       - name: Commit refreshed data
         if: github.event_name != 'push'
         run: |
-          if ! git diff --quiet data/candidates.json data/placements.json; then
+          if ! git diff --quiet data/candidates.json data/placements.json data/candidate_details.json; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/candidates.json data/placements.json
-            git commit -m "Refresh candidate and placement data"
+            git add data/candidates.json data/placements.json data/candidate_details.json
+            git commit -m "Refresh candidate, placement, and detail data"
             git push
           fi
