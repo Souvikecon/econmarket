@@ -5,6 +5,7 @@ from scripts.update_data import (
     curated_partials,
     extract_candidate,
     find_paper_link,
+    is_valid_paper_title,
 )
 
 
@@ -162,3 +163,10 @@ def test_curated_candidate_supports_last_name_first_roster():
     candidates = curated_partials(roster, department)
     assert [item["name"] for item in candidates] == ["Leonardo Barreto"]
     assert "roster_name" not in candidates[0]
+
+
+def test_rejects_site_search_results_as_paper_titles():
+    broken = "A candidate description ... Relevance: 38.8 News Item Now Hiring: Lecturer"
+
+    assert not is_valid_paper_title(broken)
+    assert is_valid_paper_title("Collateralized Debt Networks with Lender Default")

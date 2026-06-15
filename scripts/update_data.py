@@ -276,6 +276,9 @@ class Scraper:
                     partial["paper_title"], partial["paper_url"] = paper
             if not partial["paper_title"] or not partial["paper_url"]:
                 continue
+            partial["paper_title"] = clean_text(partial["paper_title"])
+            if not is_valid_paper_title(partial["paper_title"]):
+                continue
             partial["paper_url"] = urljoin(partial["profile_url"] or department["url"], partial["paper_url"])
             candidates.append(build_candidate(partial, department))
         return deduplicate_candidates(candidates)
@@ -318,6 +321,17 @@ class Scraper:
 
 def clean_text(value: str) -> str:
     return SPACE_RE.sub(" ", value or "").strip()
+
+
+def is_valid_paper_title(value: str) -> bool:
+    title = clean_text(value)
+    lowered = title.casefold()
+    return (
+        4 <= len(title) <= 240
+        and "relevance:" not in lowered
+        and "news item" not in lowered
+        and title.casefold() not in {"skip to content", "home", "research", "link"}
+    )
 
 
 def curated_partials(soup: BeautifulSoup, department: dict) -> list[dict] | None:
