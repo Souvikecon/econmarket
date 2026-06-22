@@ -1,10 +1,12 @@
 {
-  "generated_at": "2026-06-15T15:54:12+00:00",
+  "generated_at": "2026-06-22T12:26:08+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 53,
-  "confirmed_count": 41,
+  "total_candidates": 52,
+  "confirmed_count": 40,
   "pending_count": 12,
-  "stale_overrides": [],
+  "stale_overrides": [
+    "Linchuan Xu"
+  ],
   "placements": [
     {
       "candidate_id": "a020e0435055",
@@ -23,25 +25,6 @@
       "position": "Economist",
       "timing": "Starts September 2026",
       "source_url": "https://www.johannesmatt.com/",
-      "source_label": "Candidate website"
-    },
-    {
-      "candidate_id": "76a86af440e1",
-      "name": "Linchuan Xu",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Development Economics Seconday Fields: Macroeconomics",
-        "Environmental Economics"
-      ],
-      "paper_url": "https://www.dropbox.com/scl/fi/w0nh1526zcnbscf940gxt/LA_draft.pdf?rlkey=42wjwkedg0hlvri46lcc0n9df&st=4l0eii3g&dl=0",
-      "profile_url": "https://www.linchuanxu.com/",
-      "status": "confirmed",
-      "destination": "University of Manchester",
-      "position": "Lecturer (Assistant Professor) in Economics",
-      "timing": "Starts August 2026",
-      "source_url": "https://www.linchuanxu.com/",
       "source_label": "Candidate website"
     },
     {
