@@ -13,7 +13,7 @@ The current scope covers 14 leading US departments selected from IDEAS/RePEc ran
 - `scripts/update_placements.py` merges the current candidate list with reviewed records in `data/placement_overrides.json` and writes `data/placements.json`.
 - `scripts/update_candidate_details.py` adds reviewed abstract summaries, normalized research topics, and placement types for advanced filtering.
 - `.github/workflows/refresh-and-deploy.yml` tests every push and refreshes the data every Monday. GitHub Pages publishes the `main` branch.
-- Existing records are retained for one failed refresh, preventing a temporary department outage from emptying the public site.
+- Existing records are retained for up to 90 days when a department refresh fails, preventing temporary access problems from emptying the public site.
 
 ## Local development
 

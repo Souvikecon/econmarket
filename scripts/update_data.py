@@ -32,6 +32,7 @@ MACRO_RE = re.compile(
 PAPER_MARKER_RE = re.compile(r"\b(?:job\s+market\s+paper|paper\s+title|\(?jmp\)?)\b", re.IGNORECASE)
 FIELD_LABEL_RE = re.compile(r"\b(?:primary\s+)?(?:research\s+)?fields?(?:\s+of\s+study)?\s*:", re.IGNORECASE)
 SPACE_RE = re.compile(r"\s+")
+STALE_GRACE_DAYS = 90
 
 
 DEPARTMENTS = [
@@ -751,7 +752,7 @@ def ranking_period(scraper: Scraper) -> str:
 
 def merge_recent(existing: dict, fresh: list[Candidate], failed_institutions: set[str]) -> list[Candidate]:
     merged = {candidate.id: candidate for candidate in fresh}
-    cutoff = datetime.now(UTC).date() - timedelta(days=21)
+    cutoff = datetime.now(UTC).date() - timedelta(days=STALE_GRACE_DAYS)
     for old in existing.get("candidates", []):
         if old.get("institution") not in failed_institutions:
             continue
@@ -765,6 +766,10 @@ def merge_recent(existing: dict, fresh: list[Candidate], failed_institutions: se
         if verified >= cutoff and candidate.id not in merged:
             merged[candidate.id] = candidate
     return sorted(merged.values(), key=lambda item: (item.country, item.rank, item.institution, item.name))
+
+
+def is_partial_refresh(previous_count: int, current_count: int) -> bool:
+    return previous_count >= 3 and current_count > 0 and current_count * 2 <= previous_count
 
 
 def write_output(candidates: list[Candidate], period: str) -> None:
@@ -788,6 +793,11 @@ def main() -> int:
 
     scraper = Scraper(delay=args.delay, debug=args.debug)
     existing = load_existing()
+    previous_counts: dict[str, int] = {}
+    for candidate in existing.get("candidates", []):
+        institution = candidate.get("institution")
+        if institution:
+            previous_counts[institution] = previous_counts.get(institution, 0) + 1
     selected = DEPARTMENTS
     if args.department:
         needle = args.department.lower()
@@ -803,10 +813,16 @@ def main() -> int:
         try:
             candidates = scraper.scrape_department(department)
             all_candidates.extend(candidates)
-            if not candidates:
+            previous_count = previous_counts.get(department["institution"], 0)
+            partial = is_partial_refresh(previous_count, len(candidates))
+            if not candidates or partial:
                 failed.add(department["institution"])
-            report.append({"institution": department["institution"], "count": len(candidates), "status": "ok" if candidates else "no verified records"})
-            print(f"{department['institution']}: {len(candidates)} verified macro candidate(s)")
+            if partial:
+                status = f"partial result ({len(candidates)} of previous {previous_count})"
+            else:
+                status = "ok" if candidates else "no verified records"
+            report.append({"institution": department["institution"], "count": len(candidates), "status": status})
+            print(f"{department['institution']}: {len(candidates)} verified macro candidate(s) [{status}]")
         except (requests.RequestException, ValueError) as error:
             failed.add(department["institution"])
             report.append({"institution": department["institution"], "count": 0, "status": str(error)})

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-22T12:26:08+00:00",
-  "ranking_period": "May 2026",
+  "generated_at": "2026-07-16T12:15:55+00:00",
+  "ranking_period": "June 2026",
   "ranking_sources": {
     "US": "https://ideas.repec.org/top/top.usecondept.html",
     "UK": "https://ideas.repec.org/top/top.uk.html"
@@ -21,7 +21,23 @@
       "paper_url": "https://jimattecon.github.io/Papers/Matt2025FinancialRegulationPensionInvestmentandEconomicGrowth.pdf",
       "profile_url": "https://www.johannesmatt.com/",
       "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
+    },
+    {
+      "id": "76a86af440e1",
+      "name": "Linchuan Xu",
+      "institution": "London School of Economics",
+      "country": "UK",
+      "rank": 1,
+      "fields": [
+        "Development Economics Seconday Fields: Macroeconomics",
+        "Environmental Economics"
+      ],
+      "paper_title": "The Middlemen of Development? Evidence from China's Labor Recruitment Agencies",
+      "paper_url": "https://www.dropbox.com/scl/fi/w0nh1526zcnbscf940gxt/LA_draft.pdf?rlkey=42wjwkedg0hlvri46lcc0n9df&st=4l0eii3g&dl=0",
+      "profile_url": "https://www.linchuanxu.com/",
+      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
+      "last_verified": "2026-06-15"
     },
     {
       "id": "91e3a1c5a704",
@@ -36,7 +52,7 @@
       "paper_url": "https://drive.google.com/file/d/1hxPmlttkmKWHt0scQOz7u3hFKZ6fPCls/view?usp=drive_link",
       "profile_url": "https://sites.google.com/view/lukaswiedemann/",
       "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "10cce94a5d45",
@@ -52,7 +68,7 @@
       "paper_url": "https://www.dropbox.com/scl/fi/u22lix08rd9g7z9zzaczw/Debt-without-Investment_latest-version.pdf?rlkey=b853886wbhw3ivkl7l2b2ng8q&st=v1zw6vqa&dl=1",
       "profile_url": "https://sites.google.com/view/martaguasch-rusinol/",
       "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "3049e5e61cb3",
@@ -67,7 +83,7 @@
       "paper_url": "https://www.dropbox.com/scl/fi/ulftcclqr8c5rpkbqifwa/DraftV3_JMP.pdf?dl=0&rlkey=pin7a7sg2lhsn5a8lngkovbi4&st=czyocr5z",
       "profile_url": "https://www.sitongding.com/",
       "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "a64c002fc775",
@@ -82,7 +98,7 @@
       "paper_url": "https://sjhobler.github.io/assets/papers/jmp/jmp-sj-hobler.pdf",
       "profile_url": "https://sjhobler.github.io/",
       "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "fe5f36a0eee2",
@@ -97,7 +113,7 @@
       "paper_url": "https://drive.google.com/file/d/1MIaLKIe2AszccfaBVloH0d2A7Dva08Zr/view?usp=sharing",
       "profile_url": "https://www.yuhaoqian.com/#home",
       "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "87a8c2d73818",
@@ -112,7 +128,7 @@
       "paper_url": "https://drive.google.com/file/d/1dhclF5TeHFRA-xLKJ--hxeChm86YZBit/view",
       "profile_url": "https://www.economics.ox.ac.uk/people/chenchuan-shi",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "a5517d401fa0",
@@ -127,7 +143,7 @@
       "paper_url": "https://www.ekabos.com/research",
       "profile_url": "https://www.economics.ox.ac.uk/people/eszter-kabos",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "fa97e7536f4d",
@@ -142,7 +158,7 @@
       "paper_url": "https://drive.google.com/file/d/1KEhc63eglpe7-OVS4DzL2me6bQFFKjhP/view",
       "profile_url": "https://www.economics.ox.ac.uk/people/giulio-gottardo",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "d895f77b3836",
@@ -157,7 +173,7 @@
       "paper_url": "https://weblearn.ox.ac.uk/portal/site/:socsci:econ",
       "profile_url": "https://www.economics.ox.ac.uk/people/giulio-schinaia",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "7d5fcbe3d8af",
@@ -172,7 +188,7 @@
       "paper_url": "https://hannahroemer.github.io/HR_JMP_CCS.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/hannah-romer",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "fbbd458dd47b",
@@ -188,7 +204,7 @@
       "paper_url": "https://www.dropbox.com/scl/fi/44ugmgp1h984asu68jneh/JMP_Draft_KN.pdf?rlkey=zqliqeehhri1wdg7npign451y&e=1&st=mv1xoq6n&dl=0",
       "profile_url": "https://www.economics.ox.ac.uk/people/karthik-abhiramapuram-sridhar",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "a8ff7eb4abb0",
@@ -205,7 +221,7 @@
       "paper_url": "https://lidiasmitkova.com/wp-content/uploads/2025/10/export_subsidies.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/lidia-smitkova",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "41b936b4b005",
@@ -222,7 +238,7 @@
       "paper_url": "https://lukasboehnert.github.io/JMP_LBoehnert.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/lukas-boehnert",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "6b9640b83174",
@@ -237,7 +253,7 @@
       "paper_url": "https://drive.google.com/file/d/1wYNfkmOwt01BJ0yia7U7anDtQGsyH_x_/view?usp=sharing",
       "profile_url": "https://www.economics.ox.ac.uk/people/marco-garofalo",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "2926ce41b63c",
@@ -252,7 +268,7 @@
       "paper_url": "https://maxmarczinek.github.io/mywebsite/JMP_uptodate.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/max-marczinek",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "b6463bd1523e",
@@ -267,7 +283,7 @@
       "paper_url": "https://users.ox.ac.uk/~econ0628/Bank_Runs_JKMS_Full.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/rustam-jamilov",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "9d33ad76d598",
@@ -282,7 +298,7 @@
       "paper_url": "https://sarahwduffy.github.io/JMP.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/sarah-duffy",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "9a3c41265863",
@@ -298,7 +314,7 @@
       "paper_url": "https://www.shaheennaseer.com/s/JMP.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/shaheen-naseer",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "ef4d0aad8569",
@@ -314,7 +330,7 @@
       "paper_url": "https://timothywhunt.github.io/files/Hunt_Caring_2025.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/timothy-hunt",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "251387753fc2",
@@ -330,7 +346,7 @@
       "paper_url": "https://tobiaskawalec.com/files/DIDI.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/tobias-kawalec",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "4ad923ca7cd4",
@@ -346,7 +362,7 @@
       "paper_url": "https://drive.google.com/file/d/11hAbTC-KCe8YB0j25b3eJ0Ev-lhQNJ4g/view?usp=drive_link",
       "profile_url": "https://sites.google.com/view/alfredo-mendoza-fernandez/home?authuser=0",
       "source_url": "https://econ.berkeley.edu/graduate/placement/job-market-candidates-phd",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "314b8ad2f1e8",
@@ -361,7 +377,7 @@
       "paper_url": "https://www.dropbox.com/scl/fi/4ajfzu341p0eqxfne4ew5/Yding_JMP.pdf?rlkey=82y584m9fa8tqj69x78vnxhnp&st=gu6hvgpp&dl=0",
       "profile_url": "https://andersyding.com",
       "source_url": "https://econ.berkeley.edu/graduate/placement/job-market-candidates-phd",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "4cbecf7e4041",
@@ -376,7 +392,7 @@
       "paper_url": "https://drive.google.com/file/d/19hdX6FImdgjp-lvXwu8aBesu5LtDbm8V/view?usp=drive_link",
       "profile_url": "https://www.emilymartell.com/",
       "source_url": "https://econ.berkeley.edu/graduate/placement/job-market-candidates-phd",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "1ef9aa86f8fc",
@@ -392,7 +408,7 @@
       "paper_url": "https://drive.google.com/file/d/1k7Dre-c7cQtbfhtm1898SQ5YPRMX85wY/view?usp=drive_link",
       "profile_url": "https://sites.google.com/view/cindychung",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "f096bb3ca84f",
@@ -409,7 +425,7 @@
       "paper_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4772653",
       "profile_url": "https://www.jonathanhartley.net/",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "c5e0853bb919",
@@ -426,7 +442,7 @@
       "paper_url": "https://lautarochittaro.github.io/assets/papers/Chittaro-JMP.pdf",
       "profile_url": "https://lautarochittaro.github.io",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "d09ee616feb0",
@@ -442,7 +458,7 @@
       "paper_url": "https://marcelosena.github.io/marcelosenajmp.pdf",
       "profile_url": "https://marcelosena.github.io/",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "82e2b79c8175",
@@ -457,7 +473,7 @@
       "paper_url": "https://adhamimohamad.github.io/papers/Adhami_JMP.pdf",
       "profile_url": "https://adhami.people.stanford.edu/",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "cfa88416c764",
@@ -472,7 +488,7 @@
       "paper_url": "https://jwbchang.github.io/jinwookbchang/JinWookChang_JMP.pdf",
       "profile_url": "https://economics.yale.edu/people/jin-wook-chang",
       "source_url": "https://economics.yale.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "c8931a554a00",
@@ -488,7 +504,7 @@
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/Giovanni-Bonfanti-Job-Market-Paper.pdf",
       "profile_url": "https://sites.google.com/view/giovannibonfanti",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "32f20a423f98",
@@ -504,7 +520,7 @@
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/robust_VAR_0922.pdf",
       "profile_url": "https://econ.columbia.edu/e/40889/",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "e3e242e2c712",
@@ -538,7 +554,7 @@
       "paper_url": "https://drive.google.com/file/d/1aVyO0WdndnkhfE25wfjSLwvEkXHhTc7v/view?usp=sharing",
       "profile_url": "https://sites.google.com/sas.upenn.edu/alexander-sawyer/home",
       "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "decac045cda1",
@@ -554,7 +570,7 @@
       "paper_url": "https://javiertasso.github.io/research/Tasso_JMP.pdf",
       "profile_url": "https://javiertasso.github.io/",
       "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "77b143f6f48a",
@@ -571,7 +587,7 @@
       "paper_url": "https://jihwankim1994.weebly.com/uploads/1/5/1/1/151162346/jmp.pdf",
       "profile_url": "https://jihwankim1994.weebly.com/",
       "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "4174bbdbac1b",
@@ -587,7 +603,7 @@
       "paper_url": "https://drive.google.com/file/d/1w4hppS42oLRW5geHXQihcWypELDkM1Zj/view?usp=sharing",
       "profile_url": "https://www.josemarialarrain.com",
       "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "c7d4079b5a01",
@@ -604,7 +620,7 @@
       "paper_url": "https://luigif-upenn.github.io/JMP_LF/BailoutLF.pdf",
       "profile_url": "https://luigifalasconi.com",
       "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "f448b58fb4aa",
@@ -620,7 +636,7 @@
       "paper_url": "https://drive.google.com/file/d/1AJmEFjQ_e4qCzwqdKxvujMzF3pEO7gXr/view?usp=sharing",
       "profile_url": "https://sites.google.com/view/hannahrhodenhiser",
       "source_url": "https://www.bu.edu/econ/job-market-candidates/",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "f733fd4004ac",
@@ -637,7 +653,7 @@
       "paper_url": "https://gzx0321.github.io/files/The_Macro_Impact_of_the_Debt_Inflation_Channel_on_Investment%20(1).pdf",
       "profile_url": "https://gzx0321.github.io/",
       "source_url": "https://www.bu.edu/econ/job-market-candidates/",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "6050c8338389",
@@ -654,7 +670,7 @@
       "paper_url": "https://ykkoca.github.io/files/jmp_YakupKutsal_Koca.pdf",
       "profile_url": "https://ykkoca.github.io",
       "source_url": "https://dornsife.usc.edu/econ/doctoral/job-market-candidates/",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "0c782deaf273",
@@ -671,7 +687,7 @@
       "paper_url": "https://ziligit.github.io/files/jmp_paper.pdf",
       "profile_url": "https://ziligit.github.io/",
       "source_url": "https://dornsife.usc.edu/econ/doctoral/job-market-candidates/",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-07-16"
     },
     {
       "id": "565a9e581968",
@@ -687,7 +703,7 @@
       "paper_url": "https://drive.google.com/file/d/18oW-B8seFKUfJU0GZhqP0Rph7BPKH688/view?usp=sharing",
       "profile_url": "https://sites.google.com/view/alexwurdinger/home",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "4ce38c47f2a9",
@@ -704,7 +720,7 @@
       "paper_url": "https://drive.google.com/file/d/1bjK8sOJr8lOebdESXOAxLU22D_XCZt1Q/view?usp=drive_link",
       "profile_url": "https://www.bipulverma.com/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "f87194f62819",
@@ -720,7 +736,7 @@
       "paper_url": "https://assets.zyrosite.com/AGBrEJQpGyuROE7Z/jmp_carlos_bolivar_12_4-ccGr09KqVa8MaG4z.pdf",
       "profile_url": "https://carlosbolivar.info/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "f688d77a98a9",
@@ -737,7 +753,7 @@
       "paper_url": "https://drive.google.com/file/d/1kqt9moyMLJCSqn1doMiRJguTAqPXLnb0/view?usp=drive_link",
       "profile_url": "https://sites.google.com/umn.edu/effie-karfaki/home",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "b73837c8c462",
@@ -754,7 +770,7 @@
       "paper_url": "https://franciscobullano.com/files/Bullano_JMP_latest.pdf",
       "profile_url": "https://franciscobullano.com/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "2fbdb8357c8f",
@@ -771,7 +787,7 @@
       "paper_url": "https://drive.google.com/file/d/17lYaHDju-9twq-h9tkaEzH_Z49GZpCZ4/view?usp=share_link",
       "profile_url": "https://www.ikoutsonikolis.com/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "7de018636815",
@@ -788,7 +804,7 @@
       "paper_url": "https://www.jacob-wright.me/_files/ugd/5f97f5_b827be76dffa43faadc057606359e32b.pdf?index=true",
       "profile_url": "https://www.jacob-wright.me/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "d432d0baf69f",
@@ -805,7 +821,7 @@
       "paper_url": "https://www.leonardo-barreto.com/pdf/Barreto_JMP.pdf",
       "profile_url": "https://www.leonardo-barreto.com/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "53f2ac6d12e2",
@@ -822,7 +838,7 @@
       "paper_url": "https://drive.google.com/file/d/1q4jMU9q2z2XNGB-ZcMMftORyIy_6FExh/view?usp=drive_link",
       "profile_url": "https://sites.google.com/umn.edu/lieyuanyang",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     },
     {
       "id": "0a32f632fe7d",
@@ -839,7 +855,7 @@
       "paper_url": "https://drive.google.com/file/d/1UEZAP3lnoWHn87lJGuDC2BkDAxqkVtBU/view?usp=drive_link",
       "profile_url": "https://sites.google.com/view/scottsommers",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-06-22"
+      "last_verified": "2026-06-15"
     }
   ]
 }

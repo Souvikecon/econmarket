@@ -1,3 +1,5 @@
+from datetime import UTC, datetime, timedelta
+
 from bs4 import BeautifulSoup
 
 from scripts.update_data import (
@@ -7,6 +9,8 @@ from scripts.update_data import (
     extract_fields,
     find_paper_link,
     is_valid_paper_title,
+    is_partial_refresh,
+    merge_recent,
 )
 
 
@@ -175,6 +179,60 @@ def test_rejects_site_search_results_as_paper_titles():
 
 def test_rejects_version_labels_as_paper_titles():
     assert not is_valid_paper_title("Latest version: March 2026")
+
+
+def test_retains_recent_candidate_when_department_refresh_fails():
+    verified = (datetime.now(UTC).date() - timedelta(days=30)).isoformat()
+    existing = {
+        "candidates": [
+            {
+                "id": "candidate-1",
+                "name": "Ada Economist",
+                "institution": "Example University",
+                "country": "US",
+                "rank": 1,
+                "fields": ["Macroeconomics"],
+                "paper_title": "Aggregate Shocks and Household Saving",
+                "paper_url": "https://candidate.example/paper.pdf",
+                "profile_url": "https://candidate.example",
+                "source_url": "https://example.edu/candidates",
+                "last_verified": verified,
+            }
+        ]
+    }
+
+    merged = merge_recent(existing, [], {"Example University"})
+
+    assert [candidate.name for candidate in merged] == ["Ada Economist"]
+
+
+def test_drops_candidate_after_stale_grace_period():
+    verified = (datetime.now(UTC).date() - timedelta(days=91)).isoformat()
+    existing = {
+        "candidates": [
+            {
+                "id": "candidate-1",
+                "name": "Ada Economist",
+                "institution": "Example University",
+                "country": "US",
+                "rank": 1,
+                "fields": ["Macroeconomics"],
+                "paper_title": "Aggregate Shocks and Household Saving",
+                "paper_url": "https://candidate.example/paper.pdf",
+                "profile_url": "https://candidate.example",
+                "source_url": "https://example.edu/candidates",
+                "last_verified": verified,
+            }
+        ]
+    }
+
+    assert merge_recent(existing, [], {"Example University"}) == []
+
+
+def test_detects_sharp_partial_roster_drop():
+    assert is_partial_refresh(previous_count=5, current_count=2)
+    assert not is_partial_refresh(previous_count=5, current_count=3)
+    assert not is_partial_refresh(previous_count=2, current_count=1)
 
 
 def test_extracts_separate_primary_and_secondary_fields():
