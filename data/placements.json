@@ -1,10 +1,12 @@
 {
-  "generated_at": "2026-08-31T13:42:57+00:00",
+  "generated_at": "2026-09-07T12:25:50+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 53,
-  "confirmed_count": 41,
+  "total_candidates": 52,
+  "confirmed_count": 40,
   "pending_count": 12,
-  "stale_overrides": [],
+  "stale_overrides": [
+    "Lidia Smitkova"
+  ],
   "placements": [
     {
       "candidate_id": "a020e0435055",
@@ -243,26 +245,6 @@
       "timing": "",
       "source_url": "",
       "source_label": ""
-    },
-    {
-      "candidate_id": "a8ff7eb4abb0",
-      "name": "Lidia Smitkova",
-      "institution": "University of Oxford",
-      "country": "UK",
-      "rank": 2,
-      "fields": [
-        "International Macroeconomics",
-        "Economic Growth",
-        "Macroeconomics"
-      ],
-      "paper_url": "https://lidiasmitkova.com/wp-content/uploads/2025/10/export_subsidies.pdf",
-      "profile_url": "https://www.economics.ox.ac.uk/people/lidia-smitkova",
-      "status": "confirmed",
-      "destination": "Université Libre de Bruxelles",
-      "position": "",
-      "timing": "2026 placement",
-      "source_url": "https://www.economics.ox.ac.uk/job-market-candidates/job-placements",
-      "source_label": "Oxford placement record"
     },
     {
       "candidate_id": "41b936b4b005",
