@@ -1,142 +1,26 @@
 {
-  "generated_at": "2026-09-07T12:25:50+00:00",
+  "generated_at": "2026-10-13T10:48:54+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 52,
-  "confirmed_count": 40,
-  "pending_count": 12,
+  "total_candidates": 41,
+  "confirmed_count": 27,
+  "pending_count": 14,
   "stale_overrides": [
-    "Lidia Smitkova"
+    "Alexander Sawyer",
+    "Giovanni Bonfanti",
+    "Hyoseok Kim",
+    "Johannes Matt",
+    "Jonathan Hartley",
+    "Lautaro Chittaro",
+    "Lidia Smitkova",
+    "Linchuan Xu",
+    "Luigi Falasconi",
+    "Marcelo Sena",
+    "Marta Guasch Rusiñol",
+    "Mohamad Adhami",
+    "Sitong Ding",
+    "Stephan Hobler"
   ],
   "placements": [
-    {
-      "candidate_id": "a020e0435055",
-      "name": "Johannes Matt",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Finance",
-        "Macroeconomics"
-      ],
-      "paper_url": "https://jimattecon.github.io/Papers/Matt2025FinancialRegulationPensionInvestmentandEconomicGrowth.pdf",
-      "profile_url": "https://www.johannesmatt.com/",
-      "status": "confirmed",
-      "destination": "International Monetary Fund",
-      "position": "Economist",
-      "timing": "Starts September 2026",
-      "source_url": "https://www.johannesmatt.com/",
-      "source_label": "Candidate website"
-    },
-    {
-      "candidate_id": "76a86af440e1",
-      "name": "Linchuan Xu",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Development Economics Seconday Fields: Macroeconomics",
-        "Environmental Economics"
-      ],
-      "paper_url": "https://www.dropbox.com/scl/fi/w0nh1526zcnbscf940gxt/LA_draft.pdf?rlkey=42wjwkedg0hlvri46lcc0n9df&st=4l0eii3g&dl=0",
-      "profile_url": "https://www.linchuanxu.com/",
-      "status": "confirmed",
-      "destination": "University of Manchester",
-      "position": "Lecturer (Assistant Professor) in Economics",
-      "timing": "Starts August 2026",
-      "source_url": "https://www.linchuanxu.com/",
-      "source_label": "Candidate website"
-    },
-    {
-      "candidate_id": "91e3a1c5a704",
-      "name": "Lukas Wiedemann",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_url": "https://drive.google.com/file/d/1hxPmlttkmKWHt0scQOz7u3hFKZ6fPCls/view?usp=drive_link",
-      "profile_url": "https://sites.google.com/view/lukaswiedemann/",
-      "status": "pending",
-      "destination": "",
-      "position": "",
-      "timing": "",
-      "source_url": "",
-      "source_label": ""
-    },
-    {
-      "candidate_id": "10cce94a5d45",
-      "name": "Marta Guasch Rusiñol",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics",
-        "Finance"
-      ],
-      "paper_url": "https://www.dropbox.com/scl/fi/u22lix08rd9g7z9zzaczw/Debt-without-Investment_latest-version.pdf?rlkey=b853886wbhw3ivkl7l2b2ng8q&st=v1zw6vqa&dl=1",
-      "profile_url": "https://sites.google.com/view/martaguasch-rusinol/",
-      "status": "confirmed",
-      "destination": "International Monetary Fund",
-      "position": "Economist (EP)",
-      "timing": "Starts September 2026",
-      "source_url": "https://sites.google.com/view/martaguasch-rusinol/",
-      "source_label": "Candidate website"
-    },
-    {
-      "candidate_id": "3049e5e61cb3",
-      "name": "Sitong Ding",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_url": "https://www.dropbox.com/scl/fi/ulftcclqr8c5rpkbqifwa/DraftV3_JMP.pdf?dl=0&rlkey=pin7a7sg2lhsn5a8lngkovbi4&st=czyocr5z",
-      "profile_url": "https://www.sitongding.com/",
-      "status": "confirmed",
-      "destination": "HKU Business School",
-      "position": "Assistant Professor of Finance",
-      "timing": "Starts December 2026",
-      "source_url": "https://www.sitongding.com/",
-      "source_label": "Candidate website"
-    },
-    {
-      "candidate_id": "a64c002fc775",
-      "name": "Stephan Hobler",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_url": "https://sjhobler.github.io/assets/papers/jmp/jmp-sj-hobler.pdf",
-      "profile_url": "https://sjhobler.github.io/",
-      "status": "confirmed",
-      "destination": "Nuffield College, University of Oxford",
-      "position": "Postdoctoral Prize Research Fellow",
-      "timing": "Starts September 2026",
-      "source_url": "https://sjhobler.github.io/",
-      "source_label": "Candidate website"
-    },
-    {
-      "candidate_id": "fe5f36a0eee2",
-      "name": "Yuhao Qian",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_url": "https://drive.google.com/file/d/1MIaLKIe2AszccfaBVloH0d2A7Dva08Zr/view?usp=sharing",
-      "profile_url": "https://www.yuhaoqian.com/#home",
-      "status": "pending",
-      "destination": "",
-      "position": "",
-      "timing": "",
-      "source_url": "",
-      "source_label": ""
-    },
     {
       "candidate_id": "87a8c2d73818",
       "name": "Chenchuan Shi",
@@ -219,7 +103,7 @@
         "Macroeconomics"
       ],
       "paper_url": "https://hannahroemer.github.io/HR_JMP_CCS.pdf",
-      "profile_url": "https://www.economics.ox.ac.uk/people/hannah-romer",
+      "profile_url": "https://www.economics.ox.ac.uk/node/2235701",
       "status": "confirmed",
       "destination": "University of Oslo",
       "position": "Tenure-track Assistant Professor",
@@ -470,83 +354,6 @@
       "source_label": ""
     },
     {
-      "candidate_id": "f096bb3ca84f",
-      "name": "Jonathan Hartley",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Finance",
-        "Macroeconomics",
-        "Labor"
-      ],
-      "paper_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4772653",
-      "profile_url": "https://www.jonathanhartley.net/",
-      "status": "confirmed",
-      "destination": "University of Texas at Austin, School of Civic Leadership",
-      "position": "Assistant Professor of Economics",
-      "timing": "2026 placement",
-      "source_url": "https://economics.stanford.edu/graduate/student-placement",
-      "source_label": "Stanford placement record"
-    },
-    {
-      "candidate_id": "c5e0853bb919",
-      "name": "Lautaro Chittaro",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Financial Economics",
-        "Macroeconomics",
-        "Industrial Organization"
-      ],
-      "paper_url": "https://lautarochittaro.github.io/assets/papers/Chittaro-JMP.pdf",
-      "profile_url": "https://lautarochittaro.github.io",
-      "status": "confirmed",
-      "destination": "Bocconi University",
-      "position": "",
-      "timing": "2026 placement",
-      "source_url": "https://economics.stanford.edu/graduate/student-placement",
-      "source_label": "Stanford placement record"
-    },
-    {
-      "candidate_id": "d09ee616feb0",
-      "name": "Marcelo Sena",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Finance",
-        "Macroeconomics"
-      ],
-      "paper_url": "https://marcelosena.github.io/marcelosenajmp.pdf",
-      "profile_url": "https://marcelosena.github.io/",
-      "status": "confirmed",
-      "destination": "Frankfurt School of Finance and Management",
-      "position": "Postdoctoral Fellow",
-      "timing": "2026 placement",
-      "source_url": "https://economics.stanford.edu/graduate/student-placement",
-      "source_label": "Stanford placement record"
-    },
-    {
-      "candidate_id": "82e2b79c8175",
-      "name": "Mohamad Adhami",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_url": "https://adhamimohamad.github.io/papers/Adhami_JMP.pdf",
-      "profile_url": "https://adhami.people.stanford.edu/",
-      "status": "confirmed",
-      "destination": "Yale University, then Johns Hopkins University",
-      "position": "Cowles Postdoctoral Fellow (2026-27), then Assistant Professor",
-      "timing": "Johns Hopkins appointment starts July 2027",
-      "source_url": "https://adhami.people.stanford.edu/",
-      "source_label": "Candidate website"
-    },
-    {
       "candidate_id": "cfa88416c764",
       "name": "Jin-Wook Chang",
       "institution": "Yale University",
@@ -565,56 +372,17 @@
       "source_label": "Candidate website"
     },
     {
-      "candidate_id": "c8931a554a00",
-      "name": "Giovanni Bonfanti",
+      "candidate_id": "5bb57badf8b8",
+      "name": "Eshaan Patel",
       "institution": "Columbia University",
       "country": "US",
       "rank": 9,
-      "fields": [
-        "Finance",
-        "International Macroeconomics .et_pb_text"
-      ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/Giovanni-Bonfanti-Job-Market-Paper.pdf",
-      "profile_url": "https://sites.google.com/view/giovannibonfanti",
-      "status": "confirmed",
-      "destination": "NBER, then Leibniz Institute for Financial Research SAFE at Goethe University",
-      "position": "Postdoctoral placement",
-      "timing": "2026 placement",
-      "source_url": "https://econ.columbia.edu/phd/placement/",
-      "source_label": "Columbia placement record"
-    },
-    {
-      "candidate_id": "32f20a423f98",
-      "name": "Hyoseok Kim",
-      "institution": "Columbia University",
-      "country": "US",
-      "rank": 9,
-      "fields": [
-        "Econometrics",
-        "Macroeconomics .et_pb_text"
-      ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/robust_VAR_0922.pdf",
-      "profile_url": "https://econ.columbia.edu/e/40889/",
-      "status": "confirmed",
-      "destination": "Bank of Korea",
-      "position": "",
-      "timing": "2026 placement",
-      "source_url": "https://econ.columbia.edu/phd/placement/",
-      "source_label": "Columbia placement record"
-    },
-    {
-      "candidate_id": "e3e242e2c712",
-      "name": "Finn Schüle",
-      "institution": "Brown University",
-      "country": "US",
-      "rank": 10,
       "fields": [
         "Macroeconomics",
-        "Monetary Economics",
-        "Labor Economics"
+        "Development Economics .et_pb_text"
       ],
-      "paper_url": "https://www.finnschule.com/papers/jmp/JMP_Finn_Schuele.pdf",
-      "profile_url": "https://www.finnschule.com",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Abstract-2.pdf",
+      "profile_url": "https://www.eshaanpatel.com#new_tab",
       "status": "pending",
       "destination": "",
       "position": "",
@@ -623,24 +391,103 @@
       "source_label": ""
     },
     {
-      "candidate_id": "0ba0d0d854bc",
-      "name": "Alexander Sawyer",
-      "institution": "University of Pennsylvania",
+      "candidate_id": "ade7dda7dadd",
+      "name": "Madeline Hanson",
+      "institution": "Columbia University",
       "country": "US",
-      "rank": 11,
+      "rank": 9,
       "fields": [
         "Macroeconomics",
-        "Business Dynamics",
-        "Information Frictions"
+        "Labor Economics .et_pb_text"
       ],
-      "paper_url": "https://drive.google.com/file/d/1aVyO0WdndnkhfE25wfjSLwvEkXHhTc7v/view?usp=sharing",
-      "profile_url": "https://sites.google.com/sas.upenn.edu/alexander-sawyer/home",
-      "status": "confirmed",
-      "destination": "European University Institute",
-      "position": "Max Weber Postdoctoral Fellow",
-      "timing": "Starts September 2026",
-      "source_url": "https://sites.google.com/sas.upenn.edu/alexander-sawyer/home",
-      "source_label": "Candidate website"
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Draft__Distributional_Effects_of_Market_Power-63.pdf",
+      "profile_url": "https://sites.google.com/view/madeline-hanson?usp=sharing",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
+      "candidate_id": "a1ccef943ffc",
+      "name": "Pablo De Llanos",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Macroeconomics",
+        "Real Estate",
+        "Monetary Economics",
+        "Finance .et_pb_text"
+      ],
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-6.pdf",
+      "profile_url": "https://econ.columbia.edu/e/pablo-de-llanos/",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
+      "candidate_id": "8f0f19a64681",
+      "name": "Rodrigo Pacheco",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Macroeconomics",
+        "Finance .et_pb_text"
+      ],
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/rc_abstract.pdf",
+      "profile_url": "https://rcpacheco.com",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
+      "candidate_id": "601715927764",
+      "name": "Sanhitha Jugulum",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Macroeconomics",
+        "Monetary Economics .et_pb_text"
+      ],
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Jugulum_Abstract.pdf",
+      "profile_url": "https://www.sanhithajugulum.com/#new_tab",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
+      "candidate_id": "2d9baa135e93",
+      "name": "Shizuka Inoue",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Development Economics",
+        "Macroeconomics",
+        "International Trade",
+        "Economic History .et_pb_text"
+      ],
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Shizuka_Inoue_JMP_Title_Page.pdf",
+      "profile_url": "https://shizukainoue.com#new_tab",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
     },
     {
       "candidate_id": "decac045cda1",
@@ -654,26 +501,6 @@
       ],
       "paper_url": "https://javiertasso.github.io/research/Tasso_JMP.pdf",
       "profile_url": "https://javiertasso.github.io/",
-      "status": "pending",
-      "destination": "",
-      "position": "",
-      "timing": "",
-      "source_url": "",
-      "source_label": ""
-    },
-    {
-      "candidate_id": "77b143f6f48a",
-      "name": "Ji Hwan Kim",
-      "institution": "University of Pennsylvania",
-      "country": "US",
-      "rank": 11,
-      "fields": [
-        "Macroeconomics",
-        "Urban Economics",
-        "Environmental Economics"
-      ],
-      "paper_url": "https://jihwankim1994.weebly.com/uploads/1/5/1/1/151162346/jmp.pdf",
-      "profile_url": "https://jihwankim1994.weebly.com/",
       "status": "pending",
       "destination": "",
       "position": "",
@@ -699,26 +526,6 @@
       "timing": "",
       "source_url": "",
       "source_label": ""
-    },
-    {
-      "candidate_id": "c7d4079b5a01",
-      "name": "Luigi Falasconi",
-      "institution": "University of Pennsylvania",
-      "country": "US",
-      "rank": 11,
-      "fields": [
-        "Macroeconomics",
-        "Financial Economics",
-        "International Finance"
-      ],
-      "paper_url": "https://luigif-upenn.github.io/JMP_LF/BailoutLF.pdf",
-      "profile_url": "https://luigifalasconi.com",
-      "status": "confirmed",
-      "destination": "Federal Reserve Bank of Minneapolis, then University of Wisconsin-Madison",
-      "position": "Junior Scholar (2026-27), then Assistant Professor of Finance",
-      "timing": "Wisconsin appointment starts Fall 2027",
-      "source_url": "https://luigifalasconi.com/",
-      "source_label": "Candidate website"
     },
     {
       "candidate_id": "f448b58fb4aa",

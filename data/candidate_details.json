@@ -1,197 +1,29 @@
 {
-  "generated_at": "2026-09-07T12:25:50+00:00",
+  "generated_at": "2026-10-13T10:48:54+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 52,
-  "summaries_available": 52,
+  "total_candidates": 41,
+  "summaries_available": 35,
   "stale_summaries": [
-    "Lidia Smitkova"
+    "Alexander Sawyer",
+    "Finn Schüle",
+    "Giovanni Bonfanti",
+    "Hyoseok Kim",
+    "Ji Hwan Kim",
+    "Johannes Matt",
+    "Jonathan Hartley",
+    "Lautaro Chittaro",
+    "Lidia Smitkova",
+    "Linchuan Xu",
+    "Luigi Falasconi",
+    "Lukas Wiedemann",
+    "Marcelo Sena",
+    "Marta Guasch Rusiñol",
+    "Mohamad Adhami",
+    "Sitong Ding",
+    "Stephan Hobler",
+    "Yuhao Qian"
   ],
   "candidates": [
-    {
-      "id": "a020e0435055",
-      "name": "Johannes Matt",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Finance",
-        "Macroeconomics"
-      ],
-      "paper_title": "Financial Regulation, Pension Investment, and Economic Growth",
-      "paper_url": "https://jimattecon.github.io/Papers/Matt2025FinancialRegulationPensionInvestmentandEconomicGrowth.pdf",
-      "profile_url": "https://www.johannesmatt.com/",
-      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Studies how tighter limits on institutional investors' risk-taking affect equity prices, research spending, innovation, and long-run growth. Evidence from British pension regulation is combined with a calibrated growth model to quantify persistent effects on exposed firms.",
-      "abstract_source_url": "https://jimattecon.github.io/Papers/Matt2025FinancialRegulationPensionInvestmentandEconomicGrowth.pdf",
-      "research_topics": [
-        "Macro-finance",
-        "Growth and innovation",
-        "Public and fiscal"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "International organization"
-      ],
-      "placement_destination": "International Monetary Fund"
-    },
-    {
-      "id": "76a86af440e1",
-      "name": "Linchuan Xu",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Development Economics Seconday Fields: Macroeconomics",
-        "Environmental Economics"
-      ],
-      "paper_title": "The Middlemen of Development? Evidence from China's Labor Recruitment Agencies",
-      "paper_url": "https://www.dropbox.com/scl/fi/w0nh1526zcnbscf940gxt/LA_draft.pdf?rlkey=42wjwkedg0hlvri46lcc0n9df&st=4l0eii3g&dl=0",
-      "profile_url": "https://www.linchuanxu.com/",
-      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Examines how labor recruitment agencies facilitate migration from lower-wage to higher-wage regions in China. The paper estimates their effects on worker mobility and wage dispersion, then evaluates policies that could help temporary migrants enter permanent urban employment.",
-      "abstract_source_url": "https://www.dropbox.com/scl/fi/w0nh1526zcnbscf940gxt/LA_draft.pdf?rlkey=42wjwkedg0hlvri46lcc0n9df&st=4l0eii3g&dl=0",
-      "research_topics": [
-        "Labor macro",
-        "Growth and innovation",
-        "Environmental macro"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "University / research"
-      ],
-      "placement_destination": "University of Manchester"
-    },
-    {
-      "id": "91e3a1c5a704",
-      "name": "Lukas Wiedemann",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_title": "The Dual Role of Inequality for Structural Change: Cause and Consequence",
-      "paper_url": "https://drive.google.com/file/d/1hxPmlttkmKWHt0scQOz7u3hFKZ6fPCls/view?usp=drive_link",
-      "profile_url": "https://sites.google.com/view/lukaswiedemann/",
-      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Develops a multisector model in which inequality both results from and drives structural transformation. Changes in income distribution alter demand for services and the substitution of market services for home production, producing sizable shifts in sectoral employment.",
-      "abstract_source_url": "https://drive.google.com/file/d/1hxPmlttkmKWHt0scQOz7u3hFKZ6fPCls/view?usp=drive_link",
-      "research_topics": [
-        "Labor macro",
-        "Growth and innovation"
-      ],
-      "placement_status": "pending",
-      "placement_types": [
-        "Not announced"
-      ],
-      "placement_destination": ""
-    },
-    {
-      "id": "10cce94a5d45",
-      "name": "Marta Guasch Rusiñol",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics",
-        "Finance"
-      ],
-      "paper_title": "Debt without Investment",
-      "paper_url": "https://www.dropbox.com/scl/fi/u22lix08rd9g7z9zzaczw/Debt-without-Investment_latest-version.pdf?rlkey=b853886wbhw3ivkl7l2b2ng8q&st=v1zw6vqa&dl=1",
-      "profile_url": "https://sites.google.com/view/martaguasch-rusinol/",
-      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Links the expansion of corporate borrowing to acquisitions, weak productive investment, and rising market power. The analysis uses lender relationships to identify credit-supply changes and quantifies when acquisition gains are outweighed by greater concentration.",
-      "abstract_source_url": "https://www.dropbox.com/scl/fi/u22lix08rd9g7z9zzaczw/Debt-without-Investment_latest-version.pdf?rlkey=b853886wbhw3ivkl7l2b2ng8q&st=v1zw6vqa&dl=1",
-      "research_topics": [
-        "Macro-finance"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "International organization"
-      ],
-      "placement_destination": "International Monetary Fund"
-    },
-    {
-      "id": "3049e5e61cb3",
-      "name": "Sitong Ding",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_title": "Who Moves the Long End? The Dynamics of Bond Market Segmentation",
-      "paper_url": "https://www.dropbox.com/scl/fi/ulftcclqr8c5rpkbqifwa/DraftV3_JMP.pdf?dl=0&rlkey=pin7a7sg2lhsn5a8lngkovbi4&st=czyocr5z",
-      "profile_url": "https://www.sitongding.com/",
-      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Uses detailed UK bond transactions to study how dealer balance sheets transmit monetary policy to long-term real rates. A segmented bond-market model explains why dealers reduce long-duration holdings while forward rates rise persistently after monetary tightening.",
-      "abstract_source_url": "https://www.dropbox.com/scl/fi/ulftcclqr8c5rpkbqifwa/DraftV3_JMP.pdf?dl=0&rlkey=pin7a7sg2lhsn5a8lngkovbi4&st=czyocr5z",
-      "research_topics": [
-        "Monetary economics",
-        "Macro-finance"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "University / research"
-      ],
-      "placement_destination": "HKU Business School"
-    },
-    {
-      "id": "a64c002fc775",
-      "name": "Stephan Hobler",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_title": "Worker Mobility and the Diffusion of Radical Technologies",
-      "paper_url": "https://sjhobler.github.io/assets/papers/jmp/jmp-sj-hobler.pdf",
-      "profile_url": "https://sjhobler.github.io/",
-      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Studies how scarce expertise and worker mobility shape the diffusion of transformative technologies. A search model calibrated to predictive AI adoption shows that mobility restrictions can substantially slow adoption and reduce the welfare gains from new technology.",
-      "abstract_source_url": "https://sjhobler.github.io/assets/papers/jmp/jmp-sj-hobler.pdf",
-      "research_topics": [
-        "Labor macro",
-        "Growth and innovation"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "University / research"
-      ],
-      "placement_destination": "Nuffield College, University of Oxford"
-    },
-    {
-      "id": "fe5f36a0eee2",
-      "name": "Yuhao Qian",
-      "institution": "London School of Economics",
-      "country": "UK",
-      "rank": 1,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_title": "Capital Misallocation and Earnings-Based Borrowing",
-      "paper_url": "https://drive.google.com/file/d/1MIaLKIe2AszccfaBVloH0d2A7Dva08Zr/view?usp=sharing",
-      "profile_url": "https://www.yuhaoqian.com/#home",
-      "source_url": "https://www.lse.ac.uk/economics/phd-job-market",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Shows how borrowing constraints tied to earnings, rather than physical assets, influence capital allocation. Evidence from the Enron and Arthur Andersen disruption is paired with a quantitative model to measure the resulting effects on firm investment and misallocation.",
-      "abstract_source_url": "https://drive.google.com/file/d/1MIaLKIe2AszccfaBVloH0d2A7Dva08Zr/view?usp=sharing",
-      "research_topics": [
-        "Macro-finance"
-      ],
-      "placement_status": "pending",
-      "placement_types": [
-        "Not announced"
-      ],
-      "placement_destination": ""
-    },
     {
       "id": "87a8c2d73818",
       "name": "Chenchuan Shi",
@@ -230,7 +62,7 @@
       "paper_url": "https://www.ekabos.com/research",
       "profile_url": "https://www.economics.ox.ac.uk/people/eszter-kabos",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Evaluates Hungary's temporary retail food price caps using household scanner data and a structural model of store and product choice. The paper finds that price adjustments among substitute products can offset gains on capped goods and generate welfare losses at some retailers.",
       "abstract_source_url": "https://www.ekabos.com/research",
       "research_topics": [
@@ -255,7 +87,7 @@
       "paper_url": "https://drive.google.com/file/d/1KEhc63eglpe7-OVS4DzL2me6bQFFKjhP/view",
       "profile_url": "https://www.economics.ox.ac.uk/people/giulio-gottardo",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Introduces a flexible cost-share method for estimating firm production technologies when revenue data, market power, and measurement error complicate conventional approaches. The method recovers heterogeneous output elasticities, productivity, and markups with fewer demand-side restrictions.",
       "abstract_source_url": "https://drive.google.com/file/d/1KEhc63eglpe7-OVS4DzL2me6bQFFKjhP/view",
       "research_topics": [
@@ -280,7 +112,7 @@
       "paper_url": "https://weblearn.ox.ac.uk/portal/site/:socsci:econ",
       "profile_url": "https://www.economics.ox.ac.uk/people/giulio-schinaia",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Reports a nationwide experiment with cashew producers in Guinea-Bissau that supplied regular market information, prices, and sales guidance. Treated producers negotiated more actively, spread sales across transactions, and obtained higher prices, especially when market conditions improved.",
       "abstract_source_url": "https://weblearn.ox.ac.uk/portal/site/:socsci:econ",
       "research_topics": [
@@ -303,9 +135,9 @@
       ],
       "paper_title": "Climate change beliefs and savings decisions: a macroeconomic perspective",
       "paper_url": "https://hannahroemer.github.io/HR_JMP_CCS.pdf",
-      "profile_url": "https://www.economics.ox.ac.uk/people/hannah-romer",
+      "profile_url": "https://www.economics.ox.ac.uk/node/2235701",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Studies how beliefs about climate damage affect household saving and macroeconomic adjustment. An incomplete-markets model and UK survey evidence show that stronger climate concern raises saving, cushions output losses, and can temporarily reduce wealth inequality.",
       "abstract_source_url": "https://hannahroemer.github.io/HR_JMP_CCS.pdf",
       "research_topics": [
@@ -331,7 +163,7 @@
       "paper_url": "https://www.dropbox.com/scl/fi/44ugmgp1h984asu68jneh/JMP_Draft_KN.pdf?rlkey=zqliqeehhri1wdg7npign451y&e=1&st=mv1xoq6n&dl=0",
       "profile_url": "https://www.economics.ox.ac.uk/people/karthik-abhiramapuram-sridhar",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Distinguishes the effects of scheduled and unscheduled monetary-policy surprises in India. Scheduled tightening behaves conventionally, while unscheduled decisions reflect prior conditions and information effects that can initially raise asset prices, output, and inflation.",
       "abstract_source_url": "https://www.dropbox.com/scl/fi/44ugmgp1h984asu68jneh/JMP_Draft_KN.pdf?rlkey=zqliqeehhri1wdg7npign451y&e=1&st=mv1xoq6n&dl=0",
       "research_topics": [
@@ -440,7 +272,7 @@
       "paper_url": "https://users.ox.ac.uk/~econ0628/Bank_Runs_JKMS_Full.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/rustam-jamilov",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Builds a two-century international dataset of bank runs and deposit contractions. Systemic runs are followed by unusually large and persistent output losses, while credible liquidity support and liability guarantees are associated with less severe downturns.",
       "abstract_source_url": "https://users.ox.ac.uk/~econ0628/Bank_Runs_JKMS_Full.pdf",
       "research_topics": [
@@ -495,7 +327,7 @@
       "paper_url": "https://www.shaheennaseer.com/s/JMP.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/shaheen-naseer",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Uses personnel records and a rotation policy in Pakistan's civil service to study the value of varied early-career assignments. Exposure to more distinct administrative environments improves later access to frontline leadership roles and supports the development of generalist managers.",
       "abstract_source_url": "https://www.shaheennaseer.com/s/JMP.pdf",
       "research_topics": [
@@ -670,116 +502,6 @@
       "placement_destination": ""
     },
     {
-      "id": "f096bb3ca84f",
-      "name": "Jonathan Hartley",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Finance",
-        "Macroeconomics",
-        "Labor"
-      ],
-      "paper_title": "Does Government Debt Management Matter? High-Frequency Identification From U.S. Treasury Quarterly Refunding Announcements",
-      "paper_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4772653",
-      "profile_url": "https://www.jonathanhartley.net/",
-      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Measures Treasury supply surprises around quarterly refunding announcements and their immediate effects on yields. Maturity-specific evidence supports segmented demand and imperfect arbitrage, with implications for the optimal maturity structure of government debt.",
-      "abstract_source_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4772653",
-      "research_topics": [
-        "Macro-finance",
-        "Labor macro",
-        "Public and fiscal"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "University / research"
-      ],
-      "placement_destination": "University of Texas at Austin, School of Civic Leadership"
-    },
-    {
-      "id": "c5e0853bb919",
-      "name": "Lautaro Chittaro",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Financial Economics",
-        "Macroeconomics",
-        "Industrial Organization"
-      ],
-      "paper_title": "Selection in Crisis Lending. Evidence from Chile",
-      "paper_url": "https://lautarochittaro.github.io/assets/papers/Chittaro-JMP.pdf",
-      "profile_url": "https://lautarochittaro.github.io",
-      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Evaluates government-guaranteed crisis loans using Chilean administrative data. The program delayed rather than prevented defaults, while banks selected relatively safer borrowers; a dynamic model assesses the welfare implications and alternative guarantee designs.",
-      "abstract_source_url": "https://lautarochittaro.github.io/assets/papers/Chittaro-JMP.pdf",
-      "research_topics": [
-        "Macro-finance",
-        "Public and fiscal"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "University / research"
-      ],
-      "placement_destination": "Bocconi University"
-    },
-    {
-      "id": "d09ee616feb0",
-      "name": "Marcelo Sena",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Finance",
-        "Macroeconomics"
-      ],
-      "paper_title": "Pricing and Risk in Sovereign Green Debt: Evidence from Chile",
-      "paper_url": "https://marcelosena.github.io/marcelosenajmp.pdf",
-      "profile_url": "https://marcelosena.github.io/",
-      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Studies Chilean sovereign green bonds using comparable green and conventional issues. Differences across maturities are explained by interest-rate risk and investors' environmental preferences rather than market segmentation or liquidity, producing a downward-sloping green premium.",
-      "abstract_source_url": "https://marcelosena.github.io/marcelosenajmp.pdf",
-      "research_topics": [
-        "Macro-finance",
-        "International macro",
-        "Environmental macro"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "University / research"
-      ],
-      "placement_destination": "Frankfurt School of Finance and Management"
-    },
-    {
-      "id": "82e2b79c8175",
-      "name": "Mohamad Adhami",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Macroeconomics"
-      ],
-      "paper_title": "Quantifying Knowledge Spillovers Using Firm and Product Dynamics",
-      "paper_url": "https://adhamimohamad.github.io/papers/Adhami_JMP.pdf",
-      "profile_url": "https://adhami.people.stanford.edu/",
-      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Quantifies intertemporal knowledge spillovers using firm entry, product turnover, and market-share dynamics. A growth model separates spillover-driven creative destruction from ordinary product volatility and estimates the gap between private and social returns to innovation.",
-      "abstract_source_url": "https://adhamimohamad.github.io/papers/Adhami_JMP.pdf",
-      "research_topics": [
-        "Growth and innovation"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "University / research"
-      ],
-      "placement_destination": "Yale University, then Johns Hopkins University"
-    },
-    {
       "id": "cfa88416c764",
       "name": "Jin-Wook Chang",
       "institution": "Yale University",
@@ -792,7 +514,7 @@
       "paper_url": "https://jwbchang.github.io/jinwookbchang/JinWookChang_JMP.pdf",
       "profile_url": "https://economics.yale.edu/people/jin-wook-chang",
       "source_url": "https://economics.yale.edu/graduate/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Develops a collateralized-debt network model in which lenders can default after reusing collateral. Endogenous asset prices, leverage, and counterparties reveal policy trade-offs: reducing counterparty concerns can change network formation in ways that increase systemic risk.",
       "abstract_source_url": "https://jwbchang.github.io/jinwookbchang/JinWookChang_JMP.pdf",
       "research_topics": [
@@ -806,78 +528,50 @@
       "placement_destination": "Federal Reserve Board"
     },
     {
-      "id": "c8931a554a00",
-      "name": "Giovanni Bonfanti",
+      "id": "5bb57badf8b8",
+      "name": "Eshaan Patel",
       "institution": "Columbia University",
       "country": "US",
       "rank": 9,
-      "fields": [
-        "Finance",
-        "International Macroeconomics .et_pb_text"
-      ],
-      "paper_title": "A European Safe Asset? Not Without the Investors",
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/Giovanni-Bonfanti-Job-Market-Paper.pdf",
-      "profile_url": "https://sites.google.com/view/giovannibonfanti",
-      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-09-07",
-      "abstract_summary": "Explains why European Union bonds trade at higher yields than similarly safe sovereign debt. Exclusion from major indices narrows the investor base and increases sensitivity to market stress, suggesting that sovereign recognition could improve liquidity and safe-asset status.",
-      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/Giovanni-Bonfanti-Job-Market-Paper.pdf",
-      "research_topics": [
-        "Macro-finance",
-        "International macro"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "University / research"
-      ],
-      "placement_destination": "NBER, then Leibniz Institute for Financial Research SAFE at Goethe University"
-    },
-    {
-      "id": "32f20a423f98",
-      "name": "Hyoseok Kim",
-      "institution": "Columbia University",
-      "country": "US",
-      "rank": 9,
-      "fields": [
-        "Econometrics",
-        "Macroeconomics .et_pb_text"
-      ],
-      "paper_title": "Macroeconomic forecasting with outlier-robust VAR",
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/robust_VAR_0922.pdf",
-      "profile_url": "https://econ.columbia.edu/e/40889/",
-      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-09-07",
-      "abstract_summary": "Proposes a vector autoregression that separates ordinary disturbances from large outliers using robust estimation. The method improves macroeconomic forecasting and structural analysis when exceptional observations, such as the COVID-19 shock, distort conventional VAR estimates.",
-      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2025/09/robust_VAR_0922.pdf",
-      "research_topics": [
-        "Other macroeconomics"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "Central bank"
-      ],
-      "placement_destination": "Bank of Korea"
-    },
-    {
-      "id": "e3e242e2c712",
-      "name": "Finn Schüle",
-      "institution": "Brown University",
-      "country": "US",
-      "rank": 10,
       "fields": [
         "Macroeconomics",
-        "Monetary Economics",
-        "Labor Economics"
+        "Development Economics .et_pb_text"
       ],
-      "paper_title": "The Phillips and Beveridge Curves in a Multi-Sector Economy",
-      "paper_url": "https://www.finnschule.com/papers/jmp/JMP_Finn_Schuele.pdf",
-      "profile_url": "https://www.finnschule.com",
-      "source_url": "https://economics.brown.edu/job-market-candidates-0",
-      "last_verified": "2026-06-13",
-      "abstract_summary": "Builds a multisector New Keynesian model with production networks and labor-market search. Sectoral shocks redirect workers and alter hiring costs elsewhere, making inflation sensitivity state-dependent and helping explain movements in the Phillips and Beveridge curves.",
-      "abstract_source_url": "https://www.finnschule.com/papers/jmp/JMP_Finn_Schuele.pdf",
+      "paper_title": "Labor Inspections, Misallocation, and Welfare",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Abstract-2.pdf",
+      "profile_url": "https://www.eshaanpatel.com#new_tab",
+      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
+      "last_verified": "2026-10-13",
+      "abstract_summary": "",
+      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Abstract-2.pdf",
       "research_topics": [
-        "Monetary economics",
+        "Labor macro",
+        "Growth and innovation"
+      ],
+      "placement_status": "pending",
+      "placement_types": [
+        "Not announced"
+      ],
+      "placement_destination": ""
+    },
+    {
+      "id": "ade7dda7dadd",
+      "name": "Madeline Hanson",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Macroeconomics",
+        "Labor Economics .et_pb_text"
+      ],
+      "paper_title": "The Distributional Welfare Effects of Labour Market Power",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Draft__Distributional_Effects_of_Market_Power-63.pdf",
+      "profile_url": "https://sites.google.com/view/madeline-hanson?usp=sharing",
+      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
+      "last_verified": "2026-10-13",
+      "abstract_summary": "",
+      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Draft__Distributional_Effects_of_Market_Power-63.pdf",
+      "research_topics": [
         "Labor macro"
       ],
       "placement_status": "pending",
@@ -887,31 +581,114 @@
       "placement_destination": ""
     },
     {
-      "id": "0ba0d0d854bc",
-      "name": "Alexander Sawyer",
-      "institution": "University of Pennsylvania",
+      "id": "a1ccef943ffc",
+      "name": "Pablo De Llanos",
+      "institution": "Columbia University",
       "country": "US",
-      "rank": 11,
+      "rank": 9,
       "fields": [
         "Macroeconomics",
-        "Business Dynamics",
-        "Information Frictions"
+        "Real Estate",
+        "Monetary Economics",
+        "Finance .et_pb_text"
       ],
-      "paper_title": "Learning through Sequential Interactions in the Market for Venture Capital",
-      "paper_url": "https://drive.google.com/file/d/1aVyO0WdndnkhfE25wfjSLwvEkXHhTc7v/view?usp=sharing",
-      "profile_url": "https://sites.google.com/sas.upenn.edu/alexander-sawyer/home",
-      "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Models venture-capital fundraising as repeated search in which investors' signals and entrepreneurs' research outcomes gradually reveal project quality. Administrative data discipline the learning process and quantify how financing interactions affect firm entry, survival, and entrepreneur welfare.",
-      "abstract_source_url": "https://drive.google.com/file/d/1aVyO0WdndnkhfE25wfjSLwvEkXHhTc7v/view?usp=sharing",
+      "paper_title": "Housing Market Segmentation and Monetary Policy",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-6.pdf",
+      "profile_url": "https://econ.columbia.edu/e/pablo-de-llanos/",
+      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
+      "last_verified": "2026-10-13",
+      "abstract_summary": "",
+      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-6.pdf",
+      "research_topics": [
+        "Monetary economics",
+        "Macro-finance"
+      ],
+      "placement_status": "pending",
+      "placement_types": [
+        "Not announced"
+      ],
+      "placement_destination": ""
+    },
+    {
+      "id": "8f0f19a64681",
+      "name": "Rodrigo Pacheco",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Macroeconomics",
+        "Finance .et_pb_text"
+      ],
+      "paper_title": "Priced Out: Financing Frictions and Startup Mortality",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/rc_abstract.pdf",
+      "profile_url": "https://rcpacheco.com",
+      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
+      "last_verified": "2026-10-13",
+      "abstract_summary": "",
+      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/rc_abstract.pdf",
       "research_topics": [
         "Macro-finance"
       ],
-      "placement_status": "confirmed",
+      "placement_status": "pending",
       "placement_types": [
-        "University / research"
+        "Not announced"
       ],
-      "placement_destination": "European University Institute"
+      "placement_destination": ""
+    },
+    {
+      "id": "601715927764",
+      "name": "Sanhitha Jugulum",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Macroeconomics",
+        "Monetary Economics .et_pb_text"
+      ],
+      "paper_title": "Who Pays Attention? Firm Size, Information, and Monetary-Non-Neutrality",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Jugulum_Abstract.pdf",
+      "profile_url": "https://www.sanhithajugulum.com/#new_tab",
+      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
+      "last_verified": "2026-10-13",
+      "abstract_summary": "",
+      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Jugulum_Abstract.pdf",
+      "research_topics": [
+        "Monetary economics"
+      ],
+      "placement_status": "pending",
+      "placement_types": [
+        "Not announced"
+      ],
+      "placement_destination": ""
+    },
+    {
+      "id": "2d9baa135e93",
+      "name": "Shizuka Inoue",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Development Economics",
+        "Macroeconomics",
+        "International Trade",
+        "Economic History .et_pb_text"
+      ],
+      "paper_title": "Managerial Experience, Firm Size, and Economic Development: Evidence from Japan's Decolonization",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Shizuka_Inoue_JMP_Title_Page.pdf",
+      "profile_url": "https://shizukainoue.com#new_tab",
+      "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
+      "last_verified": "2026-10-13",
+      "abstract_summary": "",
+      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Shizuka_Inoue_JMP_Title_Page.pdf",
+      "research_topics": [
+        "International macro",
+        "Growth and innovation"
+      ],
+      "placement_status": "pending",
+      "placement_types": [
+        "Not announced"
+      ],
+      "placement_destination": ""
     },
     {
       "id": "decac045cda1",
@@ -932,34 +709,6 @@
       "abstract_source_url": "https://javiertasso.github.io/research/Tasso_JMP.pdf",
       "research_topics": [
         "Labor macro",
-        "Public and fiscal"
-      ],
-      "placement_status": "pending",
-      "placement_types": [
-        "Not announced"
-      ],
-      "placement_destination": ""
-    },
-    {
-      "id": "77b143f6f48a",
-      "name": "Ji Hwan Kim",
-      "institution": "University of Pennsylvania",
-      "country": "US",
-      "rank": 11,
-      "fields": [
-        "Macroeconomics",
-        "Urban Economics",
-        "Environmental Economics"
-      ],
-      "paper_title": "Adapting to Storms in the U.S.: A Spatial Dynamic Analysis",
-      "paper_url": "https://jihwankim1994.weebly.com/uploads/1/5/1/1/151162346/jmp.pdf",
-      "profile_url": "https://jihwankim1994.weebly.com/",
-      "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Uses a dynamic spatial model of US counties to examine adaptation to stronger storms. Migration, private investment, and place-based public protection interact across locations, generating heterogeneous welfare losses and informing how adaptation funding should be targeted.",
-      "abstract_source_url": "https://jihwankim1994.weebly.com/uploads/1/5/1/1/151162346/jmp.pdf",
-      "research_topics": [
-        "Environmental macro",
         "Public and fiscal"
       ],
       "placement_status": "pending",
@@ -995,36 +744,6 @@
       "placement_destination": ""
     },
     {
-      "id": "c7d4079b5a01",
-      "name": "Luigi Falasconi",
-      "institution": "University of Pennsylvania",
-      "country": "US",
-      "rank": 11,
-      "fields": [
-        "Macroeconomics",
-        "Financial Economics",
-        "International Finance"
-      ],
-      "paper_title": "Bailout Expectations, Default Risk and the Dynamics of Bank Credit Spreads",
-      "paper_url": "https://luigif-upenn.github.io/JMP_LF/BailoutLF.pdf",
-      "profile_url": "https://luigifalasconi.com",
-      "source_url": "https://economics.sas.upenn.edu/graduate/job-market-candidates",
-      "last_verified": "2026-06-15",
-      "abstract_summary": "Separates fundamental default risk from expected government support in bank credit spreads. A dynamic intermediation model combined with market-implied default measures shows how bailout beliefs affect spreads and can distort conclusions about banks' risk-taking incentives.",
-      "abstract_source_url": "https://luigif-upenn.github.io/JMP_LF/BailoutLF.pdf",
-      "research_topics": [
-        "Macro-finance",
-        "International macro",
-        "Public and fiscal"
-      ],
-      "placement_status": "confirmed",
-      "placement_types": [
-        "Central bank",
-        "University / research"
-      ],
-      "placement_destination": "Federal Reserve Bank of Minneapolis, then University of Wisconsin-Madison"
-    },
-    {
       "id": "f448b58fb4aa",
       "name": "Hannah Rhodenhiser",
       "institution": "Boston University",
@@ -1038,7 +757,7 @@
       "paper_url": "https://drive.google.com/file/d/1AJmEFjQ_e4qCzwqdKxvujMzF3pEO7gXr/view?usp=sharing",
       "profile_url": "https://sites.google.com/view/hannahrhodenhiser",
       "source_url": "https://www.bu.edu/econ/job-market-candidates/",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Quantifies large-scale payments for forest conservation in a general-equilibrium model of household land use. Economy-wide price responses weaken the effectiveness found in small experiments, while alternative targeting can improve both conservation outcomes and distributional effects.",
       "abstract_source_url": "https://drive.google.com/file/d/1AJmEFjQ_e4qCzwqdKxvujMzF3pEO7gXr/view?usp=sharing",
       "research_topics": [
@@ -1065,7 +784,7 @@
       "paper_url": "https://gzx0321.github.io/files/The_Macro_Impact_of_the_Debt_Inflation_Channel_on_Investment%20(1).pdf",
       "profile_url": "https://gzx0321.github.io/",
       "source_url": "https://www.bu.edu/econ/job-market-candidates/",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Measures how unexpected inflation reduces firms' real debt burdens and stimulates investment. Micro evidence and a heterogeneous-firm model show that this debt-inflation channel can materially strengthen aggregate investment responses, especially when nominal leverage is high.",
       "abstract_source_url": "https://gzx0321.github.io/files/The_Macro_Impact_of_the_Debt_Inflation_Channel_on_Investment%20(1).pdf",
       "research_topics": [
@@ -1147,7 +866,7 @@
       "paper_url": "https://drive.google.com/file/d/18oW-B8seFKUfJU0GZhqP0Rph7BPKH688/view?usp=sharing",
       "profile_url": "https://sites.google.com/view/alexwurdinger/home",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Explains the long decline in US teen employment using recessions, job polarization, and competition from adults in service occupations. Empirical estimates and a lifecycle model assess the later wage and welfare consequences of reduced early work experience.",
       "abstract_source_url": "https://drive.google.com/file/d/18oW-B8seFKUfJU0GZhqP0Rph7BPKH688/view?usp=sharing",
       "research_topics": [
@@ -1174,7 +893,7 @@
       "paper_url": "https://drive.google.com/file/d/1bjK8sOJr8lOebdESXOAxLU22D_XCZt1Q/view?usp=drive_link",
       "profile_url": "https://www.bipulverma.com/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Uses India's private-college expansion to estimate how higher education changes local development. Institutional licensing rules provide variation in college entry, revealing effects on graduation, sectoral employment, productivity, migration, and regional economic transformation.",
       "abstract_source_url": "https://drive.google.com/file/d/1bjK8sOJr8lOebdESXOAxLU22D_XCZt1Q/view?usp=drive_link",
       "research_topics": [
@@ -1201,7 +920,7 @@
       "paper_url": "https://assets.zyrosite.com/AGBrEJQpGyuROE7Z/jmp_carlos_bolivar_12_4-ccGr09KqVa8MaG4z.pdf",
       "profile_url": "https://carlosbolivar.info/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Models firms that choose suppliers by balancing production costs against risk. Aggregate uncertainty reorganizes international production networks, changing shock transmission and GDP; lower trade costs improve average consumption but can increase exposure to global disruptions.",
       "abstract_source_url": "https://assets.zyrosite.com/AGBrEJQpGyuROE7Z/jmp_carlos_bolivar_12_4-ccGr09KqVa8MaG4z.pdf",
       "research_topics": [
@@ -1228,7 +947,7 @@
       "paper_url": "https://drive.google.com/file/d/1kqt9moyMLJCSqn1doMiRJguTAqPXLnb0/view?usp=drive_link",
       "profile_url": "https://sites.google.com/umn.edu/effie-karfaki/home",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Uses the 2015 Swiss franc appreciation and firm-level data to estimate contractionary effects on value added and employment. A small open-economy model compares floating and fixed exchange-rate regimes and finds more stable activity and higher household welfare under the counterfactual peg.",
       "abstract_source_url": "https://drive.google.com/file/d/1kqt9moyMLJCSqn1doMiRJguTAqPXLnb0/view?usp=drive_link",
       "research_topics": [
@@ -1258,7 +977,7 @@
       "paper_url": "https://franciscobullano.com/files/Bullano_JMP_latest.pdf",
       "profile_url": "https://franciscobullano.com/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Studies Medicaid expansions for children and pregnant women and their interaction with private insurance. A household model incorporating family composition, health risk, eligibility, and premiums quantifies crowd-out and the welfare effects of broader public coverage.",
       "abstract_source_url": "https://franciscobullano.com/files/Bullano_JMP_latest.pdf",
       "research_topics": [
@@ -1286,7 +1005,7 @@
       "paper_url": "https://drive.google.com/file/d/17lYaHDju-9twq-h9tkaEzH_Z49GZpCZ4/view?usp=share_link",
       "profile_url": "https://www.ikoutsonikolis.com/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Decomposes the long rise in US stock-market valuation using a macroeconomic model with taxes, markups, intangible capital, rents, and discount rates. Tax changes explain a substantial share of higher market-capitalization and price-dividend ratios.",
       "abstract_source_url": "https://drive.google.com/file/d/17lYaHDju-9twq-h9tkaEzH_Z49GZpCZ4/view?usp=share_link",
       "research_topics": [
@@ -1314,7 +1033,7 @@
       "paper_url": "https://www.jacob-wright.me/_files/ugd/5f97f5_b827be76dffa43faadc057606359e32b.pdf?index=true",
       "profile_url": "https://www.jacob-wright.me/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Builds a spatial lifecycle model of state higher-education systems, student migration, college quality, and local firms. The paper explains cross-state differences in tuition, spending, and capacity and evaluates alternative funding and admissions policies.",
       "abstract_source_url": "https://www.jacob-wright.me/_files/ugd/5f97f5_b827be76dffa43faadc057606359e32b.pdf?index=true",
       "research_topics": [
@@ -1341,7 +1060,7 @@
       "paper_url": "https://www.leonardo-barreto.com/pdf/Barreto_JMP.pdf",
       "profile_url": "https://www.leonardo-barreto.com/",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Evaluates the distributional welfare effects of debt-financed US fiscal support during and after the 2020 recession. An open-economy heterogeneous-agent model tracks savings depletion, asset redistribution, reported well-being, and alternative stimulus designs.",
       "abstract_source_url": "https://www.leonardo-barreto.com/pdf/Barreto_JMP.pdf",
       "research_topics": [
@@ -1371,7 +1090,7 @@
       "paper_url": "https://drive.google.com/file/d/1q4jMU9q2z2XNGB-ZcMMftORyIy_6FExh/view?usp=drive_link",
       "profile_url": "https://sites.google.com/umn.edu/lieyuanyang",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Studies China's increasingly progressive redistribution of local tax revenue. Evidence from a tax reform and a regional growth model show how stronger central claims reduce local infrastructure investment, alter spatial allocation, and slow growth in affected regions.",
       "abstract_source_url": "https://drive.google.com/file/d/1q4jMU9q2z2XNGB-ZcMMftORyIy_6FExh/view?usp=drive_link",
       "research_topics": [
@@ -1399,7 +1118,7 @@
       "paper_url": "https://drive.google.com/file/d/1UEZAP3lnoWHn87lJGuDC2BkDAxqkVtBU/view?usp=drive_link",
       "profile_url": "https://sites.google.com/view/scottsommers",
       "source_url": "https://cla.umn.edu/economics/people/job-market-candidates",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-13",
       "abstract_summary": "Examines how drought risk and restrictions on land rental jointly create agricultural misallocation in India. Household data and a quantitative model show how leasing, participation, and crop choices mediate adaptation and the productivity costs of climate shocks.",
       "abstract_source_url": "https://drive.google.com/file/d/1UEZAP3lnoWHn87lJGuDC2BkDAxqkVtBU/view?usp=drive_link",
       "research_topics": [
