@@ -14,6 +14,7 @@ The current scope covers 14 leading US departments selected from IDEAS/RePEc ran
 - `scripts/update_candidate_details.py` adds reviewed abstract summaries, normalized research topics, and placement types for advanced filtering.
 - `.github/workflows/refresh-and-deploy.yml` tests every push and refreshes the data every Monday. GitHub Pages publishes the `main` branch.
 - Existing records are retained for up to 90 days when a department refresh fails, preventing temporary access problems from emptying the public site.
+- Tests validate the current roster instead of fixed candidate or placement counts, and run again after refreshing data before it is committed. Reviewed summaries and placement overrides for departed candidates are retained as historical source records, reported as stale, and excluded from the current site. New candidates can appear before a reviewed summary or confirmed placement is available.
 
 ## Local development
 

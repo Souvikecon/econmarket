@@ -45,7 +45,7 @@ function candidateCard(candidate) {
       <details class="paper-details">
         <summary>Abstract summary <span aria-hidden="true"></span></summary>
         <div class="abstract-content">
-          <p>${escapeHtml(candidate.abstract_summary)}</p>
+          <p>${escapeHtml(candidate.abstract_summary || "A reviewed abstract summary is not yet available. Open the full paper below.")}</p>
           <p class="abstract-placement"><strong>Placement:</strong> <span>${placement}</span></p>
           <a href="${escapeHtml(candidate.abstract_source_url)}" target="_blank" rel="noopener">Open full paper <span>&nearr;</span></a>
         </div>
