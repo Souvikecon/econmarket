@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  pages: write
 
 concurrency:
   group: refresh-data
@@ -26,16 +27,11 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python -m pytest tests -q
       - run: python scripts/update_data.py
-        if: github.event_name != 'push'
       - run: python scripts/update_placements.py
-        if: github.event_name != 'push'
       - run: python scripts/update_candidate_details.py
-        if: github.event_name != 'push'
       - name: Validate refreshed data
-        if: github.event_name != 'push'
         run: python -m pytest tests -q
       - name: Commit refreshed data
-        if: github.event_name != 'push'
         run: |
           if ! git diff --quiet data/candidates.json data/placements.json data/candidate_details.json; then
             git config user.name "github-actions[bot]"
@@ -44,3 +40,7 @@ jobs:
             git commit -m "Refresh candidate, placement, and detail data"
             git push
           fi
+      - name: Publish refreshed site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
