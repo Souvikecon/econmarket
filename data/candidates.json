@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-13T10:48:54+00:00",
-  "ranking_period": "August 2026",
+  "generated_at": "2026-10-19T13:04:34+00:00",
+  "ranking_period": "September 2026",
   "ranking_sources": {
     "US": "https://ideas.repec.org/top/top.usecondept.html",
     "UK": "https://ideas.repec.org/top/top.uk.html"
@@ -35,7 +35,7 @@
       "paper_url": "https://www.ekabos.com/research",
       "profile_url": "https://www.economics.ox.ac.uk/people/eszter-kabos",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "fa97e7536f4d",
@@ -50,7 +50,7 @@
       "paper_url": "https://drive.google.com/file/d/1KEhc63eglpe7-OVS4DzL2me6bQFFKjhP/view",
       "profile_url": "https://www.economics.ox.ac.uk/people/giulio-gottardo",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "d895f77b3836",
@@ -65,7 +65,7 @@
       "paper_url": "https://weblearn.ox.ac.uk/portal/site/:socsci:econ",
       "profile_url": "https://www.economics.ox.ac.uk/people/giulio-schinaia",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "7d5fcbe3d8af",
@@ -80,7 +80,7 @@
       "paper_url": "https://hannahroemer.github.io/HR_JMP_CCS.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/node/2235701",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "fbbd458dd47b",
@@ -96,7 +96,7 @@
       "paper_url": "https://www.dropbox.com/scl/fi/44ugmgp1h984asu68jneh/JMP_Draft_KN.pdf?rlkey=zqliqeehhri1wdg7npign451y&e=1&st=mv1xoq6n&dl=0",
       "profile_url": "https://www.economics.ox.ac.uk/people/karthik-abhiramapuram-sridhar",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "41b936b4b005",
@@ -158,7 +158,7 @@
       "paper_url": "https://users.ox.ac.uk/~econ0628/Bank_Runs_JKMS_Full.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/rustam-jamilov",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "9d33ad76d598",
@@ -189,7 +189,7 @@
       "paper_url": "https://www.shaheennaseer.com/s/JMP.pdf",
       "profile_url": "https://www.economics.ox.ac.uk/people/shaheen-naseer",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "ef4d0aad8569",
@@ -270,22 +270,6 @@
       "last_verified": "2026-07-27"
     },
     {
-      "id": "1ef9aa86f8fc",
-      "name": "Cindy Chung",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Finance",
-        "Macroeconomics"
-      ],
-      "paper_title": "Small Firm Credit Card Financing and Interest Rate Conditions",
-      "paper_url": "https://drive.google.com/file/d/1k7Dre-c7cQtbfhtm1898SQ5YPRMX85wY/view?usp=drive_link",
-      "profile_url": "https://sites.google.com/view/cindychung",
-      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-07-16"
-    },
-    {
       "id": "cfa88416c764",
       "name": "Jin-Wook Chang",
       "institution": "Yale University",
@@ -298,7 +282,7 @@
       "paper_url": "https://jwbchang.github.io/jinwookbchang/JinWookChang_JMP.pdf",
       "profile_url": "https://economics.yale.edu/people/jin-wook-chang",
       "source_url": "https://economics.yale.edu/graduate/job-market-candidates",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "5bb57badf8b8",
@@ -310,11 +294,11 @@
         "Macroeconomics",
         "Development Economics .et_pb_text"
       ],
-      "paper_title": "Labor Inspections, Misallocation, and Welfare",
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Abstract-2.pdf",
+      "paper_title": "The Aggregate Effects of Enforcing Labor Regulations",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-abstract.pdf",
       "profile_url": "https://www.eshaanpatel.com#new_tab",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "ade7dda7dadd",
@@ -330,7 +314,7 @@
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Draft__Distributional_Effects_of_Market_Power-63.pdf",
       "profile_url": "https://sites.google.com/view/madeline-hanson?usp=sharing",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "a1ccef943ffc",
@@ -345,10 +329,10 @@
         "Finance .et_pb_text"
       ],
       "paper_title": "Housing Market Segmentation and Monetary Policy",
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-6.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-7.pdf",
       "profile_url": "https://econ.columbia.edu/e/pablo-de-llanos/",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "8f0f19a64681",
@@ -364,7 +348,7 @@
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/rc_abstract.pdf",
       "profile_url": "https://rcpacheco.com",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "601715927764",
@@ -380,7 +364,7 @@
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Jugulum_Abstract.pdf",
       "profile_url": "https://www.sanhithajugulum.com/#new_tab",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "2d9baa135e93",
@@ -398,7 +382,7 @@
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Shizuka_Inoue_JMP_Title_Page.pdf",
       "profile_url": "https://shizukainoue.com#new_tab",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "decac045cda1",
@@ -446,7 +430,7 @@
       "paper_url": "https://drive.google.com/file/d/1AJmEFjQ_e4qCzwqdKxvujMzF3pEO7gXr/view?usp=sharing",
       "profile_url": "https://sites.google.com/view/hannahrhodenhiser",
       "source_url": "https://www.bu.edu/econ/job-market-candidates/",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "f733fd4004ac",
@@ -463,7 +447,7 @@
       "paper_url": "https://gzx0321.github.io/files/The_Macro_Impact_of_the_Debt_Inflation_Channel_on_Investment%20(1).pdf",
       "profile_url": "https://gzx0321.github.io/",
       "source_url": "https://www.bu.edu/econ/job-market-candidates/",
-      "last_verified": "2026-10-13"
+      "last_verified": "2026-10-19"
     },
     {
       "id": "6050c8338389",

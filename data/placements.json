@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-13T10:48:54+00:00",
+  "generated_at": "2026-10-19T13:04:34+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 41,
+  "total_candidates": 40,
   "confirmed_count": 27,
-  "pending_count": 14,
+  "pending_count": 13,
   "stale_overrides": [
     "Alexander Sawyer",
     "Giovanni Bonfanti",
@@ -335,25 +335,6 @@
       "source_label": "Candidate website"
     },
     {
-      "candidate_id": "1ef9aa86f8fc",
-      "name": "Cindy Chung",
-      "institution": "Stanford University",
-      "country": "US",
-      "rank": 5,
-      "fields": [
-        "Finance",
-        "Macroeconomics"
-      ],
-      "paper_url": "https://drive.google.com/file/d/1k7Dre-c7cQtbfhtm1898SQ5YPRMX85wY/view?usp=drive_link",
-      "profile_url": "https://sites.google.com/view/cindychung",
-      "status": "pending",
-      "destination": "",
-      "position": "",
-      "timing": "",
-      "source_url": "",
-      "source_label": ""
-    },
-    {
       "candidate_id": "cfa88416c764",
       "name": "Jin-Wook Chang",
       "institution": "Yale University",
@@ -381,7 +362,7 @@
         "Macroeconomics",
         "Development Economics .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Abstract-2.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-abstract.pdf",
       "profile_url": "https://www.eshaanpatel.com#new_tab",
       "status": "pending",
       "destination": "",
@@ -421,7 +402,7 @@
         "Monetary Economics",
         "Finance .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-6.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-7.pdf",
       "profile_url": "https://econ.columbia.edu/e/pablo-de-llanos/",
       "status": "pending",
       "destination": "",
