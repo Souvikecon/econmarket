@@ -1,11 +1,13 @@
 {
-  "generated_at": "2026-10-19T13:04:34+00:00",
+  "generated_at": "2026-10-26T12:54:20+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 40,
-  "confirmed_count": 27,
-  "pending_count": 13,
+  "total_candidates": 43,
+  "confirmed_count": 25,
+  "pending_count": 18,
   "stale_overrides": [
     "Alexander Sawyer",
+    "Anders Yding",
+    "Emily Martell",
     "Giovanni Bonfanti",
     "Hyoseok Kim",
     "Johannes Matt",
@@ -280,17 +282,17 @@
       "source_label": "Oxford placement record"
     },
     {
-      "candidate_id": "4ad923ca7cd4",
-      "name": "Alfredo Mendoza-Fernandez",
-      "institution": "UC Berkeley",
-      "country": "US",
-      "rank": 3,
+      "candidate_id": "05728c21aa67",
+      "name": "Fabrizio Ardiles Decker",
+      "institution": "University of Nottingham",
+      "country": "UK",
+      "rank": 5,
       "fields": [
-        "International Macroeconomics",
-        "Finance"
+        "Monetary Economics",
+        "Macroeconomics"
       ],
-      "paper_url": "https://drive.google.com/file/d/11hAbTC-KCe8YB0j25b3eJ0Ev-lhQNJ4g/view?usp=drive_link",
-      "profile_url": "https://sites.google.com/view/alfredo-mendoza-fernandez/home?authuser=0",
+      "paper_url": "https://drive.google.com/file/d/1PqKvMVCY5iH1GG8KZwOkTDiqoIQhzrzz/view",
+      "profile_url": "https://sites.google.com/view/fabrizio-ardiles/about-me",
       "status": "pending",
       "destination": "",
       "position": "",
@@ -299,40 +301,100 @@
       "source_label": ""
     },
     {
-      "candidate_id": "314b8ad2f1e8",
-      "name": "Anders Yding",
-      "institution": "UC Berkeley",
+      "candidate_id": "1a9784757681",
+      "name": "Adrien Auclert",
+      "institution": "Stanford University",
       "country": "US",
-      "rank": 3,
+      "rank": 5,
       "fields": [
-        "Macroeconomics"
+        "Macroeconomics",
+        "Finance"
       ],
-      "paper_url": "https://www.dropbox.com/scl/fi/4ajfzu341p0eqxfne4ew5/Yding_JMP.pdf?rlkey=82y584m9fa8tqj69x78vnxhnp&st=gu6hvgpp&dl=0",
-      "profile_url": "https://andersyding.com",
-      "status": "confirmed",
-      "destination": "Columbia Business School, then CEMFI",
-      "position": "Postdoctoral Research Scholar (2026-27), then Assistant Professor",
-      "timing": "CEMFI appointment starts in 2027",
-      "source_url": "https://andersyding.com/",
-      "source_label": "Candidate website"
+      "paper_url": "https://aauclert.people.stanford.edu/policy",
+      "profile_url": "https://aauclert.people.stanford.edu/",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
     },
     {
-      "candidate_id": "4cbecf7e4041",
-      "name": "Emily Martell",
-      "institution": "UC Berkeley",
+      "candidate_id": "007565b127af",
+      "name": "Calvin He",
+      "institution": "Stanford University",
       "country": "US",
-      "rank": 3,
+      "rank": 5,
       "fields": [
+        "Macroeconomics",
+        "Finance"
+      ],
+      "paper_url": "https://calvinhe.com/uploads/jmp.pdf",
+      "profile_url": "https://calvinhe.com/",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
+      "candidate_id": "15700ff55d95",
+      "name": "Emmanuella Kyei Manu",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Macroeconomics",
+        "Development Economics",
+        "Environmental Economics"
+      ],
+      "paper_url": "https://www.emmanuellakyeimanu.com/jmp.pdf",
+      "profile_url": "https://www.emmanuellakyeimanu.com/",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
+      "candidate_id": "ff40ccd0c2a2",
+      "name": "Rafael Berriel",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Finance",
         "Macroeconomics"
       ],
-      "paper_url": "https://drive.google.com/file/d/19hdX6FImdgjp-lvXwu8aBesu5LtDbm8V/view?usp=drive_link",
-      "profile_url": "https://www.emilymartell.com/",
-      "status": "confirmed",
-      "destination": "Carleton College",
-      "position": "Assistant Professor of Economics",
-      "timing": "Starts Fall 2026",
-      "source_url": "https://www.emilymartell.com/",
-      "source_label": "Candidate website"
+      "paper_url": "https://www.dropbox.com/scl/fi/h6damlco4xvnz25biic2i/How-Liquidity-Regulations-Create-Illiquidity.pdf?rlkey=sh7yg79mklzccxh9qiht4o71j&st=sdco6ood&dl=0",
+      "profile_url": "https://www.rafaelberriel.com",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
+      "candidate_id": "16e4b47ec557",
+      "name": "Reiko Laski",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Macroeconomics",
+        "Innovation"
+      ],
+      "paper_url": "https://reikolaski.com/drafts/Idea_Rents.pdf",
+      "profile_url": "https://reikolaski.com/",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
     },
     {
       "candidate_id": "cfa88416c764",
@@ -362,7 +424,7 @@
         "Macroeconomics",
         "Development Economics .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-abstract.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP.pdf",
       "profile_url": "https://www.eshaanpatel.com#new_tab",
       "status": "pending",
       "destination": "",
@@ -402,7 +464,7 @@
         "Monetary Economics",
         "Finance .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-7.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-13.pdf",
       "profile_url": "https://econ.columbia.edu/e/pablo-de-llanos/",
       "status": "pending",
       "destination": "",
