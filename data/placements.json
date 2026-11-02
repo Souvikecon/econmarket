@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-26T12:54:20+00:00",
+  "generated_at": "2026-11-02T15:41:23+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 43,
+  "total_candidates": 44,
   "confirmed_count": 25,
-  "pending_count": 18,
+  "pending_count": 19,
   "stale_overrides": [
     "Alexander Sawyer",
     "Anders Yding",
@@ -368,7 +368,7 @@
         "Finance",
         "Macroeconomics"
       ],
-      "paper_url": "https://www.dropbox.com/scl/fi/h6damlco4xvnz25biic2i/How-Liquidity-Regulations-Create-Illiquidity.pdf?rlkey=sh7yg79mklzccxh9qiht4o71j&st=sdco6ood&dl=0",
+      "paper_url": "https://ssrn.com/abstract=7644181",
       "profile_url": "https://www.rafaelberriel.com",
       "status": "pending",
       "destination": "",
@@ -389,6 +389,25 @@
       ],
       "paper_url": "https://reikolaski.com/drafts/Idea_Rents.pdf",
       "profile_url": "https://reikolaski.com/",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
+      "candidate_id": "ef3ad4fcb8ce",
+      "name": "Shelby Buckman",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Labor Economics",
+        "Macroeconomics"
+      ],
+      "paper_url": "https://drive.google.com/file/d/15HIPLEiWGHyf5vNDy8QJDasAayACy1kp/view?usp=sharing",
+      "profile_url": "https://sites.google.com/view/shelbybuckman",
       "status": "pending",
       "destination": "",
       "position": "",
@@ -424,7 +443,7 @@
         "Macroeconomics",
         "Development Economics .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-1.pdf",
       "profile_url": "https://www.eshaanpatel.com#new_tab",
       "status": "pending",
       "destination": "",
@@ -464,7 +483,7 @@
         "Monetary Economics",
         "Finance .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-13.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/dellanos_JMP-1.pdf",
       "profile_url": "https://econ.columbia.edu/e/pablo-de-llanos/",
       "status": "pending",
       "destination": "",

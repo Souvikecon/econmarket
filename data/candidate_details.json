@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-26T12:54:20+00:00",
+  "generated_at": "2026-11-02T15:41:23+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 43,
+  "total_candidates": 44,
   "summaries_available": 31,
   "stale_summaries": [
     "Alexander Sawyer",
@@ -414,7 +414,7 @@
       "paper_url": "https://drive.google.com/file/d/1PqKvMVCY5iH1GG8KZwOkTDiqoIQhzrzz/view",
       "profile_url": "https://sites.google.com/view/fabrizio-ardiles/about-me",
       "source_url": "https://www.nottingham.ac.uk/economics/people/job-market-candidates.aspx",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
       "abstract_source_url": "https://drive.google.com/file/d/1PqKvMVCY5iH1GG8KZwOkTDiqoIQhzrzz/view",
       "research_topics": [
@@ -440,7 +440,7 @@
       "paper_url": "https://aauclert.people.stanford.edu/policy",
       "profile_url": "https://aauclert.people.stanford.edu/",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
       "abstract_source_url": "https://aauclert.people.stanford.edu/policy",
       "research_topics": [
@@ -468,7 +468,7 @@
       "paper_url": "https://calvinhe.com/uploads/jmp.pdf",
       "profile_url": "https://calvinhe.com/",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
       "abstract_source_url": "https://calvinhe.com/uploads/jmp.pdf",
       "research_topics": [
@@ -497,7 +497,7 @@
       "paper_url": "https://www.emmanuellakyeimanu.com/jmp.pdf",
       "profile_url": "https://www.emmanuellakyeimanu.com/",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
       "abstract_source_url": "https://www.emmanuellakyeimanu.com/jmp.pdf",
       "research_topics": [
@@ -521,12 +521,12 @@
         "Macroeconomics"
       ],
       "paper_title": "How Liquidity Regulations Create Illiquidity",
-      "paper_url": "https://www.dropbox.com/scl/fi/h6damlco4xvnz25biic2i/How-Liquidity-Regulations-Create-Illiquidity.pdf?rlkey=sh7yg79mklzccxh9qiht4o71j&st=sdco6ood&dl=0",
+      "paper_url": "https://ssrn.com/abstract=7644181",
       "profile_url": "https://www.rafaelberriel.com",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
-      "abstract_source_url": "https://www.dropbox.com/scl/fi/h6damlco4xvnz25biic2i/How-Liquidity-Regulations-Create-Illiquidity.pdf?rlkey=sh7yg79mklzccxh9qiht4o71j&st=sdco6ood&dl=0",
+      "abstract_source_url": "https://ssrn.com/abstract=7644181",
       "research_topics": [
         "Macro-finance",
         "Public and fiscal"
@@ -551,11 +551,37 @@
       "paper_url": "https://reikolaski.com/drafts/Idea_Rents.pdf",
       "profile_url": "https://reikolaski.com/",
       "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
       "abstract_source_url": "https://reikolaski.com/drafts/Idea_Rents.pdf",
       "research_topics": [
         "Growth and innovation"
+      ],
+      "placement_status": "pending",
+      "placement_types": [
+        "Not announced"
+      ],
+      "placement_destination": ""
+    },
+    {
+      "id": "ef3ad4fcb8ce",
+      "name": "Shelby Buckman",
+      "institution": "Stanford University",
+      "country": "US",
+      "rank": 5,
+      "fields": [
+        "Labor Economics",
+        "Macroeconomics"
+      ],
+      "paper_title": "Should I Stay or Should I Go? Coworker Promotions and Turnover",
+      "paper_url": "https://drive.google.com/file/d/15HIPLEiWGHyf5vNDy8QJDasAayACy1kp/view?usp=sharing",
+      "profile_url": "https://sites.google.com/view/shelbybuckman",
+      "source_url": "https://economics.stanford.edu/graduate/job-market-candidates",
+      "last_verified": "2026-11-02",
+      "abstract_summary": "",
+      "abstract_source_url": "https://drive.google.com/file/d/15HIPLEiWGHyf5vNDy8QJDasAayACy1kp/view?usp=sharing",
+      "research_topics": [
+        "Labor macro"
       ],
       "placement_status": "pending",
       "placement_types": [
@@ -576,7 +602,7 @@
       "paper_url": "https://jwbchang.github.io/jinwookbchang/JinWookChang_JMP.pdf",
       "profile_url": "https://economics.yale.edu/people/jin-wook-chang",
       "source_url": "https://economics.yale.edu/graduate/job-market-candidates",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "Develops a collateralized-debt network model in which lenders can default after reusing collateral. Endogenous asset prices, leverage, and counterparties reveal policy trade-offs: reducing counterparty concerns can change network formation in ways that increase systemic risk.",
       "abstract_source_url": "https://jwbchang.github.io/jinwookbchang/JinWookChang_JMP.pdf",
       "research_topics": [
@@ -600,12 +626,12 @@
         "Development Economics .et_pb_text"
       ],
       "paper_title": "The Aggregate Effects of Enforcing Labor Regulations",
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-1.pdf",
       "profile_url": "https://www.eshaanpatel.com#new_tab",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
-      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP.pdf",
+      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-1.pdf",
       "research_topics": [
         "Labor macro",
         "Growth and innovation",
@@ -631,7 +657,7 @@
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Draft__Distributional_Effects_of_Market_Power-63.pdf",
       "profile_url": "https://sites.google.com/view/madeline-hanson?usp=sharing",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
       "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Draft__Distributional_Effects_of_Market_Power-63.pdf",
       "research_topics": [
@@ -656,12 +682,12 @@
         "Finance .et_pb_text"
       ],
       "paper_title": "Housing Market Segmentation and Monetary Policy",
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-13.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/dellanos_JMP-1.pdf",
       "profile_url": "https://econ.columbia.edu/e/pablo-de-llanos/",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
-      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/segmentation_MP-13.pdf",
+      "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/dellanos_JMP-1.pdf",
       "research_topics": [
         "Monetary economics",
         "Macro-finance"
@@ -686,7 +712,7 @@
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/rc_abstract.pdf",
       "profile_url": "https://rcpacheco.com",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
       "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/rc_abstract.pdf",
       "research_topics": [
@@ -712,7 +738,7 @@
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Jugulum_Abstract.pdf",
       "profile_url": "https://www.sanhithajugulum.com/#new_tab",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
       "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Jugulum_Abstract.pdf",
       "research_topics": [
@@ -736,11 +762,11 @@
         "International Trade",
         "Economic History .et_pb_text"
       ],
-      "paper_title": "Managerial Experience, Firm Size, and Economic Development: Evidence from Japan's Decolonization",
+      "paper_title": "Managerial Experience, Firm Size, and Economic Development: Evidence from the Collapse of the Japanese Empire",
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Shizuka_Inoue_JMP_Title_Page.pdf",
       "profile_url": "https://shizukainoue.com#new_tab",
       "source_url": "https://econ.columbia.edu/phd/job-market-candidates/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "",
       "abstract_source_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Shizuka_Inoue_JMP_Title_Page.pdf",
       "research_topics": [
@@ -820,7 +846,7 @@
       "paper_url": "https://drive.google.com/file/d/1AJmEFjQ_e4qCzwqdKxvujMzF3pEO7gXr/view?usp=sharing",
       "profile_url": "https://sites.google.com/view/hannahrhodenhiser",
       "source_url": "https://www.bu.edu/econ/job-market-candidates/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "Quantifies large-scale payments for forest conservation in a general-equilibrium model of household land use. Economy-wide price responses weaken the effectiveness found in small experiments, while alternative targeting can improve both conservation outcomes and distributional effects.",
       "abstract_source_url": "https://drive.google.com/file/d/1AJmEFjQ_e4qCzwqdKxvujMzF3pEO7gXr/view?usp=sharing",
       "research_topics": [
@@ -847,7 +873,7 @@
       "paper_url": "https://gzx0321.github.io/files/The_Macro_Impact_of_the_Debt_Inflation_Channel_on_Investment%20(1).pdf",
       "profile_url": "https://gzx0321.github.io/",
       "source_url": "https://www.bu.edu/econ/job-market-candidates/",
-      "last_verified": "2026-10-26",
+      "last_verified": "2026-11-02",
       "abstract_summary": "Measures how unexpected inflation reduces firms' real debt burdens and stimulates investment. Micro evidence and a heterogeneous-firm model show that this debt-inflation channel can materially strengthen aggregate investment responses, especially when nominal leverage is high.",
       "abstract_source_url": "https://gzx0321.github.io/files/The_Macro_Impact_of_the_Debt_Inflation_Channel_on_Investment%20(1).pdf",
       "research_topics": [
