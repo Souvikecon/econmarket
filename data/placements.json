@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-02T15:41:23+00:00",
+  "generated_at": "2026-11-09T16:08:22+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 44,
+  "total_candidates": 46,
   "confirmed_count": 25,
-  "pending_count": 19,
+  "pending_count": 21,
   "stale_overrides": [
     "Alexander Sawyer",
     "Anders Yding",
@@ -40,6 +40,26 @@
       "timing": "2026 placement",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates/job-placements",
       "source_label": "Oxford placement record"
+    },
+    {
+      "candidate_id": "84501e34d18b",
+      "name": "Christopher Hyland",
+      "institution": "University of Oxford",
+      "country": "UK",
+      "rank": 2,
+      "fields": [
+        "International Macroeconomics",
+        "Macro-Finance",
+        "Macroeconomics"
+      ],
+      "paper_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6240078",
+      "profile_url": "https://chrishyland.github.io/",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
     },
     {
       "candidate_id": "a5517d401fa0",
@@ -112,6 +132,26 @@
       "timing": "2026 placement",
       "source_url": "https://www.economics.ox.ac.uk/job-market-candidates/job-placements",
       "source_label": "Oxford placement record"
+    },
+    {
+      "candidate_id": "5024e01a7fe4",
+      "name": "JOB OPPORTUNITIES",
+      "institution": "University of Oxford",
+      "country": "UK",
+      "rank": 2,
+      "fields": [
+        "International Macroeconomics",
+        "Macro-Finance",
+        "Macroeconomics"
+      ],
+      "paper_url": "https://weblearn.ox.ac.uk/portal/site/:socsci:econ",
+      "profile_url": "https://www.economics.ox.ac.uk/job-opportunities",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
     },
     {
       "candidate_id": "fbbd458dd47b",
@@ -462,7 +502,7 @@
         "Macroeconomics",
         "Labor Economics .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Draft__Distributional_Effects_of_Market_Power-63.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP_Hanson_November.pdf",
       "profile_url": "https://sites.google.com/view/madeline-hanson?usp=sharing",
       "status": "pending",
       "destination": "",
@@ -483,7 +523,7 @@
         "Monetary Economics",
         "Finance .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/dellanos_JMP-1.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/dellanos_JMP-2.pdf",
       "profile_url": "https://econ.columbia.edu/e/pablo-de-llanos/",
       "status": "pending",
       "destination": "",
@@ -502,7 +542,7 @@
         "Macroeconomics",
         "Finance .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/rc_abstract.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/pacheco_priced_out.pdf",
       "profile_url": "https://rcpacheco.com",
       "status": "pending",
       "destination": "",
@@ -542,7 +582,7 @@
         "International Trade",
         "Economic History .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Shizuka_Inoue_JMP_Title_Page.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Job-Market-Paper-Shizuka-Inoue.pdf",
       "profile_url": "https://shizukainoue.com#new_tab",
       "status": "pending",
       "destination": "",
