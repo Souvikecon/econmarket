@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-09T16:08:22+00:00",
+  "generated_at": "2026-11-16T15:37:23+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 46,
+  "total_candidates": 44,
   "confirmed_count": 25,
-  "pending_count": 21,
+  "pending_count": 19,
   "stale_overrides": [
     "Alexander Sawyer",
     "Anders Yding",
@@ -331,7 +331,7 @@
         "Monetary Economics",
         "Macroeconomics"
       ],
-      "paper_url": "https://drive.google.com/file/d/1PqKvMVCY5iH1GG8KZwOkTDiqoIQhzrzz/view",
+      "paper_url": "https://drive.google.com/drive/folders/1DvsE96xQksCKDtI16DGzkC9YRf-pH7od",
       "profile_url": "https://sites.google.com/view/fabrizio-ardiles/about-me",
       "status": "pending",
       "destination": "",
@@ -483,7 +483,7 @@
         "Macroeconomics",
         "Development Economics .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-1.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-2.pdf",
       "profile_url": "https://www.eshaanpatel.com#new_tab",
       "status": "pending",
       "destination": "",
@@ -584,44 +584,6 @@
       ],
       "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Job-Market-Paper-Shizuka-Inoue.pdf",
       "profile_url": "https://shizukainoue.com#new_tab",
-      "status": "pending",
-      "destination": "",
-      "position": "",
-      "timing": "",
-      "source_url": "",
-      "source_label": ""
-    },
-    {
-      "candidate_id": "decac045cda1",
-      "name": "Javier Tasso",
-      "institution": "University of Pennsylvania",
-      "country": "US",
-      "rank": 11,
-      "fields": [
-        "Macroeconomics",
-        "Political Economy"
-      ],
-      "paper_url": "https://javiertasso.github.io/research/Tasso_JMP.pdf",
-      "profile_url": "https://javiertasso.github.io/",
-      "status": "pending",
-      "destination": "",
-      "position": "",
-      "timing": "",
-      "source_url": "",
-      "source_label": ""
-    },
-    {
-      "candidate_id": "4174bbdbac1b",
-      "name": "Josemaria Larrain",
-      "institution": "University of Pennsylvania",
-      "country": "US",
-      "rank": 11,
-      "fields": [
-        "Quantitative Macroeconomics",
-        "Labor Economics"
-      ],
-      "paper_url": "https://drive.google.com/file/d/1w4hppS42oLRW5geHXQihcWypELDkM1Zj/view?usp=sharing",
-      "profile_url": "https://www.josemarialarrain.com",
       "status": "pending",
       "destination": "",
       "position": "",
