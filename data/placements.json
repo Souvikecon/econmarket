@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-16T15:37:23+00:00",
+  "generated_at": "2026-11-23T17:58:41+00:00",
   "reviewed_at": "2026-06-15",
-  "total_candidates": 44,
+  "total_candidates": 46,
   "confirmed_count": 25,
-  "pending_count": 19,
+  "pending_count": 21,
   "stale_overrides": [
     "Alexander Sawyer",
     "Anders Yding",
@@ -341,6 +341,27 @@
       "source_label": ""
     },
     {
+      "candidate_id": "cc5e51d9c701",
+      "name": "Anand Bharadwaj",
+      "institution": "UC Berkeley",
+      "country": "US",
+      "rank": 3,
+      "fields": [
+        "Finance",
+        "Macroeconomics",
+        "Public Economics",
+        "Economic Theory"
+      ],
+      "paper_url": "http://abharadwaj.com/papers/Uncertainty, Disagreement and the Idiosyncratic Volatility Puzzle.pdf",
+      "profile_url": "http://abharadwaj.com",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
       "candidate_id": "1a9784757681",
       "name": "Adrien Auclert",
       "institution": "Stanford University",
@@ -483,8 +504,27 @@
         "Macroeconomics",
         "Development Economics .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-2.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP-4.pdf",
       "profile_url": "https://www.eshaanpatel.com#new_tab",
+      "status": "pending",
+      "destination": "",
+      "position": "",
+      "timing": "",
+      "source_url": "",
+      "source_label": ""
+    },
+    {
+      "candidate_id": "69cc5d06d653",
+      "name": "John Ma",
+      "institution": "Columbia University",
+      "country": "US",
+      "rank": 9,
+      "fields": [
+        "Finance",
+        "International Macroeconomics .et_pb_text"
+      ],
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/11/JMP_JM.pdf",
+      "profile_url": "https://johnzijianma.github.io/",
       "status": "pending",
       "destination": "",
       "position": "",
@@ -523,7 +563,7 @@
         "Monetary Economics",
         "Finance .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/dellanos_JMP-2.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/DeLlanos_JMP-1.pdf",
       "profile_url": "https://econ.columbia.edu/e/pablo-de-llanos/",
       "status": "pending",
       "destination": "",
@@ -561,7 +601,7 @@
         "Macroeconomics",
         "Monetary Economics .et_pb_text"
       ],
-      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/Jugulum_Abstract.pdf",
+      "paper_url": "https://econ.columbia.edu/wp-content/uploads/sites/18/2026/09/JMP_Jugulum.pdf",
       "profile_url": "https://www.sanhithajugulum.com/#new_tab",
       "status": "pending",
       "destination": "",
